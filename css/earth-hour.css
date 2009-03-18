@@ -2,8 +2,8 @@
 	position: fixed;
 	top: 0px;
 	right: 0px;
-	background: #000;
-	opacity: 0.8;	
+	background: #220;
+	opacity: 0.81	
 	color: #fff;
 	width: 100%;
 	font-family: "Lucida Grande";
@@ -12,6 +12,7 @@
 	padding-bottom: 3px;
 	text-align: right;
 	padding-right: 10px;
+	border-bottom: 1px solid #555;
 }
 
 #bnc_earth_hour a {
