@@ -9,6 +9,8 @@ Earth Hour is a WordPress plugin that will temporarily disable a blog during Ear
 
 == Description ==
 
+This is still in development - please check back a bit later for the official release.
+
 The Earth Hour plugin will show a message of solidarity towards the Earth Hour initiative.  During Earth Hour, your blog will show a message of support, along with every other WordPress site utilizing this plugin.  
 
 Please visit http://www.bravenewcode.com/earth-hour/ for a full description & updates on the Earth Hour plugin.
