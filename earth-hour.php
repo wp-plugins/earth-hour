@@ -106,6 +106,7 @@ function earth_hour_init() {
 	$start_time = mktime( 20, 30, 0, 3, 28, 2009 );
 	$end_time = $start_time + 60*60;
 	
+	// adjust for local time
 	$adjusted_time = time() + get_option('gmt_offset')*60*60;	
 	$in_earth_hour = ($adjusted_time >= $start_time && $adjusted_time <= $end_time);
 	
@@ -135,3 +136,17 @@ function earth_hour_init() {
 	wp_enqueue_script( 'jquery' );
 
 }
+
+function earth_hour_options_subpanel() {
+	include( 'html/options.php' );
+}
+
+
+function earth_hour_add_plugin_option() {
+	if (function_exists('add_options_page')) {
+		add_options_page( "Earth Hour", "Earth Hour", 0, basename(__FILE__), 'earth_hour_options_subpanel');
+   }
+}
+
+add_action( 'admin_menu', 'earth_hour_add_plugin_option');
+

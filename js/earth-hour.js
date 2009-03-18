@@ -11,5 +11,5 @@ function eh_changeMessage() {
 }
 
 jQuery(document).ready( function() {
-	setInterval( eh_changeMessage, 10000 );
+	setInterval( eh_changeMessage, 15000 );
 });
