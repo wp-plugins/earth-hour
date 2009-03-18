@@ -54,7 +54,7 @@ function earth_hour_footer() {
 	if ( !earth_hour_is_active() ) {
 		echo "<div id=\"bnc_earth_hour\">";
 		echo sprintf( __( "One of %s websites supporting <a href=\"http://www.earthhour.org/\" rel=\"nofollow\">Earth Hour</a>. ", "earth-hour" ), number_format( $earth_hour_settings['last_count'] ) );
-		_e( "On WordPress? Get the plugin.", "earth-hour" );
+		_e( "On WordPress? Get the <a href=\"http://wordpress.org/extend/plugins/earth-hour/\" rel=\"nofollow\">plugin</a>.", "earth-hour" );
 		echo "</div>";
 	}	
 }
