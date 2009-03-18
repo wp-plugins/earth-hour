@@ -54,18 +54,19 @@ function earth_hour_footer() {
 	global $time_until_earth_hour;
 		
 	if ( !earth_hour_is_active() ) {
-		echo "<div id=\"bnc_earth_hour\">";
+		echo "<div id=\"bnc_earth_hour\"><div id=\"inner\">";
 		$msg = sprintf( __( "One of %s websites proudly supporting <a href=\"http://www.earthhour.org/\" rel=\"nofollow\">Earth Hour</a>. ", "earth-hour" ), number_format( $earth_hour_settings['last_count'] ) );
 		$msg = $msg . __( "On WordPress? Get the <a href=\"http://wordpress.org/extend/plugins/earth-hour/\" rel=\"nofollow\">plugin</a>.", "earth-hour" );	
 		echo $msg;	
 		
-		$msg2 = sprintf( __( "<a href=\"http://earthhour.org\" rel=\"nofollow\">Earth Hour</a> begins in %d days, %d hours, %d minutes", "earth-hour" ), 
+		$msg2 = sprintf( __( "<a href=\"http://earthhour.org\" rel=\"nofollow\">Earth Hour</a> begins in %d days, %d hours, and %d minutes", "earth-hour" ), 
 			$time_until_earth_hour / (24*3600), 
 			($time_until_earth_hour % (24*3600))/3600,
 			(($time_until_earth_hour % (24*3600)) % 3600)/60
 		);
+		echo "</div></div>";
 		echo '<script type="text/javascript">var eh_msg_1 = \'' . $msg . '\';var eh_msg_2 = \'' .$msg2 . '\';</script>';
-		echo "</div>";
+
 	}	
 }
 

@@ -3,7 +3,7 @@
 	top: 0px;
 	right: 0px;
 	background: #220;
-	opacity: 0.81	
+	opacity: 0.80;	
 	color: #fff;
 	width: 100%;
 	font-family: "Lucida Grande";
@@ -13,14 +13,19 @@
 	text-align: right;
 	padding-right: 10px;
 	border-bottom: 1px solid #555;
+	height: 13px;
 }
 
-#bnc_earth_hour a {
+#bnc_earth_hour #inner {
+	
+}
+
+#bnc_earth_hour #inner a {
 	color: #8f8;
 	text-decoration: none;
 	font-weight: normal;
 }
 
-#bnc_earth_hour a:hover {
+#bnc_earth_hour #inner a:hover {
 	color: #cfc;
 }
