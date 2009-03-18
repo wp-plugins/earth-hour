@@ -5,7 +5,7 @@ Requires at least: 2.7
 Tested up to: 2.7.1
 Stable tag: 1.0.1
 
-Earth Hour is a WordPress plugin that will temporarily disable a blog during Earth Hour to show support for the initiative and the environment.  Please don't download this yet - check back a bit later for an official release.
+Earth Hour is a WordPress plugin that will temporarily disable a blog during Earth Hour to show support for the initiative and the environment.  
 
 == Description ==
 
