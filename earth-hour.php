@@ -67,16 +67,16 @@ function earth_hour_settings() {
 
 function earth_hour_update_settings() {
 	global $earth_hour_settings;
-	update_option( 'bnc_earth_hour', $earth_hour_settings );
+	update_option( 'bnc_earth_hour', serialize( $earth_hour_settings ) );
 }
 
 function earth_hour_init() {
 	global $earth_hour_settings;
 	global $earth_hour_default_settings;
 	
-	$settings = get_option( 'bnc_earth_hour' );
+	$settings = get_option( unserialize( 'bnc_earth_hour' ) );
 	if ( $settings) {
-		$earth_hour_settings = settings;
+		$earth_hour_settings = $settings;
 	} else {
 		$earth_hour_settings = $earth_hour_default_settings;
 	}
