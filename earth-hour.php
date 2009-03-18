@@ -93,10 +93,11 @@ function earth_hour_init() {
 	}
 	
 	$start_time = mktime( 20, 30, 0, 3, 28, 2009 );
-	$end_time = $start_time + 60;
-	$in_earth_hour = ($now_time >= $start_time && $now_time <= $end_time);
+	$end_time = $start_time + 60*60;
 	
-	$in_earth_hour = true;
+	$adjusted_time = time() + get_option('gmt_offset')*60*60;	
+	$in_earth_hour = ($adjusted_time >= $start_time && $adjusted_time <= $end_time);
+
 	if ( $in_earth_hour ) {
 		// we are in earth hour
 		if ( !$earth_hour_settings['currently_in_earth_hour'] ) {
@@ -105,7 +106,7 @@ function earth_hour_init() {
 		}		
 		
 		// let people hit the admin panel
-		if ( strpos( $_SERVER["REQUEST_URI"], "/wp-admin/" ) === false ) {
+		if ( strpos( $_SERVER["REQUEST_URI"], "/wp-admin/" ) === false && strpos( $_SERVER["REQUEST_URI"], "wp-login.php" ) === false ) {
 			include( 'html/message.php' );
 			die;
 		}
