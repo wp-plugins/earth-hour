@@ -15,16 +15,28 @@ add_action( 'wp_footer', 'earth_hour_footer' );
 register_activation_hook( __FILE__, 'earth_hour_activate' );
 register_deactivation_hook( __FILE__, 'earth_hour_deactivate' );
 
+if ( defined('ABSPATH') ) {
+	require_once( ABSPATH . '/wp-includes/class-snoopy.php');
+} else {
+	require_once( '../../../wp-includes/class-snoopy.php');
+}
+
+
 global $earth_hour_settings;
 $earth_hour_default_settings = array(
-	'currently_in_earth_hour' => false
+	'currently_in_earth_hour' => false,
+	'last_count' => 0,
+	'last_count_time' => 0
 );
 
-
 function earth_hour_activate() {
+   $snoopy = new Snoopy;	
+   $snoopy->fetch('http://earthhour.bravenewclients.com/?activate=1&site=' . md5( get_bloginfo('home') ) . '&tz=' . urlencode( get_option('gmt_offset') ) ); 
 }
 
 function earth_hour_deactivate() {
+   $snoopy = new Snoopy;	
+   $snoopy->fetch('http://earthhour.bravenewclients.com/?deactivate=1&site=' . md5( get_bloginfo('home') )  ); 	
 }
 
 function earth_hour_is_active() {
@@ -37,12 +49,13 @@ function earth_hour_head() {
 }
 
 function earth_hour_footer() {
+	global $earth_hour_settings;
+		
 	if ( !earth_hour_is_active() ) {
-		echo "<script type=\"text/javascript\">\n";
-		echo "\tvar d = document.createElement('div');\n";
-		echo "\td.id = 'bnc_earth_hour';\n";
-		echo "\tdocument.body.insertBefore(d, document.body.firstChild);\n";
-		echo "</script>\n";
+		echo "<div id=\"bnc_earth_hour\">";
+		echo sprintf( __( "One of %s websites supporting <a href=\"http://www.earthhour.org/\" rel=\"nofollow\">Earth Hour</a>. ", "earth-hour" ), number_format( $earth_hour_settings['last_count'] ) );
+		_e( "On WordPress? Get the plugin.", "earth-hour" );
+		echo "</div>";
 	}	
 }
 
@@ -68,9 +81,20 @@ function earth_hour_init() {
 		$earth_hour_settings = $earth_hour_default_settings;
 	}
 	
+	$now_time = time();	
+	$time_since_last_update = $now_time - $earth_hour_settings['last_count_time'];
+	
+	if ( $time_since_last_update > 300 ) {
+   	$snoopy = new Snoopy;	
+   	if ( $snoopy->fetch('http://earthhour.bravenewclients.com/?count=1') ) {	
+   		$earth_hour_settings['last_count'] = $snoopy->results;
+   		$earth_hour_settings['last_count_time'] = time();
+   	}
+	}
+	
 	$start_time = mktime( 20, 30, 0, 3, 28, 2009 );
 	$end_time = $start_time + 60;
-	$now_time = time();
+
 
 	if ( $now_time >= $start_time && $now_time <= $end_time) {
 		// we are in earth hour

@@ -4,5 +4,16 @@
 	right: 0px;
 	height: 20px;
 	background: #000;
-	opacity: 0.5;	
+	opacity: 0.95;	
+	color: #fff;
+	width: 100%;
+	font-family: "Lucida Grande";
+	font-size: 10px;
+	padding-top: 5px;
+	text-align: right;
+	padding-right: 10px;
+}
+
+#bnc_earth_hour a {
+	color: #33f;
 }
