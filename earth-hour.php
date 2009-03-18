@@ -94,22 +94,27 @@ function earth_hour_init() {
 	
 	$start_time = mktime( 20, 30, 0, 3, 28, 2009 );
 	$end_time = $start_time + 60;
-
-
-	if ( $now_time >= $start_time && $now_time <= $end_time) {
+	$in_earth_hour = ($now_time >= $start_time && $now_time <= $end_time);
+	
+	$in_earth_hour = true;
+	if ( $in_earth_hour ) {
 		// we are in earth hour
-		if ( $earth_hour_settings['currently_in_earth_hour'] ) {
+		if ( !$earth_hour_settings['currently_in_earth_hour'] ) {
 			$earth_hour_settings['currently_in_earth_hour'] = true;	
 			earth_hour_update_settings();
 		}		
+		
+		// let people hit the admin panel
+		if ( strpos( $_SERVER["REQUEST_URI"], "/wp-admin/" ) === false ) {
+			include( 'html/message.php' );
+			die;
+		}
 	} else {
 		// we are not in earth hour
 		if ( $earth_hour_settings['currently_in_earth_hour'] ) {
 			$earth_hour_settings['currently_in_earth_hour'] = false;	
 			earth_hour_update_settings();
 		}
-
-		wp_enqueue_script( 'jquery' );		
 	}
 
 }

@@ -15,5 +15,11 @@
 }
 
 #bnc_earth_hour a {
-	color: #33f;
+	color: #88f;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+#bnc_earth_hour a:hover {
+	color: #aaf;
 }
