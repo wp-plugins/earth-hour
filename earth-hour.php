@@ -83,6 +83,12 @@ function earth_hour_init() {
 	global $earth_hour_settings;
 	global $earth_hour_default_settings;
 	
+	$current_locale = get_locale();
+	if( !empty( $current_locale ) ) {
+		$moFile = dirname(__FILE__) . "/lang/earth-hour-" . $current_locale . ".mo";
+		if(@file_exists($moFile) && is_readable($moFile)) load_textdomain( 'earth-hour' , $moFile );
+	}
+	
 	$settings = get_option( unserialize( 'bnc_earth_hour' ) );
 	if ( $settings) {
 		$earth_hour_settings = $settings;

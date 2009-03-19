@@ -1,0 +1,76 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/earth-hour\n"
+"POT-Creation-Date: 2009-03-19 03:48+0000\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Green Computing Portal <admin@greencomputingportal.de>\n"
+"Language-Team: Green Computing Portal <admin@greencomputingportal.de>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+
+#: earth-hour.php:61
+#, php-format
+msgid "One of %s websites proudly supporting <a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth Hour</a>. "
+msgstr "Dies ist eine von %s Webseiten, die die <a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth Hour</a> unterstütze. "
+
+#: earth-hour.php:62
+msgid "On WordPress? Get the <a href=\"http://wordpress.org/extend/plugins/earth-hour/\" rel=\"nofollow\">plugin</a>."
+msgstr "Sie benutzen WordPress? Holen Sie sich das <a href=\"http://wordpress.org/extend/plugins/earth-hour/\" rel=\"nofollow\">Plugin</a>."
+
+#: earth-hour.php:65
+#, php-format
+msgid "<a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth Hour</a> begins in %d days, %d hours, and %d minutes"
+msgstr "Die <a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth Hour</a> beginnt in %d Tagen, %d Stunden, und %d Minuten"
+
+#: html/message.php:10
+msgid "Proudly Supporting Earth Hour"
+msgstr "Stolzer Unterstützer der Earth Hour"
+
+#: html/message.php:16
+#, php-format
+msgid "%s is currently participating in"
+msgstr "%s nimmt momentan teil an"
+
+#: html/message.php:17
+#, php-format
+msgid "There are currently %d other WordPress sites supporting this cause."
+msgstr "Zur Zeit unterstützen %d andere WordPress-Seiten die Earth Hour."
+
+#: html/message.php:18
+msgid "If you'd like to join us, download the <br /><a href=\"http://www.bravenewcode.com/earth-hour/\">WordPress Earth Hour plugin</a>"
+msgstr "Wenn Sie mitmachen wollen, dann laden Sie sich das <br /><a href=\"http://www.bravenewcode.com/earth-hour/\">WordPress Earth Hour Plugin</a> herunter."
+
+#: html/message.php:19
+#, php-format
+msgid "This website will be back online in %d minutes."
+msgstr "Diese Webseite wird in %d Minuten wieder erreichbar sein."
+
+#: html/options.php:5
+#, php-format
+msgid "There are currently %d WordPress sites using this plugin and supporting Earth Hour."
+msgstr "Zur Zeit benutzen %d andere WordPress-Seiten dieses Plugin und unterstützen die Earth Hour."
+
+#. Plugin Name of an extension
+msgid "Earth Hour"
+msgstr "Earth Hour"
+
+#. Plugin URI of an extension
+msgid "http://www.bravenewcode.com/earth-hour/"
+msgstr "http://www.bravenewcode.com/earth-hour/"
+
+#. Description of an extension
+msgid "Changing the world, one website at a time."
+msgstr "Die Welt zu verbessern, eine Webseite nach der anderen."
+
+#. Author of an extension
+msgid "Dale Mugford and Duane Storey"
+msgstr "Dale Mugford and Duane Storey"
+
+#. Author URI of an extension
+msgid "http://www.bravenewcode.com"
+msgstr "http://www.bravenewcode.com"
+
