@@ -33,4 +33,4 @@ So far, IE6+, Firefox, Opera, Safari, Camino, Shiira, Flock & more
 == Screenshots ==
 
 1. Earth Hour support message
-
+2. Banner message supporting Earth Hour
