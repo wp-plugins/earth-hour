@@ -56,14 +56,13 @@ function earth_hour_footer() {
 	if ( $time_until_earth_hour > 0 ) {
 		if ( !earth_hour_is_active() ) {
 			echo "<div id=\"bnc_earth_hour\">";
-
-			echo "<img src=\"" . get_bloginfo('wpurl') . "/wp-content/plugins/earth-hour/images/earth.png\" />";
+			echo "<a id=\"banner\" href=\"http://www.earthhour.org\" rel=\"nofollow\"></a>";
 			echo "<div id=\"inner\">";
-			$msg = sprintf( __( "One of %s websites proudly supporting <a href=\"http://www.earthhour.org/\" rel=\"nofollow\">Earth Hour</a>. ", "earth-hour" ), number_format( $earth_hour_settings['last_count'] ) );
+			$msg = sprintf( __( "One of %s websites proudly supporting <a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth Hour</a>. ", "earth-hour" ), number_format( $earth_hour_settings['last_count'] ) );
 			$msg = $msg . __( "On WordPress? Get the <a href=\"http://wordpress.org/extend/plugins/earth-hour/\" rel=\"nofollow\">plugin</a>.", "earth-hour" );	
 			echo $msg;	
 			
-			$msg2 = sprintf( __( "<a href=\"http://earthhour.org\" rel=\"nofollow\">Earth Hour</a> begins in %d days, %d hours, and %d minutes", "earth-hour" ), 
+			$msg2 = sprintf( __( "<a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth Hour</a> begins in %d days, %d hours, and %d minutes", "earth-hour" ), 
 				$time_until_earth_hour / (24*3600), 
 				($time_until_earth_hour % (24*3600))/3600,
 				(($time_until_earth_hour % (24*3600)) % 3600)/60
