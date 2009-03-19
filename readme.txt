@@ -22,7 +22,7 @@ Please visit http://www.bravenewcode.com/earth-hour/ for a full description & up
 = Version 1.1.0 =
 
 * Added Romanian translation (thanks to Dragos Apostu)
-* Added Hungarian translation (thanks to Björn Ahrens)
+* Added Hungarian translation (thanks to Zsolt Kis)
 * Added Portugeuse/BR translation (thanks to Allan Christian)
 * Added Portugeuse/PT translation (thanks to João Pedro Pereira)
 
