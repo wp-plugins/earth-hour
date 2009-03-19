@@ -1,8 +1,3 @@
-/* @override 
-	http://syndromex.me/wp-content/plugins/earth-hour/css/earth-hour.css
-	http://www.bravenewcode.com/wp-content/plugins/earth-hour/css/earth-hour.css
-*/
-
 #bnc_earth_hour {
 	position: fixed;
 	top: 0px;
@@ -37,14 +32,13 @@
 #bnc_earth_hour a#banner {
 	height: 20px;
 	background: url(../images/banner-earth.png) no-repeat 0 -1px;
-	position: absolute;
 	top: 2px;
 	left: 2px;
 	width: 170px;
 	text-align: left;
-	padding-left: 25px;
 	font-weight: bold;
 	color: #706b64;
+	position: absolute;
 }
 
 #bnc_earth_hour a#banner:hover {
