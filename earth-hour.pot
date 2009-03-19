@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/earth-hour\n"
-"POT-Creation-Date: 2009-03-18 21:37+0000\n"
+"POT-Creation-Date: 2009-03-19 03:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,21 +16,56 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: earth-hour.php:56
+#: earth-hour.php:61
 #, php-format
 msgid ""
-"One of %s websites supporting <a href=\"http://www.earthhour.org/\" rel="
-"\"nofollow\">Earth Hour</a>. "
+"One of %s websites proudly supporting <a href=\"http://www.bravenewcode.com/"
+"earth-hour/\" rel=\"nofollow\">Earth Hour</a>. "
 msgstr ""
 
-#: earth-hour.php:57
+#: earth-hour.php:62
 msgid ""
 "On WordPress? Get the <a href=\"http://wordpress.org/extend/plugins/earth-"
 "hour/\" rel=\"nofollow\">plugin</a>."
 msgstr ""
 
-#: html/message.php:9
+#: earth-hour.php:65
+#, php-format
+msgid ""
+"<a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth "
+"Hour</a> begins in %d days, %d hours, and %d minutes"
+msgstr ""
+
+#: html/message.php:10
 msgid "Proudly Supporting Earth Hour"
+msgstr ""
+
+#: html/message.php:16
+#, php-format
+msgid "%s is currently participating in"
+msgstr ""
+
+#: html/message.php:17
+#, php-format
+msgid "There are currently %d other WordPress sites supporting this cause."
+msgstr ""
+
+#: html/message.php:18
+msgid ""
+"If you'd like to join us, download the <br /><a href=\"http://www."
+"bravenewcode.com/earth-hour/\">WordPress Earth Hour plugin</a>"
+msgstr ""
+
+#: html/message.php:19
+#, php-format
+msgid "This website will be back online in %d minutes."
+msgstr ""
+
+#: html/options.php:5
+#, php-format
+msgid ""
+"There are currently %d WordPress sites using this plugin and supporting "
+"Earth Hour."
 msgstr ""
 
 #. Plugin Name of an extension
