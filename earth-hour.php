@@ -6,6 +6,7 @@ Description: Changing the world, one website at a time.
 Author: Dale Mugford and Duane Storey
 Version: 1.0.3
 Author URI: http://www.bravenewcode.com
+Text Domain: earth-hour
 */
 
 add_action( 'init', 'earth_hour_init' );
