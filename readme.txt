@@ -3,7 +3,7 @@ Contributors: BraveNewCode
 Tags: earth hour, environment, bravenewcode 
 Requires at least: 2.7
 Tested up to: 2.7.1
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 
 Earth Hour is a WordPress plugin that will temporarily disable a blog during Earth Hour to show support for the initiative and the environment.  
 
@@ -26,7 +26,7 @@ installation instructions.
 
 == Frequently Asked Questions ==
 
-= What Browsers Are Supported =
+= What Browsers Are Supported? =
 
 So far, IE6+, Firefox, Opera, Safari, Camino, Shiira, Flock & more
 
