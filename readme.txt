@@ -17,7 +17,7 @@ Please visit http://www.bravenewcode.com/earth-hour/ for a full description & up
 
 = Version 1.0.2 =
 
-First release!  
+* First release!  
 
 == Installation ==
 
@@ -28,11 +28,11 @@ installation instructions.
 
 = What Browsers Are Supported? =
 
-So far, IE6+, Firefox, Opera, Safari, Camino, Shiira, Flock & more
+* So far, IE6+, Firefox, Opera, Safari, Camino, Shiira, Flock & more
 
 = Can I Help Translate Earth Hour =
 
-Sure! We've included the .POT file in the package.  Please translate it and email it to use at support@bravenewcode.com.  
+* Sure! We've included the .POT file in the package.  Please translate it and email it to use at support@bravenewcode.com.  
 
 == Screenshots ==
 
