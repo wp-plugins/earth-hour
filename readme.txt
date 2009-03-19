@@ -1,6 +1,6 @@
 === Plugin Name ===
 Contributors: BraveNewCode
-Tags: earth hour, environment, bravenewcode 
+Tags: environment, bravenewcode, voteearth, earthhour
 Requires at least: 2.7
 Tested up to: 2.7.1
 Stable tag: 1.0.3
