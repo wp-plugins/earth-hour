@@ -30,6 +30,10 @@ installation instructions.
 
 So far, IE6+, Firefox, Opera, Safari, Camino, Shiira, Flock & more
 
+= Can I Help Translate Earth Hour =
+
+Sure! We've included the .POT file in the package.  Please translate it and email it to use at support@bravenewcode.com.  
+
 == Screenshots ==
 
 1. Earth Hour support message
