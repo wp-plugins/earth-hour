@@ -42,6 +42,10 @@ installation instructions.
 
 * Sure! We've included the .POT file in the package.  Please translate it and email it to use at support@bravenewcode.com.  
 
+= Why Doesn't The Banner Show Up On My Site? =
+
+* It's most likely because your theme doesn't have a wp_footer tag.  Try adding that to your theme.
+
 == Screenshots ==
 
 1. Earth Hour support message
