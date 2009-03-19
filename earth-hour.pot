@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/earth-hour\n"
-"POT-Creation-Date: 2009-03-19 03:48+0000\n"
+"POT-Creation-Date: 2009-03-19 06:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,20 +16,20 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: earth-hour.php:61
+#: earth-hour.php:62
 #, php-format
 msgid ""
 "One of %s websites proudly supporting <a href=\"http://www.bravenewcode.com/"
 "earth-hour/\" rel=\"nofollow\">Earth Hour</a>. "
 msgstr ""
 
-#: earth-hour.php:62
+#: earth-hour.php:63
 msgid ""
 "On WordPress? Get the <a href=\"http://wordpress.org/extend/plugins/earth-"
 "hour/\" rel=\"nofollow\">plugin</a>."
 msgstr ""
 
-#: earth-hour.php:65
+#: earth-hour.php:66
 #, php-format
 msgid ""
 "<a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth "
@@ -72,18 +72,3 @@ msgstr ""
 msgid "Earth Hour"
 msgstr ""
 
-#. Plugin URI of an extension
-msgid "http://www.bravenewcode.com/earth-hour/"
-msgstr ""
-
-#. Description of an extension
-msgid "Changing the world, one website at a time."
-msgstr ""
-
-#. Author of an extension
-msgid "Dale Mugford and Duane Storey"
-msgstr ""
-
-#. Author URI of an extension
-msgid "http://www.bravenewcode.com"
-msgstr ""
