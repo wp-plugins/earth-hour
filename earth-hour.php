@@ -4,7 +4,7 @@ Plugin Name: Earth Hour
 Plugin URI: http://www.bravenewcode.com/earth-hour/
 Description: Changing the world, one website at a time.
 Author: Dale Mugford and Duane Storey
-Version: 1.0.8
+Version: 1.0.9
 Author URI: http://www.bravenewcode.com
 Text Domain: earth-hour
 */
@@ -57,8 +57,9 @@ function earth_hour_footer() {
 	if ( $time_until_earth_hour > 0 ) {
 		if ( !earth_hour_is_active() ) {
 			echo "<div id=\"bnc_earth_hour\">";
-			echo "<a id=\"banner\" href=\"http://www.earthhour.org\" rel=\"nofollow\"></a>";
-			echo "<div id=\"inner\">";
+			echo "<a id=\"banner\" href=\"http://www.earthhour.org\" rel=\"nofollow\">";
+			echo __( "Visit the Earth Hour Website", "earth-hour" );
+			echo "</a><div id=\"inner\">";
 			$msg = sprintf( __( "One of %s websites proudly supporting <a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth Hour</a>. ", "earth-hour" ), number_format( $earth_hour_settings['last_count'] ) );
 			$msg = $msg . __( "On WordPress? Get the <a href=\"http://wordpress.org/extend/plugins/earth-hour/\" rel=\"nofollow\">plugin</a>.", "earth-hour" );	
 			echo $msg;	
