@@ -4,7 +4,7 @@ Plugin Name: Earth Hour
 Plugin URI: http://www.bravenewcode.com/earth-hour/
 Description: Changing the world, one website at a time.
 Author: Dale Mugford and Duane Storey
-Version: 1.0.5
+Version: 1.0.7
 Author URI: http://www.bravenewcode.com
 Text Domain: earth-hour
 */
@@ -161,4 +161,3 @@ function earth_hour_add_plugin_option() {
 }
 
 //add_action( 'admin_menu', 'earth_hour_add_plugin_option');
-
