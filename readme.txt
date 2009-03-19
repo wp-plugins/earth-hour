@@ -19,10 +19,6 @@ Please visit http://www.bravenewcode.com/earth-hour/ for a full description & up
 
 First release!  
 
-= Version 1.0.0 =
-
-Beta version -- please don't download yet.
-
 == Installation ==
 
 Please visit http://www.bravenewcode.com/earth-hour/ for comprehensive
