@@ -53,27 +53,25 @@ function earth_hour_footer() {
 	global $earth_hour_settings;
 	global $time_until_earth_hour;
 		
-	if ( !earth_hour_is_active() ) {
-		echo "<div id=\"bnc_earth_hour\"><div id=\"inner\">";
-		$msg = sprintf( __( "One of %s websites proudly supporting <a href=\"http://www.earthhour.org/\" rel=\"nofollow\">Earth Hour</a>. ", "earth-hour" ), number_format( $earth_hour_settings['last_count'] ) );
-		$msg = $msg . __( "On WordPress? Get the <a href=\"http://wordpress.org/extend/plugins/earth-hour/\" rel=\"nofollow\">plugin</a>.", "earth-hour" );	
-		echo $msg;	
-		
-		$msg2 = sprintf( __( "<a href=\"http://earthhour.org\" rel=\"nofollow\">Earth Hour</a> begins in %d days, %d hours, and %d minutes", "earth-hour" ), 
-			$time_until_earth_hour / (24*3600), 
-			($time_until_earth_hour % (24*3600))/3600,
-			(($time_until_earth_hour % (24*3600)) % 3600)/60
-		);
-		echo "</div></div>";
-		echo '<script type="text/javascript">var eh_msg_1 = \'' . $msg . '\';var eh_msg_2 = \'' .$msg2 . '\';</script>';
+	if ( $time_until_earth_hour > 0 ) {
+		if ( !earth_hour_is_active() ) {
+			echo "<div id=\"bnc_earth_hour\">";
 
-	}	
-}
-
-function earth_hour_settings() {
-	global $earth_hour_settings;
-	
-	return $earth_hour_settings;
+			echo "<img src=\"" . get_bloginfo('wpurl') . "/wp-content/plugins/earth-hour/images/earth.png\" />";
+			echo "<div id=\"inner\">";
+			$msg = sprintf( __( "One of %s websites proudly supporting <a href=\"http://www.earthhour.org/\" rel=\"nofollow\">Earth Hour</a>. ", "earth-hour" ), number_format( $earth_hour_settings['last_count'] ) );
+			$msg = $msg . __( "On WordPress? Get the <a href=\"http://wordpress.org/extend/plugins/earth-hour/\" rel=\"nofollow\">plugin</a>.", "earth-hour" );	
+			echo $msg;	
+			
+			$msg2 = sprintf( __( "<a href=\"http://earthhour.org\" rel=\"nofollow\">Earth Hour</a> begins in %d days, %d hours, and %d minutes", "earth-hour" ), 
+				$time_until_earth_hour / (24*3600), 
+				($time_until_earth_hour % (24*3600))/3600,
+				(($time_until_earth_hour % (24*3600)) % 3600)/60
+			);
+			echo "</div></div>";
+			echo '<script type="text/javascript">var eh_msg_1 = \'' . $msg . '\';var eh_msg_2 = \'' .$msg2 . '\';</script>';
+		}	
+	}
 }
 
 function earth_hour_update_settings() {
@@ -100,6 +98,8 @@ function earth_hour_init() {
    	if ( $snoopy->fetch('http://earthhour.bravenewclients.com/?count=1') ) {	
    		$earth_hour_settings['last_count'] = $snoopy->results;
    		$earth_hour_settings['last_count_time'] = time();
+   		
+   		earth_hour_update_settings();
    	}
 	}
 	
@@ -108,6 +108,9 @@ function earth_hour_init() {
 	
 	// adjust for local time
 	$adjusted_time = time() + get_option('gmt_offset')*60*60;	
+	
+	//$adjusted_time = $start_time + 300;
+	
 	$in_earth_hour = ($adjusted_time >= $start_time && $adjusted_time <= $end_time);
 	
 	global $time_until_earth_hour;
@@ -122,6 +125,9 @@ function earth_hour_init() {
 		
 		// let people hit the admin panel
 		if ( strpos( $_SERVER["REQUEST_URI"], "/wp-admin/" ) === false && strpos( $_SERVER["REQUEST_URI"], "wp-login.php" ) === false ) {
+			global $earth_hour_minutes;
+			$earth_hour_minutes = ($end_time - $adjusted_time)/60;
+			
 			include( 'html/message.php' );
 			die;
 		}
@@ -148,5 +154,5 @@ function earth_hour_add_plugin_option() {
    }
 }
 
-add_action( 'admin_menu', 'earth_hour_add_plugin_option');
+//add_action( 'admin_menu', 'earth_hour_add_plugin_option');
 

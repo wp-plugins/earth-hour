@@ -1,31 +1,38 @@
+/* @override http://syndromex.me/wp-content/plugins/earth-hour/css/earth-hour.css */
+
 #bnc_earth_hour {
 	position: fixed;
 	top: 0px;
 	right: 0px;
 	background: #320;
 	opacity: 1;	
-	color: #fff;
+	color: #e3daa3;
 	width: 100%;
-	font-family: "Lucida Grande";
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
 	font-size: 10px;
-	padding-top: 3px;
-	padding-bottom: 3px;
 	text-align: right;
-	padding-right: 10px;
-	border-bottom: 1px solid #555;
-	height: 13px;
+	border-bottom: 1px solid #5a3716;
+	height: 28px;
+	z-index: 10;
+}
+
+#bnc_earth_hour img {
+	float: left;
+	padding-left: 7px;
+	padding-top: 2px;
 }
 
 #bnc_earth_hour #inner {
-	
+	padding-top: 7px;
+	padding-right: 10px;
 }
 
 #bnc_earth_hour #inner a {
-	color: #8f8;
+	color: #52dd62;
 	text-decoration: none;
 	font-weight: normal;
 }
 
 #bnc_earth_hour #inner a:hover {
-	color: #cfc;
+	color: #a4d5ed;
 }
