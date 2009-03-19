@@ -15,7 +15,7 @@ msgstr ""
 #: earth-hour.php:61
 #, php-format
 msgid "One of %s websites proudly supporting <a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth Hour</a>. "
-msgstr "Dies ist eine von %s Webseiten, die die <a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth Hour</a> unterstütze. "
+msgstr "Dies ist eine von %s Webseiten, die <a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth Hour</a> unterstützen. "
 
 #: earth-hour.php:62
 msgid "On WordPress? Get the <a href=\"http://wordpress.org/extend/plugins/earth-hour/\" rel=\"nofollow\">plugin</a>."
