@@ -23,7 +23,7 @@ msgstr "Látogass el a Föld Órája honlapra"
 msgid "One of %s website proudly supporting <a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth Hour</a>. "
 msgid_plural "One of %s websites proudly supporting <a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth Hour</a>. "
 msgstr[0] "Ez egyike annak a %s honlapnak, amely támogatja a <a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Föld Órája</a> kezdeményezést. "
-msgstr[1] "Ez egyike azoknak a %s honlapoknak, melyek támogatják a <a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Föld Órája</a> kezdeményezést. "
+msgstr[1] "Ez egyike annak a %s honlapnak, amelyek támogatják a <a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Föld Órája</a> kezdeményezést. "
 
 #: earth-hour.php:72
 msgid "On WordPress? Get the <a href=\"http://wordpress.org/extend/plugins/earth-hour/\" rel=\"nofollow\">plugin</a>."
