@@ -60,14 +60,24 @@ function earth_hour_footer() {
 			echo "<a id=\"banner\" href=\"http://www.earthhour.org\" rel=\"nofollow\">";
 			echo __( "Visit the Earth Hour Website", "earth-hour" );
 			echo "</a><div id=\"inner\">";
-			$msg = sprintf( __( "One of %s websites proudly supporting <a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth Hour</a>. ", "earth-hour" ), number_format( $earth_hour_settings['last_count'] ) );
+			$msg = sprintf( 
+				__ngettext( 
+					"One of %s website proudly supporting <a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth Hour</a>. ", 
+					"One of %s websites proudly supporting <a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth Hour</a>. ",
+					$earth_hour_settings['last_count'],
+					"earth-hour"
+				),
+				number_format( $earth_hour_settings['last_count'] ) 
+			);
 			$msg = $msg . __( "On WordPress? Get the <a href=\"http://wordpress.org/extend/plugins/earth-hour/\" rel=\"nofollow\">plugin</a>.", "earth-hour" );	
 			echo $msg;	
 			
-			$msg2 = sprintf( __( "<a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth Hour</a> begins in %d days, %d hours, and %d minutes", "earth-hour" ), 
-				$time_until_earth_hour / (24*3600), 
-				($time_until_earth_hour % (24*3600))/3600,
-				(($time_until_earth_hour % (24*3600)) % 3600)/60
+			$days = sprintf( __ngettext( "%d day", "%d days", $time_until_earth_hour / (24*3600) ),  $time_until_earth_hour / (24*3600), "earth-hour" );
+			$hours = sprintf( __ngettext( "%d hour", "%d hours", ($time_until_earth_hour % (24*3600))/3600 ),  ($time_until_earth_hour % (24*3600))/3600, "earth-hour" );
+			$mins = sprintf( __ngettext( "%d minute", "%d minutes", (($time_until_earth_hour % (24*3600)) % 3600)/60),  (($time_until_earth_hour % (24*3600)) % 3600)/60, "earth-hour" );
+	 
+			$msg2 = sprintf( __( "<a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth Hour</a> begins in %1\$s, %2\$s, and %3\$s", "earth-hour" ), 
+				$days, $hours, $mins
 			);
 			echo "</div></div>";
 			echo '<script type="text/javascript">var eh_msg_1 = \'' . $msg . '\';var eh_msg_2 = \'' .$msg2 . '\';</script>';

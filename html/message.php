@@ -14,9 +14,9 @@
 		<div id="page">
 			<div id="content">
 				<h2><?php echo sprintf( __( "%s is currently participating in", "earth-hour" ), get_bloginfo('name') ); ?></h2>
-				<p id="duane"><?php echo sprintf( __( "There are currently %d other WordPress sites supporting this cause.", "earth-hour"), $count); ?></p>
+				<p id="duane"><?php echo sprintf( __ngettext( "There is currently %d other WordPress site supporting this cause.",  "There are currently %d other WordPress sites supporting this cause.", $count, "earth-hour"), $count); ?></p>
 				<p id="chloe"><?php echo __( "If you'd like to join us, download the <br /><a href=\"http://www.bravenewcode.com/earth-hour/\">WordPress Earth Hour plugin</a>", "earth-hour" ) ?></p>
-				<p id="dale"><?php echo sprintf( __( "This website will be back online in %d minutes.", "earth-hour" ), $earth_hour_minutes ); ?></p>
+				<p id="dale"><?php echo sprintf( __ngettext( "This website will be back online in %d minute.", "This website will be back online in %d minutes.", $earth_hour_minutes, "earth-hour" ), $earth_hour_minutes ); ?></p>
 			</div>
 		</div>
 	</body>
