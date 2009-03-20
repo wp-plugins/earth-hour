@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/earth-hour\n"
-"POT-Creation-Date: 2009-03-19 03:48+0000\n"
+"POT-Creation-Date: 2009-03-19 16:10+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Green Computing Portal <admin@greencomputingportal.de>\n"
 "Language-Team: Green Computing Portal <admin@greencomputingportal.de>\n"
@@ -13,15 +13,19 @@ msgstr ""
 "X-Poedit-Country: GERMANY\n"
 
 #: earth-hour.php:61
+msgid "Visit the Earth Hour Website"
+msgstr "Earth Hour Webseite öffnen"
+
+#: earth-hour.php:63
 #, php-format
 msgid "One of %s websites proudly supporting <a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth Hour</a>. "
 msgstr "Dies ist eine von %s Webseiten, die <a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth Hour</a> unterstützen. "
 
-#: earth-hour.php:62
+#: earth-hour.php:64
 msgid "On WordPress? Get the <a href=\"http://wordpress.org/extend/plugins/earth-hour/\" rel=\"nofollow\">plugin</a>."
 msgstr "Sie benutzen WordPress? Holen Sie sich das <a href=\"http://wordpress.org/extend/plugins/earth-hour/\" rel=\"nofollow\">Plugin</a>."
 
-#: earth-hour.php:65
+#: earth-hour.php:67
 #, php-format
 msgid "<a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth Hour</a> begins in %d days, %d hours, and %d minutes"
 msgstr "Die <a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth Hour</a> beginnt in %d Tagen, %d Stunden, und %d Minuten"
