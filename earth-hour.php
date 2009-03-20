@@ -53,9 +53,14 @@ function earth_hour_head() {
 function earth_hour_footer() {
 	global $earth_hour_settings;
 	global $time_until_earth_hour;
+
+	$on_iphone = false;
+	if ( function_exists( 'bnc_is_iphone' ) ) {
+		$on_iphone = bnc_is_iphone();
+	}
 		
 	if ( $time_until_earth_hour > 0 ) {
-		if ( !earth_hour_is_active() ) {
+		if ( !earth_hour_is_active() && !$on_iphone ) {
 			echo "<div id=\"bnc_earth_hour\">";
 			echo "<a id=\"banner\" href=\"http://www.earthhour.org\" rel=\"nofollow\">";
 			echo __( "Visit the Earth Hour Website", "earth-hour" );
