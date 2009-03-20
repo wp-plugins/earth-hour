@@ -46,8 +46,15 @@ function earth_hour_is_active() {
 }
 
 function earth_hour_head() {
-	echo "<link rel=\"stylesheet\" type=\"text/css\" media=\"screen\" href=\"" . get_bloginfo('wpurl') . "/wp-content/plugins/earth-hour/css/earth-hour.css\"></link>";
-	echo "<script type=\"text/javascript\" src=\"" . get_bloginfo('wpurl') . "/wp-content/plugins/earth-hour/js/earth-hour.js\"></script>";
+        $on_iphone = false;
+        if ( function_exists( 'bnc_is_iphone' ) ) {
+                $on_iphone = bnc_is_iphone();
+        }
+
+	if ( !$on_iphone ) {
+		echo "<link rel=\"stylesheet\" type=\"text/css\" media=\"screen\" href=\"" . get_bloginfo('wpurl') . "/wp-content/plugins/earth-hour/css/earth-hour.css\"></link>";
+		echo "<script type=\"text/javascript\" src=\"" . get_bloginfo('wpurl') . "/wp-content/plugins/earth-hour/js/earth-hour.js\"></script>";
+	}
 }
 
 function earth_hour_footer() {
@@ -161,9 +168,15 @@ function earth_hour_init() {
 			earth_hour_update_settings();
 		}
 	}
-	
-	wp_enqueue_script( 'jquery' );
+       
+	$on_iphone = false;
+        if ( function_exists( 'bnc_is_iphone' ) ) {
+                $on_iphone = bnc_is_iphone();
+        }
 
+	if ( !$on_iphone ) {	
+		wp_enqueue_script( 'jquery' );
+	}
 }
 
 function earth_hour_options_subpanel() {
