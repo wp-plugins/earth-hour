@@ -15,6 +15,10 @@ Please visit http://www.bravenewcode.com/earth-hour/ for a full description & up
 
 == What's New ==
 
+= Version 1.1.6 =
+
+* Fixed style issues in some situations regarding the banner
+
 = Version 1.1.5 =
 
 * Disabled banner on WPtouch sites
