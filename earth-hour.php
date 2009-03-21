@@ -4,7 +4,7 @@ Plugin Name: Earth Hour
 Plugin URI: http://www.bravenewcode.com/earth-hour/
 Description: Changing the world, one website at a time.
 Author: Dale Mugford and Duane Storey
-Version: 1.1.7
+Version: 1.1.8
 Author URI: http://www.bravenewcode.com
 Text Domain: earth-hour
 */
@@ -138,7 +138,7 @@ function earth_hour_init() {
 	$adjusted_time = time() + get_option('gmt_offset')*60*60;	
 	//$adjusted_time = time();
 	
-	//$adjusted_time = $start_time + 300;
+//	$adjusted_time = $start_time + 300;
 	
 	$in_earth_hour = ($adjusted_time >= $start_time && $adjusted_time <= $end_time);
 	

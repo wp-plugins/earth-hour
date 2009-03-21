@@ -1,20 +1,22 @@
-# translation of Earth.
+# Chinese/Simplified translation of PACKAGE.
 # Copyright (C) 2009 Dale Mugford and Duane Storey
-# This file is distributed under the same license as the Earth package.
+# This file is distributed under the same license as the PACKAGE package.
 # Jonathan Lumb <jonolumb@gmail.com>, 2009.
+# , fuzzy
 # 
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Earth Hour\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/earth-hour\n"
 "POT-Creation-Date: 2009-03-20 16:37+0000\n"
-"PO-Revision-Date: 2009-03-21 11:03+0800\n"
+"PO-Revision-Date: 2009-03-21 13:16+0800\n"
 "Last-Translator: Jonathan Lumb <jonolumb@gmail.com>\n"
 "Language-Team: Chinese/Simplified\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;"
 
 #: earth-hour.php:61
 msgid "Visit the Earth Hour Website"
@@ -22,32 +24,48 @@ msgstr "访问“地球一小时”网站"
 
 #: earth-hour.php:65
 #, php-format
-msgid "One of %s website proudly supporting <a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth Hour</a>. "
-msgstr "作为“地球一小时”活动%s个参与者之一，本网站为此而感到自豪"
+msgid ""
+"One of %s website proudly supporting <a href=\"http://www.bravenewcode.com/"
+"earth-hour/\" rel=\"nofollow\">Earth Hour</a>. "
+msgid_plural ""
+"One of %s websites proudly supporting <a href=\"http://www.bravenewcode.com/"
+"earth-hour/\" rel=\"nofollow\">Earth Hour</a>. "
+msgstr[0] "作为“地球一小时”活动%s个参与者之一，本网站为此而感到自豪"
+msgstr[1] "作为“地球一小时”活动%s个参与者之一，本网站为此而感到自豪"
 
 #: earth-hour.php:72
-msgid "On WordPress? Get the <a href=\"http://wordpress.org/extend/plugins/earth-hour/\" rel=\"nofollow\">plugin</a>."
-msgstr "您使用Wordpress平台吗？请下载<a href=\"http://wordpress.org/extend/plugins/earth-hour/\" rel=\"nofollow\">此插件</a>."
+msgid ""
+"On WordPress? Get the <a href=\"http://wordpress.org/extend/plugins/earth-"
+"hour/\" rel=\"nofollow\">plugin</a>."
+msgstr "您使用Wordpress平台吗？请下载<a href=\\"http://wordpress.org/extend/plugins/earth-hour/\\" rel=\\"nofollow\\">此插件</a>."
 
 #: earth-hour.php:75
 #, php-format
 msgid "%d day"
-msgstr "%d天"
+msgid_plural "%d days"
+msgstr[0] "%d天"
+msgstr[1] "%d天"
 
 #: earth-hour.php:76
 #, php-format
 msgid "%d hour"
-msgstr "%d小时"
+msgid_plural "%d hours"
+msgstr[0] "%d小时"
+msgstr[1] "%d小时"
 
 #: earth-hour.php:77
 #, php-format
 msgid "%d minute"
-msgstr "%d分钟"
+msgid_plural "%d minutes"
+msgstr[0] "%d分钟"
+msgstr[1] "%d分钟"
 
 #: earth-hour.php:79
 #, php-format
-msgid "<a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth Hour</a> begins in %1$s, %2$s, and %3$s"
-msgstr "<a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">“地球一小时”活动</a>将于%1$s%2$s%3$s开始"
+msgid ""
+"<a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth "
+"Hour</a> begins in %1$s, %2$s, and %3$s"
+msgstr "<a href=\\"http://www.bravenewcode.com/earth-hour/\\" rel=\\"nofollow\\">“地球一小时”活动</a>将于%1$s%2$s%3$s开始"
 
 #: html/message.php:10
 msgid "Proudly Supporting Earth Hour"
@@ -61,20 +79,27 @@ msgstr "%s 正在参与"
 #: html/message.php:17
 #, php-format
 msgid "There is currently %d other WordPress site supporting this cause."
+"There are currently %d other WordPress sites supporting this cause."
 msgstr "目前有%d个基于Wordpress的网站正在参与“地球一小时”活动"
 
 #: html/message.php:18
-msgid "If you'd like to join us, download the <br /><a href=\"http://www.bravenewcode.com/earth-hour/\">WordPress Earth Hour plugin</a>"
-msgstr "如果您想参加此活动，请下载<br /><a href=\"http://www.bravenewcode.com/earth-hour/\">WordPress “地球一小时”插件</a>"
+msgid ""
+"If you'd like to join us, download the <br /><a href=\"http://www."
+"bravenewcode.com/earth-hour/\">WordPress Earth Hour plugin</a>"
+msgstr "如果您想参加此活动，请下载<br /><a href=\\"http://www.bravenewcode.com/earth-hour/\\">WordPress “地球一小时”插件</a>"
 
 #: html/message.php:19
 #, php-format
 msgid "This website will be back online in %d minute."
-msgstr "此网站将在%d分钟后恢复正常"
+msgid_plural "This website will be back online in %d minutes."
+msgstr[0] "此网站将在%d分钟后恢复正常"
+msgstr[1] "此网站将在%d分钟后恢复正常"
 
 #: html/options.php:5
 #, php-format
-msgid "There are currently %d WordPress sites using this plugin and supporting Earth Hour."
+msgid ""
+"There are currently %d WordPress sites using this plugin and supporting "
+"Earth Hour."
 msgstr "目前有%d个基于Wordpress的网站正在参与“地球一小时”活动"
 
 #. Plugin Name of an extension
