@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: EarthHourRus1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/earth-hour\n"
 "POT-Creation-Date: 2009-03-20 16:37+0000\n"
-"PO-Revision-Date: 2009-03-20 22:25+0300\n"
+"PO-Revision-Date: 2009-03-21 03:37+0300\n"
 "Last-Translator: non4bidden <non4bidden@yahoo.com>\n"
 "Language-Team: non4bidden <non4bidden@yahoo.com>\n"
 "MIME-Version: 1.0\n"
@@ -62,7 +62,7 @@ msgstr[2] "%d минут"
 #: earth-hour.php:79
 #, php-format
 msgid "<a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth Hour</a> begins in %1$s, %2$s, and %3$s"
-msgstr "<a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Час Земли</a> начнется через %1$, %2$, и %3$"
+msgstr "<a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Час Земли</a> начнется через %1$s, %2$s, и %3$s"
 
 #: html/message.php:10
 msgid "Proudly Supporting Earth Hour"
