@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Föld Órája (Earth Hour) magyar fordítás\n"
+"Project-Id-Version: Föld Órája (Earth Hour) magyar fordítás v1.0.5\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/earth-hour\n"
 "POT-Creation-Date: 2009-03-20 16:37+0000\n"
 "PO-Revision-Date: \n"
@@ -9,14 +9,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Poedit-Language: Hungarian\n"
 "X-Poedit-Country: HUNGARY\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
 #: earth-hour.php:61
 msgid "Visit the Earth Hour Website"
-msgstr "Látogass el a Föld Órája honlapra"
+msgstr "A Föld Órája honlap"
 
 #: earth-hour.php:65
 #, php-format
@@ -53,7 +53,7 @@ msgstr[1] "%d perc"
 #: earth-hour.php:79
 #, php-format
 msgid "<a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth Hour</a> begins in %1$s, %2$s, and %3$s"
-msgstr "A <a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Föld Órája (Earth Hour)</a> %1$s, %2$s, és %3$s perc múlva kezdődik"
+msgstr "A <a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Föld Órája (Earth Hour)</a> %1$s, %2$s, és %3$s múlva kezdődik"
 
 #: html/message.php:10
 msgid "Proudly Supporting Earth Hour"
@@ -85,7 +85,7 @@ msgstr[1] "Ez a honlap %d perc múlva ismét online lesz."
 #: html/options.php:5
 #, php-format
 msgid "There are currently %d WordPress sites using this plugin and supporting Earth Hour."
-msgstr "Jelenleg összesen %d WordPress oldal használja ezt a bővítményt és  támogatja a Föld Órája  (Earth Hour) kezdeményezést."
+msgstr "Jelenleg összesen %d WordPress oldal használja ezt a bővítményt és  támogatja a Föld Órája (Earth Hour) kezdeményezést."
 
 #. Plugin Name of an extension
 msgid "Earth Hour"
@@ -95,6 +95,8 @@ msgstr "Föld Órája"
 msgid "http://www.bravenewcode.com/earth-hour/"
 msgstr "http://www.bravenewcode.com/earth-hour/"
 
+# Na ez volt az a amondat, ami feladta a leckét. Ha tudsz jobbat helyette, légy szíves küldd el az email címemre: info@novamaxx.hu
+# Előre is köszönöm!
 #. Description of an extension
 msgid "Changing the world, one website at a time."
 msgstr "Változtassunk a Világon egy honlappal, még időben."
