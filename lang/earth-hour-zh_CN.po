@@ -1,36 +1,53 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Dale Mugford and Duane Storey
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# translation of Earth.
+# Copyright (C) 2009 Dale Mugford and Duane Storey
+# This file is distributed under the same license as the Earth package.
+# Jonathan Lumb <jonolumb@gmail.com>, 2009.
+# 
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Earth Hour\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/earth-hour\n"
-"POT-Creation-Date: 2009-03-19 06:07+0000\n"
-"PO-Revision-Date: 2009-03-19 20:55+0800\n"
+"POT-Creation-Date: 2009-03-20 16:37+0000\n"
+"PO-Revision-Date: 2009-03-21 11:03+0800\n"
 "Last-Translator: Jonathan Lumb <jonolumb@gmail.com>\n"
-"Language-Team: \n"
+"Language-Team: Chinese/Simplified\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Chinese\n"
-"X-Poedit-Country: CHINA\n"
-"X-Poedit-SourceCharset: utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit"
 
-#: earth-hour.php:62
+#: earth-hour.php:61
+msgid "Visit the Earth Hour Website"
+msgstr "访问“地球一小时”网站"
+
+#: earth-hour.php:65
 #, php-format
-msgid "One of %s websites proudly supporting <a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth Hour</a>. "
+msgid "One of %s website proudly supporting <a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth Hour</a>. "
 msgstr "作为“地球一小时”活动%s个参与者之一，本网站为此而感到自豪"
 
-#: earth-hour.php:63
+#: earth-hour.php:72
 msgid "On WordPress? Get the <a href=\"http://wordpress.org/extend/plugins/earth-hour/\" rel=\"nofollow\">plugin</a>."
 msgstr "您使用Wordpress平台吗？请下载<a href=\"http://wordpress.org/extend/plugins/earth-hour/\" rel=\"nofollow\">此插件</a>."
 
-#: earth-hour.php:66
+#: earth-hour.php:75
 #, php-format
-msgid "<a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth Hour</a> begins in %d days, %d hours, and %d minutes"
-msgstr "<a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">“地球一小时”活动</a>将在%d天%d小时%d分钟开始"
+msgid "%d day"
+msgstr "%d天"
+
+#: earth-hour.php:76
+#, php-format
+msgid "%d hour"
+msgstr "%d小时"
+
+#: earth-hour.php:77
+#, php-format
+msgid "%d minute"
+msgstr "%d分钟"
+
+#: earth-hour.php:79
+#, php-format
+msgid "<a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth Hour</a> begins in %1$s, %2$s, and %3$s"
+msgstr "<a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">“地球一小时”活动</a>将于%1$s%2$s%3$s开始"
 
 #: html/message.php:10
 msgid "Proudly Supporting Earth Hour"
@@ -43,8 +60,8 @@ msgstr "%s 正在参与"
 
 #: html/message.php:17
 #, php-format
-msgid "There are currently %d other WordPress sites supporting this cause."
-msgstr "目前还有其他%d个基于Wordpress的网站正在参与此活动"
+msgid "There is currently %d other WordPress site supporting this cause."
+msgstr "目前有%d个基于Wordpress的网站正在参与“地球一小时”活动"
 
 #: html/message.php:18
 msgid "If you'd like to join us, download the <br /><a href=\"http://www.bravenewcode.com/earth-hour/\">WordPress Earth Hour plugin</a>"
@@ -52,15 +69,31 @@ msgstr "如果您想参加此活动，请下载<br /><a href=\"http://www.braven
 
 #: html/message.php:19
 #, php-format
-msgid "This website will be back online in %d minutes."
+msgid "This website will be back online in %d minute."
 msgstr "此网站将在%d分钟后恢复正常"
 
 #: html/options.php:5
 #, php-format
 msgid "There are currently %d WordPress sites using this plugin and supporting Earth Hour."
-msgstr "目前有%d个基于 Wordpress 的网站正在使用此插件，支持“地球一小时”活动"
+msgstr "目前有%d个基于Wordpress的网站正在参与“地球一小时”活动"
 
 #. Plugin Name of an extension
 msgid "Earth Hour"
-msgstr "”地球一小时“活动"
+msgstr "地球一小时"
+
+#. Plugin URI of an extension
+msgid "http://www.bravenewcode.com/earth-hour/"
+msgstr "http://www.bravenewcode.com/earth-hour/"
+
+#. Description of an extension
+msgid "Changing the world, one website at a time."
+msgstr "改变世界，从一个一个网站做起"
+
+#. Author of an extension
+msgid "Dale Mugford and Duane Storey"
+msgstr "Dale Mugford 和 Duane Storey"
+
+#. Author URI of an extension
+msgid "http://www.bravenewcode.com"
+msgstr "http://www.bravenewcode.com"
 
