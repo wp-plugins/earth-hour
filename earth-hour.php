@@ -4,7 +4,7 @@ Plugin Name: Earth Hour
 Plugin URI: http://www.bravenewcode.com/earth-hour/
 Description: Changing the world, one website at a time.
 Author: Dale Mugford and Duane Storey
-Version: 1.2.0
+Version: 1.2.1
 Author URI: http://www.bravenewcode.com
 Text Domain: earth-hour
 */
@@ -46,6 +46,7 @@ function earth_hour_is_active() {
 }
 
 function earth_hour_head() {
+	/*
         $on_iphone = false;
         if ( function_exists( 'bnc_is_iphone' ) ) {
                 $on_iphone = bnc_is_iphone();
@@ -55,6 +56,7 @@ function earth_hour_head() {
 		echo "<link rel=\"stylesheet\" type=\"text/css\" media=\"screen\" href=\"" . get_bloginfo('wpurl') . "/wp-content/plugins/earth-hour/css/earth-hour.css\"></link>";
 		echo "<script type=\"text/javascript\" src=\"" . get_bloginfo('wpurl') . "/wp-content/plugins/earth-hour/js/earth-hour.js\"></script>";
 	}
+	*/
 }
 
 function earth_hour_footer() {
@@ -136,10 +138,6 @@ function earth_hour_init() {
 	
 	// adjust for local time
 	$adjusted_time = time() + get_option('gmt_offset')*60*60;	
-	//$adjusted_time = time();
-	
-//	$adjusted_time = $start_time + 300;
-	
 	$in_earth_hour = ($adjusted_time >= $start_time && $adjusted_time <= $end_time);
 	
 	global $time_until_earth_hour;
