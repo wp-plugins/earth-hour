@@ -28,7 +28,6 @@ Please visit http://www.bravenewcode.com/earth-hour/ for a full description & up
 * Added French translation (thanks to Daniel Lalonde)
 * Added Indonesian translation (thanks to Gilang Ramadhan)
 * Added Finish translation (thanks to AtteL)
-
 * Updated German translation
 
 = Version 1.1.8 =
