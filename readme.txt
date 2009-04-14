@@ -28,6 +28,7 @@ Please visit http://www.bravenewcode.com/earth-hour/ for a full description & up
 * Added French translation (thanks to Daniel Lalonde)
 * Added Indonesian translation (thanks to Gilang Ramadhan)
 * Added Finish translation (thanks to AtteL)
+
 * Updated German translation
 
 = Version 1.1.8 =
@@ -47,7 +48,7 @@ Please visit http://www.bravenewcode.com/earth-hour/ for a full description & up
 
 * Disabled banner on WPtouch sites
 
-= Version 1.1.4 = 
+= Version 1.1.4 =
 
 * Updated POT file with plural forms
 
@@ -58,7 +59,7 @@ Please visit http://www.bravenewcode.com/earth-hour/ for a full description & up
 
 = Version 1.1.2 =
 
-* Changed header bar to add 20px to body top prevent the banner from overlapping header logos, etc. 
+* Changed header bar to add 20px to body top prevent the banner from overlapping header logos, etc.
 * Made the banner black (to match Earth Hour stuff), revised icon
 * Added mild opacity (83%) in IE7, Firefox, Safari/Webkit
 * Added shadow in Safari/Webkit browsers
@@ -74,24 +75,24 @@ Please visit http://www.bravenewcode.com/earth-hour/ for a full description & up
 * Added Portugeuse/BR translation (thanks to Allan Christian)
 * Added Portugeuse/PT translation (thanks to João Pedro Pereira)
 
-= Version 1.0.9 = 
+= Version 1.0.9 =
 
 * Fixed missing text link to earthhour.org
 
-= Version 1.0.8 = 
+= Version 1.0.8 =
 
 * Replaced earth icon, added missing image
 
-= Version 1.0.7 = 
+= Version 1.0.7 =
 
 * Two minor CSS fixes
 
-= Version 1.0.6 = 
+= Version 1.0.6 =
 
 * Minor CSS fix
 * Changed 'Visit the Earth Hour Website' from an image to localized text
 
-= Version 1.0.5 = 
+= Version 1.0.5 =
 
 * Added Spanish translation (thanks to Raul Pacheco)
 
@@ -101,14 +102,19 @@ Please visit http://www.bravenewcode.com/earth-hour/ for a full description & up
 
 = Version 1.0.3 =
 
-* First release!  
+* First release!
+
 
 == Installation ==
 
 = Pre 2.7 =
+
 Download, unzip, and upload the 'earth-hour' folder and all its contents to your WordPress wp-content/plugins folder using FTP. Visit the plugin tab in the WordPress admin, and activate Earth Hour, that's it!
+
 = 2.7+ =
+
 You can now install Earth Hour directly from the WordPress admin!
+
 
 == Frequently Asked Questions ==
 
