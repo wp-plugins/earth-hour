@@ -17,7 +17,7 @@ Please visit http://www.bravenewcode.com/earth-hour/ for a full description & up
 
 = Version 1.2.1 =
 
-* Removed stylesheet when earth hour is over
+* Removed stylesheet for when earth hour is over
 
 = Version 1.2.0 =
 
