@@ -4,7 +4,7 @@ Plugin Name: Earth Hour
 Plugin URI: http://www.bravenewcode.com/earth-hour/
 Description: Changing the world, one website at a time.
 Author: Dale Mugford and Duane Storey
-Version: 1.2.1
+Version: 1.2.2
 Author URI: http://www.bravenewcode.com
 Text Domain: earth-hour
 */
@@ -123,7 +123,7 @@ function earth_hour_init() {
 	$now_time = time();	
 	$time_since_last_update = $now_time - $earth_hour_settings['last_count_time'];
 	
-	if ( $time_since_last_update > 300 ) {
+	if ( $time_since_last_update > (60*60) ) {
    	$snoopy = new Snoopy;	
    	if ( $snoopy->fetch('http://earthhour.bravenewclients.com/?count=1') ) {	
    		$earth_hour_settings['last_count'] = $snoopy->results;
