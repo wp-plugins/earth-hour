@@ -9,6 +9,8 @@ Author URI: http://www.bravenewcode.com
 Text Domain: earth-hour
 */
 
+require( 'compat.php' );
+
 add_action( 'init', 'earth_hour_init' );
 add_action( 'wp_head', 'earth_hour_head' );
 add_action( 'wp_footer', 'earth_hour_footer' );
@@ -53,8 +55,8 @@ function earth_hour_head() {
         }
 
 	if ( !$on_iphone ) {
-		echo "<link rel=\"stylesheet\" type=\"text/css\" media=\"screen\" href=\"" . get_bloginfo('wpurl') . "/wp-content/plugins/earth-hour/css/earth-hour.css\"></link>";
-		echo "<script type=\"text/javascript\" src=\"" . get_bloginfo('wpurl') . "/wp-content/plugins/earth-hour/js/earth-hour.js\"></script>";
+		echo "<link rel=\"stylesheet\" type=\"text/css\" media=\"screen\" href=\"" . compat_get_plugin_url( 'earth-hour' ) . "/css/earth-hour.css\"></link>";
+		echo "<script type=\"text/javascript\" src=\"" . compat_get_plugin_url( 'earth-hour' ) . "/earth-hour/js/earth-hour.js\"></script>";
 	}
 	*/
 }
