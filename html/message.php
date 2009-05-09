@@ -1,5 +1,4 @@
 <?php 
-	include( dirname(__FILE__) . "/../../../../wp-config.php" );
 	global $earth_hour_settings;
 	global $earth_hour_minutes;
 	$count = number_format( $earth_hour_settings['last_count'] );
@@ -8,7 +7,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 	<head>
 		<title><?php bloginfo('name'); ?> - <?php _e( "Proudly Supporting Earth Hour", "earth-hour" ); ?></title>
-		<link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('wpurl'); ?>/wp-content/plugins/earth-hour/html/style.css"></link>
+		<link rel="stylesheet" type="text/css" media="screen" href="<?php echo compat_get_plugin_url( 'earth-hour' ); ?>/html/style.css"></link>
 	</head>
 	<body>
 		<div id="page">
