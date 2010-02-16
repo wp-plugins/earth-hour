@@ -46,18 +46,17 @@ function earth_hour_is_active() {
 	return ( $earth_hour_settings['currently_in_earth_hour'] );
 }
 
-function earth_hour_head() {
-	/*
-        $on_iphone = false;
-        if ( function_exists( 'bnc_is_iphone' ) ) {
-                $on_iphone = bnc_is_iphone();
-        }
+function earth_hour_head() {	
+	$on_iphone = false;
+	if ( function_exists( 'bnc_is_iphone' ) ) {
+		$on_iphone = bnc_is_iphone();
+	}
 
 	if ( !$on_iphone ) {
-		echo "<link rel=\"stylesheet\" type=\"text/css\" media=\"screen\" href=\"" . compat_get_plugin_url( 'earth-hour' ) . "/css/earth-hour.css\"></link>";
-		echo "<script type=\"text/javascript\" src=\"" . compat_get_plugin_url( 'earth-hour' ) . "/earth-hour/js/earth-hour.js\"></script>";
+		echo "<link rel='stylesheet' type='text/css' media='screen' href='" . WP_PLUGIN_URL . "/earth-hour/css/earth-hour.css'></link>";
+		echo "<script type='text/javascript' src='" . WP_PLUGIN_URL . "/earth-hour/js/earth-hour.js'></script>";
 	}
-	*/
+	
 }
 
 function earth_hour_footer() {
@@ -134,12 +133,12 @@ function earth_hour_init() {
    	}
 	}
 	
-	$start_time = gmmktime( 20, 30, 0, 3, 28, 2009 );
+	$start_time = gmmktime( 20, 30, 0, 3, 27, 2010 );
 	$end_time = $start_time + 60*60;
 	
 	// adjust for local time
 	$adjusted_time = time() + get_option('gmt_offset')*60*60;	
-	$in_earth_hour = ($adjusted_time >= $start_time && $adjusted_time <= $end_time);
+	$in_earth_hour = ( $adjusted_time >= $start_time && $adjusted_time <= $end_time );
 	
 	global $time_until_earth_hour;
 	$time_until_earth_hour = $start_time - $adjusted_time;
@@ -168,9 +167,9 @@ function earth_hour_init() {
 	}
        
 	$on_iphone = false;
-        if ( function_exists( 'bnc_is_iphone' ) ) {
-                $on_iphone = bnc_is_iphone();
-        }
+	if ( function_exists( 'bnc_is_iphone' ) ) {
+		$on_iphone = bnc_is_iphone();
+	}
 
 	if ( !$on_iphone ) {	
 		wp_enqueue_script( 'jquery' );
@@ -182,7 +181,7 @@ function earth_hour_options_subpanel() {
 }
 
 function earth_hour_add_plugin_option() {
-	if (function_exists('add_options_page')) {
+	if ( function_exists('add_options_page') ) {
 		add_options_page( "Earth Hour", "Earth Hour", 0, basename(__FILE__), 'earth_hour_options_subpanel');
    }
 }
