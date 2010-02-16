@@ -36,8 +36,21 @@ $bnc_earth_hour_version = '1.3';
 
 	function Earth_Hour($before = '', $after = '') {
 		global $bnc_earth_hour_version;
-		echo $before . 'WPtouch ' . $bnc_earth_hour_version . $after;
+		echo $before . 'Earth Hour ' . $bnc_earth_hour_version . $after;
 	}
+	
+// WP Admin stylesheets & javascript
+function earth_hour_admin_files() {		
+	if ( isset( $_GET['page'] ) && $_GET['page'] == 'earth-hour.php' ) {
+		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/bnc-global-admin.css' />\n";
+//		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/bnc-global.css' />\n";
+//		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/bnc-compressed-global.css' />\n";
+//		echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/ajax_upload_3.9.js'></script>\n";
+//		echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/colorpicker_1.4.js'></script>\n";
+//		echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/fancybox_1.2.5.js'></script>\n";
+//		echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/admin_1.9.js'></script>\n";
+	}
+}
 
 function earth_hour_activate() {
    $snoopy = new Snoopy;	
@@ -204,4 +217,5 @@ function earth_hour_settings_link( $links, $file ) {
 }
 
 add_action( 'admin_menu', 'earth_hour_add_plugin_option');
+add_action('admin_head', 'earth_hour_admin_files');
 add_filter( 'plugin_action_links', 'earth_hour_settings_link', 9, 2 );
