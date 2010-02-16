@@ -1,4 +1,4 @@
-/* @override http://www.bravenewcode.com/wordpress/wp-content/plugins/wptouch/admin-css/bnc-global-admin.css */
+/* @override http://www.bravenewcode.com/wordpress/wp-content/plugins/earth-hour/css/bnc-global-admin.css */
 
 /* Global styles applied to BraveNewCode plugins */
 
@@ -144,7 +144,6 @@
 #bnc-global {
 	color: #444;
 	margin-bottom: 35px;
-	width: 98%;
 	margin-top: 0;
 }
 
@@ -153,6 +152,7 @@
 	position: relative;
 	overflow: hidden;
 	-webkit-box-shadow: #ccc 0px 1px 6px;
+	width: 98%;
 }
 
 #bnc-global .postbox h3 {
@@ -197,7 +197,7 @@
 	padding: 0 0 4px;
 	letter-spacing: 0;
 	color: #d54e21;
-	font-size: 11px;
+	font-size: 12px;
 	line-height: 13px;
 }
 
@@ -331,27 +331,28 @@
 	position: relative;
 	left: 10px;
 	margin-bottom: 25px;
+	margin-right: 1%;
 }
 
 #bnc-global input#bnc-button {
-	color: #fff;
+	color: #fff !important;
 }
 
 #bnc-global input#bnc-button, #bnc-global input#bnc-button-reset {
-	border: 2px solid #b2cfe4;
-	float: left;
-	width: 12%;
-	padding: 4px;
+	border: 2px solid #b2cfe4 !important;
+	float: left !important;
+	width: 12% !important;
+	padding: 4px !important;
 }
 
 #bnc-global input#bnc-button-reset:hover {
-	border-color: red;
-	color: red;
+	border-color: red !important;
+	color: red !important;
 }
 
-#bnc-global input#bnc-button:hover {
-	border: 2px solid #305769;
-	color: #cdebfd;
+#bnc-global input#bnc-button:hover, #bnc-global input#bnc-button:active {
+	border: 2px solid #305769 !important;
+	color: #cdebfd !important;
 }
 
 /* @end */
