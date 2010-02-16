@@ -2,143 +2,6 @@
 
 /* Global styles applied to BraveNewCode plugins */
 
-/* @group Options Page */
-
-#earth-hour-head .postbox {
-	background: #fff;
-	position: relative;
-	overflow: hidden;
-	width: 98%;
-}
-
-#earth-hour-head-colour {
-	background-color: #b7c9d6;
-	padding: 10px;
-	margin: -10px -10px -20px;
-	-webkit-border-top-right-radius: 5px;
-	-webkit-border-top-left-radius: 5px;
-	-moz-border-radius-topright: 5px;
-	-moz-border-radius-topleft: 5px;
-	border: 1px solid #e5f0f2;
-	border-bottom: 1px solid #a2bdbf;
-}
-
-#earth-hour-head-title {
-	font: bold 22px Georgia, "Times New Roman", Times, serif;
-	color: #333c42;
-	text-shadow: #deeefa 0 1px 0;
-	letter-spacing: -1px;
-	margin: 0;
-	padding: 0;
-	float: left;
-}
-
-#earth-hour-head-title p {
-	letter-spacing: 0;
-	font-family: "Lucida Grande", "Lucida sans Unicode", Arial, sans-serif;
-	display: inline;
-	margin-left: 10px;
-	position: relative;
-	bottom: 3px;
-}
-
-#earth-hour-head-title p span {
-	color: green;
-}
-
-#earth-hour-head-links {
-	float: right;
-	position: relative;
-	bottom: 6px;
-}
-
-#earth-hour-head-links a {
-	color: #333c42;
-	font-weight: bold;
-	text-shadow: #cddce8 0 1px 0;
-}
-
-#earth-hour-head-links a:hover {
-	color: #d54e21;
-	text-shadow: #cedeea 0 1px 0;
-}
-
-#earth-hour-head-links li {
-	display: inline;
-	color: #618299;
-	text-shadow: #bfdfe8 1px 1px 0;
-}
-
-#earth-hour-news-twitter {
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	margin-top: 30px;
-	width: 100%;
-	height: 170px;
-	text-transform: capitalize;
-}
-
-#earth-hour-head h3 {
-	color: #444;
-	-webkit-border-radius: 0px;
-	-moz-border-radius: 0px;
-}
-
-/* @group RSS Feeds */
-
-#earth-hour-news-wrap {
-	width: 50%;
-	margin: 0;
-	padding: 0;
-	float: left;
-}
-
-#earth-hour-news-wrap h3 {
-	padding-left: 10px;
-	display: block;
-	width: 100%;
-}
-
-#earth-hour-twitter-wrap {
-	color: #777;
-	width: 50%;
-	padding: 0;
-	margin: 0;
-	float: left;
-}
-
-#earth-hour-twitter-wrap ul {
-}
-
-#earth-hour-twitter-wrap ul li {
-	width: 95%;
-}
-
-#earth-hour-twitter-wrap h3 {
-	display: block;
-	width: 100%;
-	position: relative;
-	padding-right: 12px;
-}
-
-#earth-hour-news-twitter li {
-	border-bottom: 1px solid #e6e6e6;
-	margin: 0;
-	padding: 3px 0;
-	list-style-type: circle;
-	list-style-position: inside;
-	color: #c1cfd1;
-	width: 90%;
-}
-
-#earth-hour-news-twitter li:last-child {
-	border-bottom-style: none;
-}
-
-/* @end */
-
-/* @end */
-
 /* @group Global Plugin Styles */
 
 #bnc-global {
@@ -360,5 +223,155 @@
 /* @group Earth Hour Admin */
 
 
+
+/* @end */
+
+/* @group Options Page Styles */
+
+#earth-hour-head .postbox {
+	background: #fff;
+	position: relative;
+	overflow: hidden;
+	width: 98%;
+}
+
+#earth-hour-head-colour {
+	background-color: #b7c9d6;
+	padding: 10px;
+	margin: -10px -10px -20px;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-top-left-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-topleft: 5px;
+	border: 1px solid #e5f0f2;
+	border-bottom: 1px solid #a2bdbf;
+}
+
+#earth-hour-head-title {
+	font: bold 22px Georgia, "Times New Roman", Times, serif;
+	color: #333c42;
+	text-shadow: #deeefa 0 1px 0;
+	letter-spacing: -1px;
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+
+#earth-hour-head-title p {
+	letter-spacing: 0;
+	font-family: "Lucida Grande", "Lucida sans Unicode", Arial, sans-serif;
+	display: inline;
+	margin-left: 10px;
+	position: relative;
+	bottom: 3px;
+}
+
+#earth-hour-head-title p span {
+	color: green;
+}
+
+#earth-hour-head-links {
+	float: right;
+	position: relative;
+	bottom: 6px;
+}
+
+#earth-hour-head-links a {
+	color: #333c42;
+	font-weight: bold;
+	text-shadow: #cddce8 0 1px 0;
+}
+
+#earth-hour-head-links a:hover {
+	color: #d54e21;
+	text-shadow: #cedeea 0 1px 0;
+}
+
+#earth-hour-head-links li {
+	display: inline;
+	color: #618299;
+	text-shadow: #bfdfe8 1px 1px 0;
+}
+
+#earth-hour-news-twitter {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	margin-top: 30px;
+	width: 100%;
+	height: 170px;
+	text-transform: capitalize;
+}
+
+#earth-hour-head h3 {
+	color: #444;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+}
+
+/* @group RSS Feeds */
+
+#earth-hour-news-wrap {
+	width: 50%;
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+
+#earth-hour-news-wrap h3 {
+	padding-left: 10px;
+	display: block;
+	width: 100%;
+}
+
+#earth-hour-twitter-wrap {
+	color: #777;
+	width: 50%;
+	padding: 0;
+	margin: 0;
+	float: left;
+}
+
+#earth-hour-twitter-wrap ul {
+}
+
+#earth-hour-twitter-wrap ul li {
+	width: 95%;
+}
+
+#earth-hour-twitter-wrap h3 {
+	display: block;
+	width: 100%;
+	position: relative;
+	padding-right: 12px;
+}
+
+#earth-hour-news-twitter li {
+	border-bottom: 1px solid #e6e6e6;
+	margin: 0;
+	padding: 3px 0;
+	list-style-type: circle;
+	list-style-position: inside;
+	color: #c1cfd1;
+	width: 90%;
+}
+
+#earth-hour-news-twitter li:last-child {
+	border-bottom-style: none;
+}
+
+/* @end */
+
+/* @group General Settings */
+
+#bnc-global .right-content input.radio {
+	padding: 0;
+	margin: 0 5px 0 0;
+	width: auto;
+	height: auto;
+}
+
+
+
+/* @end */
 
 /* @end */

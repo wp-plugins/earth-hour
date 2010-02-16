@@ -87,11 +87,17 @@
 			</div>
 
 			<div class="right-content">
-			<ul>
-<li><input type="radio" name="group2" value="Water" /> Lightbulbs</li>
-<li><input type="radio" name="group2" value="Beer" /> Official Earth Hour</li>
-<li><input type="radio" name="group2" value="Wine" checked="true" />Custom</li>
-</ul>
+
+				<ul>
+					<li><input class="radio" type="radio" name="website-banner" id="website-top" value="website-top" checked="true" /> <label for="website-top">Website Top</label></li>
+					<li><input class="radio" type="radio" name="website-banner" id="website-bottom" value="website-bottom" /> <label for="website-bottom">Website Bottom</label></li>
+				</ul>
+
+				<ul>
+					<li><input class="radio" type="radio" name="image" id="official-image" value="official-image" checked="true" /> <label for="official-image">Official Earth Hour</label></li>
+					<li><input class="radio" type="radio" name="image" id="lightbulbs" value="lightbulbs" /> <label for="lightbulbs">Lightbulbs</label></li>
+					<li><input class="radio" type="radio" name="image" id="custom-image" value="custom-image" /> <label for="custom-image">Custom</label></li>
+				</ul>
 			</div>
 			
 	<div class="bnc-clearer"></div>
