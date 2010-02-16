@@ -15,8 +15,10 @@ body {
 
 #bnc_earth_hour {
 	position: fixed;
+	/*
 	top: 0px;
 	right: 0px;
+	*/
 	background: #000;
 	opacity: 0.83 !important;
 	filter:alpha(opacity=83) !important;

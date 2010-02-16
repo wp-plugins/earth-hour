@@ -1,18 +1,18 @@
-<?php global $earth_hour_settings; ?>
+<?php $settings = earth_hour_get_settings();  ?>
 
+<form method="post" action="">	
 <div class="wrap" id="bnc-global">
 <div class="metabox-holder" id="earth-hour-head">
 	<div class="postbox">
 		<div id="earth-hour-head-colour">
 			<div id="earth-hour-head-title">
-				<?php Earth_Hour(); ?>
+				<?php earth_hour_version(); ?>
 				<p><?php echo sprintf( __( "There are currently <span>%d</span> WordPress sites using this plugin &amp; supporting Earth Hour.", "earth-hour" ), number_format( $earth_hour_settings['last_count'] ) ); ?>
 </p>
 			</div>
 				<div id="earth-hour-head-links">
 					<ul>
 						<li><?php echo sprintf(__( "%sBNC Earth Hour Page%s", "earth-hour" ), '<a href="http://www.bravenewcode.com/earth-hour" target="_blank">','</a>'); ?> | </li>
-						<!-- <li><?php echo sprintf(__( "%sNewsletter%s", "wordtwit" ), '<a href="http://www.bravenewcode.com/newsletter" target="_blank">','</a>'); ?> | </li> -->
 						<li><?php echo sprintf(__( "%sDonate%s", "earth-hour" ), '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=paypal%40bravenewcode%2ecom&amp;item_name=earth-hour%20Beer%20Fund&amp;no_shipping=1&amp;tax=0&amp;currency_code=CAD&amp;lc=CA&amp;bn=PP%2dDonationsBF&amp;charset=UTF%2d8" target="_blank">','</a>'); ?></li>
 					</ul>
 				</div>
@@ -52,10 +52,12 @@
 			</div>
 			
 		</div><!-- earth-hour-news-support -->
-
+	
 	<div class="bnc-clearer"></div>
 	</div><!-- postbox -->
+
 </div><!-- earth-hour-head -->
+</div><!-- global earth-hour -->
 
 <!-- Earth Hour Settings Pane -->
 <div class="metabox-holder">
@@ -89,25 +91,27 @@
 			<div class="right-content">
 				<p><strong><?php _e( "Banner Placement", "earth-hour" ); ?></strong></p>
 				<ul>
-					<li><input class="radio" type="radio" name="website-banner" id="website-top" value="website-top" checked="true" /> <label for="website-top">Website Top</label></li>
-					<li><input class="radio" type="radio" name="website-banner" id="website-bottom" value="website-bottom" /> <label for="website-bottom">Website Bottom</label></li>
+					<li><input class="radio" type="radio" name="banner_location" id="website-top" value="top" <?php if ( $settings['banner_location'] == 'top' ) echo 'checked="true" '; ?>/> <label for="website-top">Website Top</label></li>
+					<li><input class="radio" type="radio" name="banner_location" id="website-bottom" value="bottom" <?php if ( $settings['banner_location'] == 'bottom' ) echo 'checked="true" '; ?>/> <label for="website-bottom">Website Bottom</label></li>
 				</ul>
 
 				<br /><br /><br /><br />
 				
 				<p><strong><?php _e( "Earth Hour Image", "earth-hour" ); ?></strong></p>
 				<ul>
-					<li><input class="radio" type="radio" name="image" id="official-image" value="official-image" checked="true" /> <label for="official-image">Official Earth Hour</label></li>
-					<li><input class="radio" type="radio" name="image" id="lightbulbs" value="lightbulbs" /> <label for="lightbulbs">Lightbulbs</label></li>
-					<li><input class="radio" type="radio" name="image" id="custom-image" value="custom-image" /> <label for="custom-image">Custom:</label><br />
-						   <input  class="input" type="text" name="custom-path" id="custom-path" value="...full URL to a custom image" /></li>
+					<li><input class="radio" type="radio" name="main_image" id="official-image" value="official" <?php if ( $settings['main_image'] == 'official' ) echo 'checked="true" '; ?>/> <label for="official-image">Official Earth Hour</label></li>
+					<li><input class="radio" type="radio" name="main_image" id="lightbulbs" value="lightbulbs" <?php if ( $settings['main_image'] == 'lightbulbs' ) echo 'checked="true" '; ?>/> <label for="lightbulbs">Lightbulbs</label></li>
+					<li>
+						<input class="radio" type="radio" name="main_image" id="custom-image" value="custom" <?php if ( $settings['main_image'] == 'custom' ) echo 'checked="true" '; ?>/> <label for="custom-image">Custom:</label><br />
+						<input  class="input" type="text" name="custom_image" id="custom-path" value="<?php echo $settings['custom_image']; ?>" />
+					</li>
 				</ul>
 
 				<br /><br />
 				
 				<p><strong><?php _e( "Earth Hour Text", "earth-hour" ); ?></strong></p>
 				<ul>
-					<li><textarea class="textarea" id="earth-hour-text" name="earth-hour-text">some saved text stuff here</textarea></li>
+					<li><textarea class="textarea" id="earth-hour-text" name="earth_hour_text"><?php echo $settings['earth_hour_text']; ?></textarea></li>
 				</ul>
 				
 				<p><strong><?php _e( "Preview Site", "earth-hour" ); ?></strong></p>
@@ -129,7 +133,7 @@
 		<input type="submit" onclick="return confirm('<?php _e('Restore default Earth Hour settings?', 'earth-hour' ); ?>');" name="reset" value="<?php _e('Restore Defaults', 'earth-hour' ); ?>" id="bnc-button-reset" class="button-highlighted" />
 	</form>
 		
-		<?php echo('' . Earth_Hour('<div class="bnc-plugin-version"> This is ','</div>') . ''); ?>
+	<?php earth_hour_version('<div class="bnc-plugin-version"> This is ','</div>'); ?>
 
 	<div class="bnc-clearer"></div>
 

@@ -14,6 +14,7 @@ require( 'compat.php' );
 add_action( 'init', 'earth_hour_init' );
 add_action( 'wp_head', 'earth_hour_head' );
 add_action( 'wp_footer', 'earth_hour_footer' );
+add_action( 'admin_init', 'earth_hour_admin_init' );
 
 register_activation_hook( __FILE__, 'earth_hour_activate' );
 register_deactivation_hook( __FILE__, 'earth_hour_deactivate' );
@@ -25,23 +26,61 @@ if ( defined('ABSPATH') ) {
 }
 
 global $earth_hour_settings;
+$earth_hour_settings = false;
+
 $earth_hour_default_settings = array(
 	'currently_in_earth_hour' => false,
 	'last_count' => 0,
-	'last_count_time' => 0
+	'last_count_time' => 0,
+	'banner_location' => 'top',
+	'main_image' => 'official',
+	'custom_image' => '',
+	'earth_hour_text' => ''
 );
 
-////////  DALE ADDED CODE  ////////
+function earth_hour_get_settings() {
+	global $earth_hour_settings;
+	global $earth_hour_default_settings;
+	
+	// Return the settings if they already exist
+	if ( $earth_hour_settings ) {
+		return $earth_hour_settings;
+	}
+	
+	$saved_settings = get_option( 'bnc_earth_hour', false );
+	if ( $saved_settings ) {
+		// Settings exist, let's add recently added default settings
+		foreach( $earth_hour_default_settings as $key => $value ) {
+			if ( !isset( $saved_settings[$key] ) ) {
+				$saved_settings[$key] = $value;	
+			}	
+		}
+		
+		// Save our local cached copy
+		$earth_hour_settings = $saved_settings;
+		
+		return $saved_settings;
+	} else {
+		// No settings exist, so just return the defaults
+		return $earth_hour_default_settings;
+	}
+}
+
+function earth_hour_save_settings( $new_settings ) {
+	global $earth_hour_settings;	
+	
+	update_option( 'bnc_earth_hour', $new_settings );	
+	$earth_hour_settings = $new_settings;
+}
+
 global $bnc_earth_hour_version;
 $bnc_earth_hour_version = '1.3';
 
-////////  DALE ADDED CODE  ////////
-	function Earth_Hour($before = '', $after = '') {
-		global $bnc_earth_hour_version;
-		echo $before . 'Earth Hour ' . $bnc_earth_hour_version . $after;
-	}
+function earth_hour_version($before = '', $after = '') {
+	global $bnc_earth_hour_version;
+	echo $before . 'Earth Hour ' . $bnc_earth_hour_version . $after;
+}
 	
-////////  DALE ADDED CODE  ////////
 // WP Admin stylesheets & javascript
 function earth_hour_admin_files() {		
 	if ( isset( $_GET['page'] ) && $_GET['page'] == 'earth-hour.php' ) {
@@ -71,7 +110,8 @@ function earth_hour_head() {
 	}
 
 	if ( !$on_iphone ) {
-		echo "<link rel='stylesheet' type='text/css' media='screen' href='" . WP_PLUGIN_URL . "/earth-hour/css/earth-hour.css'></link>";
+		echo "<link rel='stylesheet' type='text/css' media='screen' href='" . WP_PLUGIN_URL . "/earth-hour/css/earth-hour.css'></link>\n";
+		echo "<link rel='stylesheet' type='text/css' media='screen' href='" . get_bloginfo("home") . "/?earth_hour_dynamic_css=1'></link>\n";
 		echo "<script type='text/javascript' src='" . WP_PLUGIN_URL . "/earth-hour/js/earth-hour.js'></script>";
 	}
 	
@@ -116,38 +156,59 @@ function earth_hour_footer() {
 	}
 }
 
-function earth_hour_update_settings() {
-	global $earth_hour_settings;
-	update_option( 'bnc_earth_hour', serialize( $earth_hour_settings ) );
-}
+function earth_hour_init() {	
+	$settings = earth_hour_get_settings();	
+	
+	// Output Dynamic CSS
+	if ( isset( $_GET['earth_hour_dynamic_css'] ) ) {
+		header( "Content-type: text/css" );
+		
+		switch( $settings['banner_location'] ) {
+			case 'top':
+				echo "#bnc_earth_hour { position: fixed; top: 0px; right: 0px; }\n";
+				break;
+			case 'bottom':
+				echo "#bnc_earth_hour { position: fixed; bottom: 0px; right: 0px; }\n";
+				break;
+			default:
+				break;	
+		}
+		
+		// DALE CHANGE THESE
+		switch( $settings['main_image'] ) {
+			case 'original':
+				echo "#some_id { background-image: url(" . WP_PLUGIN_URL . "/earth-hour/images/original.jpg); }\n";
+				break;
+			case 'lightbulbs':
+				echo "#some_id { background-image: url(" . WP_PLUGIN_URL . "/earth-hour/images/lightbulbs.jpg); }\n";
+				break;
+			case 'custom':
+				echo "#some_id { background-image: url(" . $settings['custom_image'] . "); }\n";
+				break;	
+		}
+		// END CHANGE
+		
+		die;
+	}
 
-function earth_hour_init() {
-	global $earth_hour_settings;
-	global $earth_hour_default_settings;
 	
 	$current_locale = get_locale();
 	if( !empty( $current_locale ) ) {
 		$moFile = dirname(__FILE__) . "/lang/earth-hour-" . $current_locale . ".mo";
 		if(@file_exists($moFile) && is_readable($moFile)) load_textdomain( 'earth-hour' , $moFile );
 	}
-	
-	$settings = get_option( unserialize( 'bnc_earth_hour' ) );
-	if ( $settings) {
-		$earth_hour_settings = $settings;
-	} else {
-		$earth_hour_settings = $earth_hour_default_settings;
-	}
-	
+
+
 	$now_time = time();	
 	$time_since_last_update = $now_time - $earth_hour_settings['last_count_time'];
 	
 	if ( $time_since_last_update > (60*60) ) {
    	$snoopy = new Snoopy;	
    	if ( $snoopy->fetch('http://earthhour.bravenewclients.com/?count=1') ) {	
-   		$earth_hour_settings['last_count'] = $snoopy->results;
-   		$earth_hour_settings['last_count_time'] = time();
+   		$settings['last_count'] = $snoopy->results;
+   		$settings['last_count_time'] = time();
    		
-   		earth_hour_update_settings();
+   		earth_hour_save_settings( $settings );
    	}
 	}
 	
@@ -158,14 +219,19 @@ function earth_hour_init() {
 	$adjusted_time = time() + get_option('gmt_offset')*60*60;	
 	$in_earth_hour = ( $adjusted_time >= $start_time && $adjusted_time <= $end_time );
 	
+	// Force earth hour if the user clicked the preview button
+	if ( isset( $_GET['earth_hour_preview'] ) ) {
+		$in_earth_hour = true;	
+	}
+		
 	global $time_until_earth_hour;
 	$time_until_earth_hour = $start_time - $adjusted_time;
 
 	if ( $in_earth_hour ) {
 		// we are in earth hour
-		if ( !$earth_hour_settings['currently_in_earth_hour'] ) {
-			$earth_hour_settings['currently_in_earth_hour'] = true;	
-			earth_hour_update_settings();
+		if ( !$settings['currently_in_earth_hour'] ) {
+			$settings['currently_in_earth_hour'] = true;	
+			earth_hour_save_settings( $settings );
 		}		
 		
 		// let people hit the admin panel
@@ -178,9 +244,9 @@ function earth_hour_init() {
 		}
 	} else {
 		// we are not in earth hour
-		if ( $earth_hour_settings['currently_in_earth_hour'] ) {
-			$earth_hour_settings['currently_in_earth_hour'] = false;	
-			earth_hour_update_settings();
+		if ( $settings['currently_in_earth_hour'] ) {
+			$settings['currently_in_earth_hour'] = false;	
+			earth_hour_save_settings( $settings );
 		}
 	}
        
@@ -204,8 +270,6 @@ function earth_hour_add_plugin_option() {
    }
 }
 
-////////  DALE ADDED CODE  ////////
-//Add a link to settings on the plugin listings page
 function earth_hour_settings_link( $links, $file ) {
  	if( $file == 'earth-hour/earth-hour.php' && function_exists( "admin_url" ) ) {
 		$settings_link = '<a href="' . admin_url( 'options-general.php?page=earth-hour.php' ) . '">' . __('Settings') . '</a>';
@@ -214,15 +278,29 @@ function earth_hour_settings_link( $links, $file ) {
 	return $links;
 }
 
-////////  DALE ADDED CODE  ////////
-// The Master Save/Kill Switch
-if ( isset( $_POST['submit'] ) ) {
-		// let's rock and roll
+function earth_hour_admin_init() {
+	if ( isset( $_POST['preview'] ) ) {
+		header( 'Location: ' . get_bloginfo('home') . '?earth_hour_preview=1' );
+		die;
+	}
+	
+	if ( isset( $_POST['submit'] ) ) {
+		$settings = earth_hour_get_settings();
+		
+		foreach( $settings as $key => $value ) {
+			if ( isset( $_POST[$key] ) ) {
+				$settings[$key] = $_POST[$key];	
+			}
+		}
+		
+		earth_hour_save_settings( $settings );
 	} elseif ( isset( $_POST['reset'] ) ) {
-		update_option( 'bnc_earth-hour_settings', '' );
-		// empty everything
- }
+		global $earth_hour_default_settings;
+		earth_hour_save_settings( $earth_hour_default_settings );
+	}	
+}
 
-add_action( 'admin_menu', 'earth_hour_add_plugin_option');
-add_action('admin_head', 'earth_hour_admin_files');
+add_action( 'admin_menu', 'earth_hour_add_plugin_option' );
+add_action( 'admin_head', 'earth_hour_admin_files' );
 add_filter( 'plugin_action_links', 'earth_hour_settings_link', 9, 2 );
+
