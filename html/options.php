@@ -87,17 +87,34 @@
 			</div>
 
 			<div class="right-content">
-
+				<p><strong><?php _e( "Banner Placement", "earth-hour" ); ?></strong></p>
 				<ul>
 					<li><input class="radio" type="radio" name="website-banner" id="website-top" value="website-top" checked="true" /> <label for="website-top">Website Top</label></li>
 					<li><input class="radio" type="radio" name="website-banner" id="website-bottom" value="website-bottom" /> <label for="website-bottom">Website Bottom</label></li>
 				</ul>
 
+				<br /><br /><br /><br />
+				
+				<p><strong><?php _e( "Earth Hour Image", "earth-hour" ); ?></strong></p>
 				<ul>
 					<li><input class="radio" type="radio" name="image" id="official-image" value="official-image" checked="true" /> <label for="official-image">Official Earth Hour</label></li>
 					<li><input class="radio" type="radio" name="image" id="lightbulbs" value="lightbulbs" /> <label for="lightbulbs">Lightbulbs</label></li>
-					<li><input class="radio" type="radio" name="image" id="custom-image" value="custom-image" /> <label for="custom-image">Custom</label></li>
+					<li><input class="radio" type="radio" name="image" id="custom-image" value="custom-image" /> <label for="custom-image">Custom:</label><br />
+						   <input  class="input" type="text" name="custom-path" id="custom-path" value="...full URL to a custom image" /></li>
 				</ul>
+
+				<br /><br />
+				
+				<p><strong><?php _e( "Earth Hour Text", "earth-hour" ); ?></strong></p>
+				<ul>
+					<li><textarea class="textarea" id="earth-hour-text" name="earth-hour-text">some saved text stuff here</textarea></li>
+				</ul>
+				
+				<p><strong><?php _e( "Preview Site", "earth-hour" ); ?></strong></p>
+				<ul>
+					<li><input class="button" type="submit" name="preview" value="<?php _e('Preview Website During Earth Hour', 'earth-hour' ); ?>" /></li>
+				</ul>						
+
 			</div>
 			
 	<div class="bnc-clearer"></div>
