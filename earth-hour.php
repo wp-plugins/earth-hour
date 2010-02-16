@@ -42,7 +42,7 @@ $bnc_earth_hour_version = '1.3';
 // WP Admin stylesheets & javascript
 function earth_hour_admin_files() {		
 	if ( isset( $_GET['page'] ) && $_GET['page'] == 'earth-hour.php' ) {
-		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/bnc-global-admin.css' />\n";
+		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'earth-hour' ) . "/css/bnc-global-admin.css' />\n";
 //		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/bnc-global.css' />\n";
 //		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/bnc-compressed-global.css' />\n";
 //		echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/ajax_upload_3.9.js'></script>\n";
