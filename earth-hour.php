@@ -24,7 +24,6 @@ if ( defined('ABSPATH') ) {
 	require_once( '../../../wp-includes/class-snoopy.php');
 }
 
-
 global $earth_hour_settings;
 $earth_hour_default_settings = array(
 	'currently_in_earth_hour' => false,
@@ -78,8 +77,8 @@ function earth_hour_footer() {
 			echo "</a><div id=\"inner\">";
 			$msg = sprintf( 
 				__ngettext( 
-					"One of %s website proudly supporting <a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth Hour</a>. ", 
-					"One of %s websites proudly supporting <a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth Hour</a>. ",
+					"One of %s website proudly supporting <a href=\"http://www.bravenewcode.com/products/earth-hour/\" rel=\"nofollow\">Earth Hour</a>. ", 
+					"One of %s websites proudly supporting <a href=\"http://www.bravenewcode.com/products/earth-hour/\" rel=\"nofollow\">Earth Hour</a>. ",
 					$earth_hour_settings['last_count'],
 					"earth-hour"
 				),
@@ -182,11 +181,20 @@ function earth_hour_options_subpanel() {
 	include( 'html/options.php' );
 }
 
-
 function earth_hour_add_plugin_option() {
 	if (function_exists('add_options_page')) {
 		add_options_page( "Earth Hour", "Earth Hour", 0, basename(__FILE__), 'earth_hour_options_subpanel');
    }
 }
 
-//add_action( 'admin_menu', 'earth_hour_add_plugin_option');
+//Add a link to settings on the plugin listings page
+function earth_hour_settings_link( $links, $file ) {
+ 	if( $file == 'earth-hour/earth-hour.php' && function_exists( "admin_url" ) ) {
+		$settings_link = '<a href="' . admin_url( 'options-general.php?page=earth-hour.php' ) . '">' . __('Settings') . '</a>';
+		array_unshift( $links, $settings_link ); // before other links
+	}
+	return $links;
+}
+
+add_action( 'admin_menu', 'earth_hour_add_plugin_option');
+add_filter( 'plugin_action_links', 'earth_hour_settings_link', 9, 2 );
