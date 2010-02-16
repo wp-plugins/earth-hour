@@ -216,6 +216,14 @@ function earth_hour_settings_link( $links, $file ) {
 	return $links;
 }
 
+// The Master Save/Kill Switch
+if ( isset( $_POST['submit'] ) ) {
+		// let's rock and roll
+	elseif ( isset( $_POST['reset'] ) ) {
+		update_option( 'bnc_earth-hour_settings', '' );
+		// empty everything
+ }
+
 add_action( 'admin_menu', 'earth_hour_add_plugin_option');
 add_action('admin_head', 'earth_hour_admin_files');
 add_filter( 'plugin_action_links', 'earth_hour_settings_link', 9, 2 );
