@@ -4,7 +4,7 @@ Plugin Name: Earth Hour
 Plugin URI: http://www.bravenewcode.com/earth-hour/
 Description: Changing the world, one website at a time.
 Author: Dale Mugford and Duane Storey
-Version: 1.2.2
+Version: 1.3
 Author URI: http://www.bravenewcode.com
 Text Domain: earth-hour
 */
@@ -30,6 +30,14 @@ $earth_hour_default_settings = array(
 	'last_count' => 0,
 	'last_count_time' => 0
 );
+
+global $bnc_earth_hour_version;
+$bnc_earth_hour_version = '1.3';
+
+	function Earth_Hour($before = '', $after = '') {
+		global $bnc_earth_hour_version;
+		echo $before . 'WPtouch ' . $bnc_earth_hour_version . $after;
+	}
 
 function earth_hour_activate() {
    $snoopy = new Snoopy;	
