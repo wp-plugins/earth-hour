@@ -219,7 +219,7 @@ function earth_hour_settings_link( $links, $file ) {
 // The Master Save/Kill Switch
 if ( isset( $_POST['submit'] ) ) {
 		// let's rock and roll
-	elseif ( isset( $_POST['reset'] ) ) {
+	} elseif ( isset( $_POST['reset'] ) ) {
 		update_option( 'bnc_earth-hour_settings', '' );
 		// empty everything
  }

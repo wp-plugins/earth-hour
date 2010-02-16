@@ -87,7 +87,11 @@
 			</div>
 
 			<div class="right-content">
-
+			<ul>
+<li><input type="radio" name="group2" value="Water" /> Lightbulbs</li>
+<li><input type="radio" name="group2" value="Beer" /> Official Earth Hour</li>
+<li><input type="radio" name="group2" value="Wine" checked="true" />Custom</li>
+</ul>
 			</div>
 			
 	<div class="bnc-clearer"></div>
