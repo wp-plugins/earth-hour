@@ -146,5 +146,6 @@ You can now install Earth Hour directly from the WordPress admin!
 
 == Screenshots ==
 
-1. Earth Hour support message
-2. Banner message supporting Earth Hour
+1. Earth Hour Admin
+2. Preview of site appearance during Earth Hour
+3. Website with Banner at the top (shows countdown prior to Earth hour)
