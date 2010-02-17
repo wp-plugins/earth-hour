@@ -1,0 +1,120 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Dale Mugford and Duane Storey
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: EarthHourRus1.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/earth-hour\n"
+"POT-Creation-Date: 2009-03-20 16:37+0000\n"
+"PO-Revision-Date: 2009-03-21 03:37+0300\n"
+"Last-Translator: non4bidden <non4bidden@yahoo.com>\n"
+"Language-Team: non4bidden <non4bidden@yahoo.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Poedit-Language: Russian\n"
+"X-Poedit-Country: RUSSIAN FEDERATION\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: earth-hour.php:61
+msgid "Visit the Earth Hour Website"
+msgstr "Посетите сайт Часа Земли"
+
+#: earth-hour.php:65
+#, php-format
+msgid "One of %s website proudly supporting <a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth Hour</a>. "
+msgid_plural "One of %s websites proudly supporting <a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth Hour</a>. "
+msgstr[0] "Один из %s сайта с гордостью поддерживает <a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Час Земли</a>. "
+msgstr[1] "Один из %s сайтов с гордостью поддерживает <a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Час Земли</a>. "
+msgstr[2] "Один из %s сайтов с гордостью поддерживает <a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Час Земли</a>. "
+
+#: earth-hour.php:72
+msgid "On WordPress? Get the <a href=\"http://wordpress.org/extend/plugins/earth-hour/\" rel=\"nofollow\">plugin</a>."
+msgstr "Используете WordPress? Установите <a href=\"http://wordpress.org/extend/plugins/earth-hour/\" rel=\"nofollow\">плагин</a>."
+
+#: earth-hour.php:75
+#, php-format
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d день"
+msgstr[1] "%d дня"
+msgstr[2] "%d дней"
+
+#: earth-hour.php:76
+#, php-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d час"
+msgstr[1] "%d часа"
+msgstr[2] "%d часов"
+
+#: earth-hour.php:77
+#, php-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d минута"
+msgstr[1] "%d минуты"
+msgstr[2] "%d минут"
+
+#: earth-hour.php:79
+#, php-format
+msgid "<a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth Hour</a> begins in %1$s, %2$s, and %3$s"
+msgstr "<a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Час Земли</a> начнется через %1$s, %2$s, и %3$s"
+
+#: html/message.php:10
+msgid "Proudly Supporting Earth Hour"
+msgstr "С гордостью поддерживаем Час Земли"
+
+#: html/message.php:16
+#, php-format
+msgid "%s is currently participating in"
+msgstr "%s в настоящее время участвуют в"
+
+#: html/message.php:17
+#, php-format
+msgid "There is currently %d other WordPress site supporting this cause."
+msgid_plural "There are currently %d other WordPress sites supporting this cause."
+msgstr[0] "На данный момент %d сайт WordPress поддерживает эту идею."
+msgstr[1] "На данный момент %d сайта WordPress поддерживает эту идею."
+msgstr[2] "На данный момент %d сайтов WordPress поддерживает эту идею."
+
+#: html/message.php:18
+msgid "If you'd like to join us, download the <br /><a href=\"http://www.bravenewcode.com/earth-hour/\">WordPress Earth Hour plugin</a>"
+msgstr "Если хотите присоединиться к нам, скачайте <br /><a href=\"http://www.bravenewcode.com/earth-hour/\">Плагин Час Земли для WordPress</a>"
+
+#: html/message.php:19
+#, php-format
+msgid "This website will be back online in %d minute."
+msgid_plural "This website will be back online in %d minutes."
+msgstr[0] "Этот вебсайт вновь будет доступен через %d минуту."
+msgstr[1] "Этот вебсайт вновь будет доступен через %d минуты."
+msgstr[2] "Этот вебсайт вновь будет доступен через %d минут."
+
+#: html/options.php:5
+#, php-format
+msgid "There are currently %d WordPress sites using this plugin and supporting Earth Hour."
+msgstr "В настоящий момент, сайтов, использующих этот плагин и поддерживающих Час Земли - %d."
+
+#. Plugin Name of an extension
+msgid "Earth Hour"
+msgstr "Час Земли"
+
+#. Plugin URI of an extension
+msgid "http://www.bravenewcode.com/earth-hour/"
+msgstr "http://www.bravenewcode.com/earth-hour/"
+
+#. Description of an extension
+msgid "Changing the world, one website at a time."
+msgstr "Изменяя мир, один вебсайт за один раз."
+
+#. Author of an extension
+msgid "Dale Mugford and Duane Storey"
+msgstr "Дейл Магфорд и Дуэйн Стори"
+
+#. Author URI of an extension
+msgid "http://www.bravenewcode.com"
+msgstr "http://www.bravenewcode.com"
+

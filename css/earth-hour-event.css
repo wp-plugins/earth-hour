@@ -1,0 +1,66 @@
+/* @override http://www.bravenewcode.com/wordpress/wp-content/plugins/earth-hour/css/earth-hour-event.css */
+
+body {
+	color: #e3daa3;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	font: 11px "Helvetica Neue", Helvetica, Geneva, Arial, sans-serif;
+	background-color: #101415;
+	position: relative;
+	z-index: 0;
+}
+
+#earth_hour {
+	width: 54%;
+	background-position: center top;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 5%;
+	text-transform: uppercase;
+	color: #777;
+	text-shadow: #000000 0 -1px 0;
+	font: 15px/150% Baskerville, Garamond, Georgia, "Times New Roman", Times, serif;
+	letter-spacing: 3px;
+	background-repeat: no-repeat;
+}
+
+.preview {
+	text-align: left;
+	padding: 5px 5px 5px 10px;
+	background-color: #002b48;
+	color: #51b5fb;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-shadow: #000000 0 -1px 1px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	left: 0;
+}
+
+a#admin-return {
+	text-align: right;
+	z-index: 1;
+	margin-left: 25px;
+}
+
+p {
+	letter-spacing: 1px;
+	text-transform: none;
+}
+
+p.admin-text {
+	padding-top: 350px;
+	text-transform: uppercase;
+	margin-bottom: 50px;
+}
+
+a {
+	color: #9ccd7f;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #a4d5ed;
+}
