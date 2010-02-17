@@ -9,9 +9,9 @@ Earth Hour is a WordPress plugin that will temporarily disable a blog during Ear
 
 == Description ==
 
-During Earth Hour (which starts at 8:30pm local time on March 28, 2009), your blog will show a message of support for the initiative, along with every other WordPress site utilizing this plugin.  
+During Earth Hour (which starts at 8:30pm local time on Saturday, March 27th 2010), your blog will show a message of support for the initiative, along with every other WordPress site utilizing this plugin.  
 
-Please visit http://www.bravenewcode.com/earth-hour/ for a full description & updates on the Earth Hour plugin. 
+Please visit http://www.bravenewcode.com/products/earth-hour/ for a full description & updates on the Earth Hour plugin. 
 
 == What's New ==
 
