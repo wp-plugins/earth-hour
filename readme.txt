@@ -1,7 +1,7 @@
 === Plugin Name ===
 Contributors: BraveNewCode
 Tags: environment, bravenewcode, voteearth, earthhour, earth, hour, earthhour2009, duanestorey, dalemugford
-Requires at least: 2.7
+Requires at least: 2.6
 Tested up to: 2.9.2
 Stable tag: 1.3
 
@@ -13,7 +13,7 @@ During Earth Hour (which starts at 8:30pm local time on Saturday, March 27th 201
 
 Please visit http://www.bravenewcode.com/products/earth-hour/ for a full description & updates on the Earth Hour plugin. 
 
-== What's New ==
+== Changelog ==
 
 = Version 1.3 =
 
@@ -137,7 +137,7 @@ You can now install Earth Hour directly from the WordPress admin!
 
 = What Browsers Are Supported? =
 
-* So far, IE6, IE7+, All flavors of Firefox, Opera, Safari/Webkit, Camino, Shiira, Flock... & likely many more!
+* So far:  IE 6+, Firefox 2+, Safari 3+, Opera 9+... & many more!
 
 = Can I Help Translate Earth Hour? =
 
