@@ -1,45 +1,39 @@
-/* @override http://www.duanestorey.com/wp-content/plugins/earth-hour/css/earth-hour.css */
-
-/* @override http://www.bravenewcode.com/wp-content/plugins/earth-hour/css/earth-hour.css */
+/* @override http://www.bravenewcode.com/wordpress/wp-content/plugins/earth-hour/css/earth-hour-banner.css */
 
 body {
 	position: relative;
-	top: 20px;
 }
 
 * html #bnc_earth_hour {
 	position: absolute;
 	margin: 0;
 	padding: 0;
+	width: 100%;
 }
 
 #bnc_earth_hour {
-	position: fixed;
-	/*
-	top: 0px;
-	right: 0px;
-	*/
 	background: #000;
 	opacity: 0.83 !important;
 	filter:alpha(opacity=83) !important;
 	-moz-opacity:.83 !important;
-	-webkit-box-shadow: 0px 4px 8px #333;
 	color: #c6c6c6 !important;
-	border-bottom: 1px solid #57565f;
-	height: 20px;
 	z-index: 999;
 	width: 100%;
 	margin: 0;
 	padding: 0;
-	font: 10px/10px "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+	font: 10px/10px Helvetica, Geneva, Arial, sans-serif;
+	height: 20px;
+	text-transform: uppercase;
 }
 
 #bnc_earth_hour #inner {
-	position: absolute;
+	text-shadow: #000000 0 -1px 1px;
+	position: relative;
 	right: 5px;
-	top: 4px;
 	margin: 0;
 	padding: 0;
+	float: right;
+	top: 5px;
 }
 
 #bnc_earth_hour #inner a {
@@ -49,22 +43,22 @@ body {
 }
 
 #bnc_earth_hour #inner a:hover {
-	color: #9fd2fb;
+	color: #9fd2fb !important;
 }
 
 #bnc_earth_hour a#banner {
+	text-shadow: #000000 0 -1px 1px;
 	background: url(../images/banner-earth.png) no-repeat 3px 0;
-	font-weight: bold;
 	color: #c6c6c6;
 	margin: 0;
 	width: auto;
 	float: left;
-	position: absolute;
-	top: 3px;
-	left: 1px;
+	position: relative;
+	left: 2px;
 	height: 13px;
 	padding: 2px 0 0 25px;
 	text-shadow: #222 1px 1px 1px;
+	top: 3px;
 }
 
 #bnc_earth_hour a#banner:hover {

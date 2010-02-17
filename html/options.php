@@ -32,10 +32,10 @@
 		<div id="earth-hour-news-twitter">
 
 			<div id="earth-hour-news-wrap">
-			<h3><span class="rss-head">&nbsp;</span><?php _e( "EarthHour.org Official Blog", "earth-hour" ); ?></h3>
+			<h3><span class="rss-head">&nbsp;</span><?php _e( "BraveNewCode Environmental Entries", "earth-hour" ); ?></h3>
 				<div id="earth-hour-blog-content">
 					<?php require_once (ABSPATH . WPINC . '/rss.php');
-					$rss = @fetch_rss('http://twitter.com/statuses/user_timeline/12626962.rss');
+					$rss = @fetch_rss('http://www.bravenewcode.com/tag/environment/rss/');
 					//$rss = @fetch_rss('http://earthhourblog.posterous.com/rss.xml');						
 					if ( isset($rss->items) && 0 != count($rss->items) ) { ?>
 					<ul>

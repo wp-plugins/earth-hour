@@ -35,7 +35,7 @@ $earth_hour_default_settings = array(
 	'banner_location' => 'top',
 	'main_image' => 'official',
 	'custom_image' => '',
-	'earth_hour_text' => '' . get_bloginfo('title') . ' proudly supports'
+	'earth_hour_text' => '' . get_bloginfo('title') . ' is proudly participating in Earth Hour 2010.'
 );
 
 function earth_hour_get_settings() {
@@ -147,7 +147,7 @@ function earth_hour_footer() {
 			$days = sprintf( __ngettext( "%d day", "%d days", $time_until_earth_hour / (24*3600), "earth-hour" ),  $time_until_earth_hour / (24*3600) );
 			$hours = sprintf( __ngettext( "%d hour", "%d hours", ($time_until_earth_hour % (24*3600))/3600, "earth-hour" ),  ($time_until_earth_hour % (24*3600))/3600 );
 			$mins = sprintf( __ngettext( "%d minute", "%d minutes", (($time_until_earth_hour % (24*3600)) % 3600)/60, "earth-hour" ), (($time_until_earth_hour % (24*3600)) % 3600)/60 );
-			$msg2 = sprintf( __( "<a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth Hour</a> begins in %1\$s, %2\$s, and %3\$s", "earth-hour" ), 
+			$msg2 = sprintf( __( "<a href=\"http://www.bravenewcode.com/products/earth-hour/\" rel=\"nofollow\">Earth Hour</a> begins in %1\$s, %2\$s, and %3\$s", "earth-hour" ), 
 				$days, $hours, $mins
 			);
 			echo "</div></div>";
@@ -165,10 +165,10 @@ function earth_hour_init() {
 		
 		switch( $settings['banner_location'] ) {
 			case 'top':
-				echo "#bnc_earth_hour { position: fixed; top: 0px; right: 0px; }\n";
+				echo "body{top: 20px} \n #bnc_earth_hour { position: fixed; top: 0px; right: 0px; -webkit-box-shadow: 0px 4px 8px #333; border-bottom: 1px solid #57565f; } \n";
 				break;
 			case 'bottom':
-				echo "#bnc_earth_hour { position: fixed; bottom: 0px; right: 0px; }\n";
+				echo "#bnc_earth_hour { position: fixed; bottom: 0px; right: 0px; border-top: 1px solid #57565f; }\n";
 				break;
 			default:
 				break;	
