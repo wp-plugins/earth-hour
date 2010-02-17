@@ -48,6 +48,10 @@ function earth_hour_get_settings() {
 	}
 	
 	$saved_settings = get_option( 'bnc_earth_hour', false );
+	if ( !is_array( $saved_settings ) ) {
+		$saved_settings = unserialize( $saved_settings );	
+	}
+	
 	if ( $saved_settings ) {
 		// Settings exist, let's add recently added default settings
 		foreach( $earth_hour_default_settings as $key => $value ) {
