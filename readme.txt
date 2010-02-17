@@ -19,12 +19,14 @@ Please visit http://www.bravenewcode.com/earth-hour/ for a full description & up
 
 * Ready for 2010!
 * Brand new admin panel with options
-* Updated Earth hour page design
+* Updated Earth Hour page design (now dark- uses less screen energy!)
 * Updated banner design
 * Added option to set custom page text
 * Added option to choose image, set custom image
 * Added option to preview Earth hour page
 * Updated code, css, js etc
+* Tested in IE 6+, Firefox 2+, Safari 3+, Opera 9+
+* Updated POT file for new translations
 
 = Version 1.2.2 =
 
@@ -32,7 +34,7 @@ Please visit http://www.bravenewcode.com/earth-hour/ for a full description & up
 
 = Version 1.2.1 =
 
-* Removed stylesheet for when earth hour is over
+* Automatically removes stylesheet banner when earth hour is over
 
 = Version 1.2.0 =
 
