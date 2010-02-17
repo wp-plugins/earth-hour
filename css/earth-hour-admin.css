@@ -10,6 +10,12 @@
 	margin-top: 0;
 }
 
+#bnc-global #message p {
+	font-size: 12px;
+	color: #333;
+	text-transform: capitalize;
+}
+
 #bnc-global .postbox {
 	padding: 10px;
 	position: relative;

@@ -1,6 +1,17 @@
 <?php $settings = earth_hour_get_settings();  ?>
 
 <div class="wrap" id="bnc-global">
+<?php if (isset($_POST['submit'])) {
+		echo('<div id="message" class="updated fade"><p><strong>');
+		echo __( "Settings saved", "earth-hour");
+		echo('</strong></p></div>');
+		} 
+	elseif (isset($_POST['reset'])) {
+		echo('<div id="message" class="updated fade"><p><strong>');
+		echo __( "Defaults restored", "earth-hour");
+		echo('</strong></p></div>');
+		} 
+?>
 <div class="metabox-holder" id="earth-hour-head">
 	<div class="postbox">
 		<div id="earth-hour-head-colour">
@@ -75,18 +86,17 @@
 				<h4><?php _e( "Earth Hour Image", "earth-hour" ); ?></h4>
 				<p><?php _e( "During Earth Hour all website URLs will show a page with the image you choose and the text you include in the option below.", "earth-hour" ); ?></p>
 				<p><?php _e( "Choose between the two provided images, or link to one of your own.", "earth-hour" ); ?></p>
-				<p><?php _e( "Our images are 350px by 350px, and we'd recommend you keep yours at a similar size to work correctly.", "earth-hour" ); ?></p>
+				<p><?php _e( "Our images are 300px by 300px, and we suggest you keep yours at around the same size to work correctly.", "earth-hour" ); ?></p>
 				
 				<br /><br />
 
 				<h4><?php _e( "Earth Hour Text", "earth-hour" ); ?></h4>
-				<p><?php _e( "Along with the image above, during Earth Hour your site will display a message to all your visitors. You can edit that message here.", "earth-hour" ); ?></p>
+				<p><?php _e( "Along with the image your site displays a message to all your visitors. Edit that message here.", "earth-hour" ); ?></p>
 
 				<br /><br />
 
 				<h4><?php _e( "Preview Site", "earth-hour" ); ?></h4>
 				<p><?php _e( "Clicking the Preview button will show you what your site will look like during Earth Hour.", "earth-hour" ); ?></p>
-				<p><?php _e( "Only you will see the preview, not your visitors.", "earth-hour" ); ?></p>
 			</div>
 			
 			<div class="right-content">
@@ -110,7 +120,7 @@
 					<li><input class="radio" type="radio" name="main_image" id="official-image" value="official" <?php if ( $settings['main_image'] == 'official' ) echo 'checked="true" '; ?>/> <label for="official-image">Official Earth Hour</label></li>
 					<li><input class="radio" type="radio" name="main_image" id="lightbulbs" value="lightbulbs" <?php if ( $settings['main_image'] == 'lightbulbs' ) echo 'checked="true" '; ?>/> <label for="lightbulbs">Lightbulbs</label></li>
 					<li>
-						<input class="radio" type="radio" name="main_image" id="custom-image" value="custom" <?php if ( $settings['main_image'] == 'custom' ) echo 'checked="true" '; ?>/> <label for="custom-image">Custom:</label><br />
+						<input class="radio" type="radio" name="main_image" id="custom-image" value="custom" <?php if ( $settings['main_image'] == 'custom' ) echo 'checked="true" '; ?>/> <label for="custom-image">Custom Image URL:</label><br />
 						<input  class="input" type="text" name="custom_image" id="custom-path" value="<?php echo $settings['custom_image']; ?>" />
 					</li>
 				</ul>
@@ -122,7 +132,7 @@
 					<li><textarea class="textarea" id="earth-hour-text" name="earth_hour_text"><?php echo $settings['earth_hour_text']; ?></textarea></li>
 				</ul>
 				
-				<p><strong><?php _e( "Preview Site", "earth-hour" ); ?></strong></p>
+				<p><strong><?php _e( "Preview Site", "earth-hour" ); ?></strong> <small>(<?php _e( "Make sure you save before previewing", "earth-hour" ); ?>)</small></p>
 				<ul>
 					<li><input class="button" type="submit" name="preview" value="<?php _e('Preview Website During Earth Hour', 'earth-hour' ); ?>" /></li>
 				</ul>						
