@@ -1,23 +1,22 @@
 <?php $settings = earth_hour_get_settings();  ?>
 
-<form method="post" action="">	
 <div class="wrap" id="bnc-global">
 <div class="metabox-holder" id="earth-hour-head">
 	<div class="postbox">
 		<div id="earth-hour-head-colour">
 			<div id="earth-hour-head-title">
 				<?php earth_hour_version(); ?>
-				<p><?php echo sprintf( __( "There are currently <span>%d</span> WordPress sites using this plugin &amp; supporting Earth Hour.", "earth-hour" ), number_format( $earth_hour_settings['last_count'] ) ); ?>
-</p>
+				<p><?php 	global $earth_hour_settings; $count = number_format( $earth_hour_settings['last_count'] ); echo sprintf( __ngettext( "There is currently %d other WordPress site supporting this cause.",  "There are currently %d other WordPress sites supporting this cause.", $count, "earth-hour"), $count); ?></p>
 			</div>
 				<div id="earth-hour-head-links">
 					<ul>
+						<li><?php echo sprintf(__( "%sEarthHour.org%s", "earth-hour" ), '<a href="http://www.earthhour.org" target="_blank">','</a>'); ?> | </li>
 						<li><?php echo sprintf(__( "%sBNC Earth Hour Page%s", "earth-hour" ), '<a href="http://www.bravenewcode.com/earth-hour" target="_blank">','</a>'); ?> | </li>
 						<li><?php echo sprintf(__( "%sDonate%s", "earth-hour" ), '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=paypal%40bravenewcode%2ecom&amp;item_name=earth-hour%20Beer%20Fund&amp;no_shipping=1&amp;tax=0&amp;currency_code=CAD&amp;lc=CA&amp;bn=PP%2dDonationsBF&amp;charset=UTF%2d8" target="_blank">','</a>'); ?></li>
 					</ul>
 				</div>
-	<div class="bnc-clearer"></div>
-			</div>	
+			<div class="bnc-clearer"></div>
+		</div>	
 	
 		<div id="earth-hour-news-twitter">
 
@@ -25,7 +24,8 @@
 			<h3><span class="rss-head">&nbsp;</span><?php _e( "EarthHour.org Official Blog", "earth-hour" ); ?></h3>
 				<div id="earth-hour-blog-content">
 					<?php require_once (ABSPATH . WPINC . '/rss.php');
-					$rss = @fetch_rss('http://earthhourblog.posterous.com/rss.xml');						
+					$rss = @fetch_rss('http://twitter.com/statuses/user_timeline/12626962.rss');
+					//$rss = @fetch_rss('http://earthhourblog.posterous.com/rss.xml');						
 					if ( isset($rss->items) && 0 != count($rss->items) ) { ?>
 					<ul>
 						<?php $rss->items = array_slice($rss->items, 0, 5); foreach ($rss->items as $item ) { ?>
@@ -51,13 +51,14 @@
 				</div>
 			</div>
 			
-		</div><!-- earth-hour-news-support -->
+		</div><!-- earth-hour-news-twitter -->
 	
 	<div class="bnc-clearer"></div>
 	</div><!-- postbox -->
 
 </div><!-- earth-hour-head -->
-</div><!-- global earth-hour -->
+
+<form method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
 
 <!-- Earth Hour Settings Pane -->
 <div class="metabox-holder">
@@ -87,7 +88,7 @@
 				<p><?php _e( "Clicking the Preview button will show you what your site will look like during Earth Hour.", "earth-hour" ); ?></p>
 				<p><?php _e( "Only you will see the preview, not your visitors.", "earth-hour" ); ?></p>
 			</div>
-
+			
 			<div class="right-content">
 				<p><strong><?php _e( "Banner Placement", "earth-hour" ); ?></strong></p>
 				<ul>
@@ -125,7 +126,6 @@
 	</div><!-- postbox -->
 </div><!-- metabox -->
 
-	<form method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
 		<input type="submit" name="submit" value="<?php _e('Save Options', 'earth-hour' ); ?>" id="bnc-button" class="button-primary" />
 	</form>
 	

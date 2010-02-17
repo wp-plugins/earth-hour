@@ -7,7 +7,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 	<head>
 		<title><?php bloginfo('name'); ?> - <?php _e( "Proudly Supporting Earth Hour", "earth-hour" ); ?></title>
-		<link rel="stylesheet" type="text/css" media="screen" href="<?php echo compat_get_plugin_url( 'earth-hour' ); ?>/html/style.css"></link>
+		<link rel="stylesheet" type="text/css" media="screen" href="<?php echo compat_get_plugin_url( 'earth-hour' ); ?>/css/earth-hour-event.css"></link>
 	</head>
 	<body>
 		<div id="page">

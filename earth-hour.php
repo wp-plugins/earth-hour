@@ -35,7 +35,7 @@ $earth_hour_default_settings = array(
 	'banner_location' => 'top',
 	'main_image' => 'official',
 	'custom_image' => '',
-	'earth_hour_text' => ''
+	'earth_hour_text' => '' . get_bloginfo('title') . ' proudly supports'
 );
 
 function earth_hour_get_settings() {
@@ -84,7 +84,7 @@ function earth_hour_version($before = '', $after = '') {
 // WP Admin stylesheets & javascript
 function earth_hour_admin_files() {		
 	if ( isset( $_GET['page'] ) && $_GET['page'] == 'earth-hour.php' ) {
-		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'earth-hour' ) . "/css/bnc-global-admin.css' />\n";
+		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'earth-hour' ) . "/css/earth-hour-admin.css' />\n";
 	}
 }
 
@@ -110,7 +110,7 @@ function earth_hour_head() {
 	}
 
 	if ( !$on_iphone ) {
-		echo "<link rel='stylesheet' type='text/css' media='screen' href='" . WP_PLUGIN_URL . "/earth-hour/css/earth-hour.css'></link>\n";
+		echo "<link rel='stylesheet' type='text/css' media='screen' href='" . WP_PLUGIN_URL . "/earth-hour/css/earth-hour-banner.css'></link>\n";
 		echo "<link rel='stylesheet' type='text/css' media='screen' href='" . get_bloginfo("home") . "/?earth_hour_dynamic_css=1'></link>\n";
 		echo "<script type='text/javascript' src='" . WP_PLUGIN_URL . "/earth-hour/js/earth-hour.js'></script>";
 	}
@@ -177,10 +177,10 @@ function earth_hour_init() {
 		// DALE CHANGE THESE
 		switch( $settings['main_image'] ) {
 			case 'original':
-				echo "#some_id { background-image: url(" . WP_PLUGIN_URL . "/earth-hour/images/original.jpg); }\n";
+				echo "#some_id { background-image: url(" . WP_PLUGIN_URL . "/earth-hour/images/earth-hour.gif); }\n";
 				break;
 			case 'lightbulbs':
-				echo "#some_id { background-image: url(" . WP_PLUGIN_URL . "/earth-hour/images/lightbulbs.jpg); }\n";
+				echo "#some_id { background-image: url(" . WP_PLUGIN_URL . "/earth-hour/images/bnc-earth-hour.gif); }\n";
 				break;
 			case 'custom':
 				echo "#some_id { background-image: url(" . $settings['custom_image'] . "); }\n";
@@ -294,6 +294,7 @@ function earth_hour_admin_init() {
 		}
 		
 		earth_hour_save_settings( $settings );
+		
 	} elseif ( isset( $_POST['reset'] ) ) {
 		global $earth_hour_default_settings;
 		earth_hour_save_settings( $earth_hour_default_settings );
@@ -303,4 +304,3 @@ function earth_hour_admin_init() {
 add_action( 'admin_menu', 'earth_hour_add_plugin_option' );
 add_action( 'admin_head', 'earth_hour_admin_files' );
 add_filter( 'plugin_action_links', 'earth_hour_settings_link', 9, 2 );
-
