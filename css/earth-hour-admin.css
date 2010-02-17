@@ -1,0 +1,396 @@
+/* @override http://www.bravenewcode.com/wordpress/wp-content/plugins/earth-hour/css/earth-hour-admin.css */
+
+/* @group Global Styles */
+
+#bnc-global {
+	color: #444;
+	margin-bottom: 35px;
+	margin-top: 0;
+}
+
+#bnc-global #message p {
+	font-size: 12px;
+	color: #333;
+	text-transform: capitalize;
+}
+
+#bnc-global .postbox {
+	padding: 10px;
+	position: relative;
+	overflow: hidden;
+	-webkit-box-shadow: #ccc 0px 1px 6px;
+	width: 98%;
+}
+
+#bnc-global .postbox h3 {
+	margin: -10px -10px 0;
+	cursor: default;
+}
+
+#bnc-global a {
+	text-decoration: none;
+	font-size: 11px;
+}
+
+#bnc-global a.orange-link {
+	color: #d54e21;
+}
+
+#bnc-global a.orange-link:hover {
+	color: #3c627f;
+}
+
+#bnc-global a.fancylink {
+	color: red;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+#bnc-global, #bnc-global .postbox, #bnc-global .postbox ul, #bnc-global .postbox p, #bnc-global p {
+	margin-top: 10px;
+	font-size: 11px;
+}
+
+#bnc-global .left-content {
+	width: 28%;
+	float: left;
+	padding-right: 10px;
+	margin-top: 10px;
+	position: relative;
+}
+
+#bnc-global .left-content h4 {
+	margin: 2px 0 0;
+	padding: 0 0 4px;
+	letter-spacing: 0;
+	color: #d54e21;
+	font-size: 12px;
+	line-height: 13px;
+}
+
+#bnc-global .left-content p {
+	margin-top: 0;
+}
+
+#bnc-global .left-content ul {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+#bnc-global .left-content li {
+	color: #536e90;
+	margin: 0 5px;
+	padding: 1px 0;
+	list-style-type: circle;
+	list-style-position: inside;
+}
+
+#bnc-global .right-content li {
+	list-style-type: none;
+}
+
+#bnc-global .right-content {
+	width: 63%;
+	float: left;
+	margin-left: 3%;
+	border-left: 1px solid #e6e6e6;
+	padding-bottom: 45px;
+	padding-left: 10px;
+	margin-bottom: -30px;
+}
+
+#bnc-global .bnc-clearer {
+	clear: both;
+}
+
+#bnc-global select {
+	vertical-align: baseline;
+	width: 176px;
+	margin-right: 5px;
+	border: 1px solid #6caccd;
+}
+
+#bnc-global input {
+	border: 2px solid #a4c6d3;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	width: 177px;
+	color: #555;
+	font-size: 11px;
+	background-color: #ebf1ff;
+	margin-right: 7px;
+	margin-left: 5px;
+}
+
+/* @group Global H3 Icons */
+
+#bnc-global h3 span {
+	background: no-repeat 0 0;
+	height: 16px;
+	margin-right: 5px;
+	width: 16px;
+	display: block;
+	float: left;
+	bottom: 2px;
+	position: relative;
+}
+
+#bnc-global h3 span.global-settings {
+	background: url(../images/h3_icons/general.png);
+}
+
+#bnc-global h3 span.rss-head {
+	background: url(../images/h3_icons/rss.png) 0 1px;
+}
+
+/* @end */
+
+/* @end */
+
+/* @group Earth Hour Admin */
+
+/* @group Options Page Styles */
+
+#earth-hour-head .postbox {
+	background: #fff;
+	position: relative;
+	overflow: hidden;
+	width: 98%;
+}
+
+#earth-hour-head-colour {
+	background-color: #b7c9d6;
+	padding: 10px;
+	margin: -10px -10px -20px;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-top-left-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-topleft: 5px;
+	border: 1px solid #e5f0f2;
+	border-bottom: 1px solid #a2bdbf;
+}
+
+#earth-hour-head-title {
+	font: bold 22px Georgia, "Times New Roman", Times, serif;
+	color: #333c42;
+	text-shadow: #deeefa 0 1px 0;
+	letter-spacing: -1px;
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+
+#earth-hour-head-title p {
+	letter-spacing: 0;
+	font-family: "Lucida Grande", "Lucida sans Unicode", Arial, sans-serif;
+	display: inline;
+	margin-left: 10px;
+	position: relative;
+	bottom: 3px;
+}
+
+#earth-hour-head-title p span {
+	color: green;
+}
+
+#earth-hour-head-links {
+	float: right;
+	position: relative;
+	bottom: 6px;
+}
+
+#earth-hour-head-links a {
+	color: #333c42;
+	font-weight: bold;
+	text-shadow: #cddce8 0 1px 0;
+}
+
+#earth-hour-head-links a:hover {
+	color: #d54e21;
+	text-shadow: #cedeea 0 1px 0;
+}
+
+#earth-hour-head-links li {
+	display: inline;
+	color: #618299;
+	text-shadow: #bfdfe8 1px 1px 0;
+}
+
+#earth-hour-news-twitter {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	margin-top: 30px;
+	width: 100%;
+	height: 170px;
+	text-transform: capitalize;
+}
+
+#earth-hour-head h3 {
+	color: #444;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+}
+
+/* @group RSS Feeds */
+
+#earth-hour-news-wrap {
+	width: 50%;
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+
+#earth-hour-news-wrap h3 {
+	padding-left: 10px;
+	display: block;
+	width: 100%;
+}
+
+#earth-hour-twitter-wrap {
+	color: #777;
+	width: 50%;
+	padding: 0;
+	margin: 0;
+	float: left;
+}
+
+#earth-hour-twitter-wrap ul {
+}
+
+#earth-hour-twitter-wrap ul li {
+	width: 95%;
+}
+
+#earth-hour-twitter-wrap h3 {
+	display: block;
+	width: 100%;
+	position: relative;
+	padding-right: 12px;
+}
+
+#earth-hour-news-twitter li {
+	border-bottom: 1px solid #e6e6e6;
+	margin: 0;
+	padding: 3px 0;
+	list-style-type: circle;
+	list-style-position: inside;
+	color: #c1cfd1;
+	width: 90%;
+}
+
+#earth-hour-news-twitter li:last-child {
+	border-bottom-style: none;
+}
+
+/* @end */
+
+/* @group General Settings */
+
+#bnc-global .right-content .radio {
+	padding: 0;
+	margin: 0 5px 0 0;
+	width: auto;
+	height: auto;
+	border-style: none;
+}
+
+#bnc-global .right-content .input {
+	margin-top: 10px;
+	position: relative;
+	right: 5px;
+	width: 55%;
+	padding: 5px;
+}
+
+#bnc-global .right-content .textarea {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	width: 55%;
+	color: #444;
+	font-size: 11px;
+	border-width: 2px;
+	border-color: #a4c6d3;
+	background-color: #ebf1ff;
+	height: 60px;
+	margin: 0;
+	overflow: auto;
+}
+
+#bnc-global .right-content .button {
+	border-width: 1px;
+	padding: 5px;
+	width: auto;
+	border-color: #ccc;
+}
+
+
+
+/* @end */
+
+/* @group Earth Hour Images */
+
+#earth-hour-images {
+	width: 155px;
+	position: absolute;
+	top: 27px;
+	right: 1px;
+	background-color: #fffbe0;
+	padding: 10px;
+	height: 100%;
+}
+
+#earth-hour-images img {
+	width: 150px;
+	height: auto;
+	border: 3px solid #b9c4c6;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+
+
+
+/* @end */
+
+/* @group Save/Restore Button Area */
+
+#bnc-global .bnc-plugin-version {
+	float: right;
+	font: 18px Georgia, "Times New Roman", Times, serif;
+	color: #70777a;
+	text-shadow: #fff -1px -1px 0;
+	letter-spacing: -1px;
+	margin-top: 2px;
+	position: relative;
+	left: 10px;
+	margin-bottom: 25px;
+	margin-right: 1%;
+}
+
+#bnc-global input#bnc-button {
+	color: #fff !important;
+}
+
+#bnc-global input#bnc-button, #bnc-global input#bnc-button-reset {
+	border: 2px solid #b2cfe4 !important;
+	float: left !important;
+	width: 12% !important;
+	padding: 4px !important;
+}
+
+#bnc-global input#bnc-button-reset:hover {
+	border-color: red !important;
+	color: red !important;
+}
+
+#bnc-global input#bnc-button:hover, #bnc-global input#bnc-button:active {
+	border: 2px solid #305769 !important;
+	color: #cdebfd !important;
+}
+
+/* @end */
+
+/* @end */
+
+
+
+/* @end */
