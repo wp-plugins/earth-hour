@@ -73,9 +73,9 @@
 				<br /><br />
 
 				<h4><?php _e( "Earth Hour Image", "earth-hour" ); ?></h4>
-				<p><?php _e( "During Earth Hour all links to your site will show this image and the text you choose in the option below.", "earth-hour" ); ?></p>
+				<p><?php _e( "During Earth Hour all website URLs will show a page with the image you choose and the text you include in the option below.", "earth-hour" ); ?></p>
 				<p><?php _e( "Choose between the two provided images, or link to one of your own.", "earth-hour" ); ?></p>
-				<p><?php _e( "Our images are 350px x 350px, and we'd recommend you keep yours at a similar size to work correctly.", "earth-hour" ); ?></p>
+				<p><?php _e( "Our images are 350px by 350px, and we'd recommend you keep yours at a similar size to work correctly.", "earth-hour" ); ?></p>
 				
 				<br /><br />
 
@@ -90,6 +90,13 @@
 			</div>
 			
 			<div class="right-content">
+				<div id="earth-hour-images">
+					<ul>
+						<li><h4>Official Earth Hour Image</h4><img src="<?php echo '' . WP_PLUGIN_URL . ''; ?>/earth-hour/images/earth-hour.gif" alt="official image" /></li>
+						<li><h4>Lightbulbs BNC Image</h4><img src="<?php echo '' . WP_PLUGIN_URL . ''; ?>/earth-hour/images/bnc-earth-hour.gif" alt="BNC image" /></li>
+						<!-- <li><h4>Your Custom Image</h4><img src="" alt="custom image" /></li> -->
+					</ul>
+				</div>
 				<p><strong><?php _e( "Banner Placement", "earth-hour" ); ?></strong></p>
 				<ul>
 					<li><input class="radio" type="radio" name="banner_location" id="website-top" value="top" <?php if ( $settings['banner_location'] == 'top' ) echo 'checked="true" '; ?>/> <label for="website-top">Website Top</label></li>

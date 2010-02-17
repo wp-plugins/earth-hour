@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: Earth Hour
-Plugin URI: http://www.bravenewcode.com/earth-hour/
-Description: Changing the world, one website at a time.
-Author: Dale Mugford and Duane Storey
+Plugin URI: http://www.bravenewcode.com/products/earth-hour/
+Description: Proudly show your support for Earth Hour with a banner countdown to the event and "shutting off" your site for the hour.
+Author: Dale Mugford and Duane Storey (BraveNewCode)
 Version: 1.3
 Author URI: http://www.bravenewcode.com
 Text Domain: earth-hour
