@@ -1,41 +1,62 @@
-/* @override http://syndromex.me/wp-content/plugins/earth-hour/html/style.css */
+/* @override http://www.bravenewcode.com/wordpress/wp-content/plugins/earth-hour/css/earth-hour-event.css */
 
 body {
-	background: #261a0b;
 	color: #e3daa3;
 	margin: 0px;
 	padding: 0px;
 	text-align: center;
-	font: 11px "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+	font: 11px "Helvetica Neue", Helvetica, Geneva, Arial, sans-serif;
+	background-color: #101415;
+	position: relative;
+	z-index: 0;
 }
 
-#content {
-	background: url(../images/earth-hour-logo.gif) no-repeat center top;
-	margin: 3% auto auto;
-	padding-top: 325px;
+#earth_hour {
+	width: 54%;
+	background-position: center top;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 5%;
+	text-transform: uppercase;
+	color: #777;
+	text-shadow: #000000 0 -1px 0;
+	font: 15px/150% Baskerville, Garamond, Georgia, "Times New Roman", Times, serif;
+	letter-spacing: 3px;
+	background-repeat: no-repeat;
 }
 
-h2 {
-	color: #33a435;
-	font-size: 1.3em;
-	text-shadow: #003c20 -1px -1px 1px;
+.preview {
+	text-align: left;
+	padding: 5px 5px 5px 10px;
+	background-color: #002b48;
+	color: #51b5fb;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-shadow: #000000 0 -1px 1px;
+}
+
+a#admin-return {
+	text-align: right;
+	z-index: 1;
+	margin-left: 25px;
+}
+
+p {
+	letter-spacing: 1px;
+	text-transform: none;
+}
+
+p.admin-text {
+	padding-top: 350px;
+	text-transform: uppercase;
+	margin-bottom: 50px;
 }
 
 a {
-	color: #ff7901;
+	color: #9ccd7f;
 	text-decoration: none;
 }
 
 a:hover {
 	color: #a4d5ed;
-}
-
-#duane {
-	padding-top: 70px;
-	font-size: 1.1em;
-}
-
-p#dale, p#chloe {
-	padding-top: 10px;
-	line-height: 160%;
 }

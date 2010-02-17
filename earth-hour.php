@@ -176,14 +176,14 @@ function earth_hour_init() {
 		
 		// DALE CHANGE THESE
 		switch( $settings['main_image'] ) {
-			case 'original':
-				echo "#some_id { background-image: url(" . WP_PLUGIN_URL . "/earth-hour/images/earth-hour.gif); }\n";
+			case 'official':
+				echo "#earth_hour { background-image: url(" . WP_PLUGIN_URL . "/earth-hour/images/earth-hour.gif); }\n";
 				break;
 			case 'lightbulbs':
-				echo "#some_id { background-image: url(" . WP_PLUGIN_URL . "/earth-hour/images/bnc-earth-hour.gif); }\n";
+				echo "#earth_hour { background-image: url(" . WP_PLUGIN_URL . "/earth-hour/images/bnc-earth-hour.gif); }\n";
 				break;
 			case 'custom':
-				echo "#some_id { background-image: url(" . $settings['custom_image'] . "); }\n";
+				echo "#earth_hour { background-image: url(" . $settings['custom_image'] . "); }\n";
 				break;	
 		}
 		// END CHANGE
