@@ -9,6 +9,7 @@ body {
 	background-color: #101415;
 	position: relative;
 	z-index: 0;
+	height: 100%;
 }
 
 #earth_hour {
@@ -54,6 +55,7 @@ p.admin-text {
 	padding-top: 350px;
 	text-transform: uppercase;
 	margin-bottom: 50px;
+	font-size: 16px;
 }
 
 a {

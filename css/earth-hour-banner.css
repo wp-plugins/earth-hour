@@ -4,13 +4,6 @@ body {
 	position: relative;
 }
 
-* html #bnc_earth_hour {
-	position: absolute;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-}
-
 #bnc_earth_hour {
 	background: #000;
 	opacity: 0.83 !important;
@@ -64,4 +57,11 @@ body {
 #bnc_earth_hour a#banner:hover {
 	background-position: 3px -16px;
 	color: #9fd2fb;
+}
+
+* html #bnc_earth_hour {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	width: 100%;
 }

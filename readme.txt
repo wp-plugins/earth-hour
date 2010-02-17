@@ -18,6 +18,7 @@ Please visit http://www.bravenewcode.com/products/earth-hour/ for a full descrip
 = Verison 1.3.1 =
 
 * Added improved settings handling for old versions
+* Minor CSS tweaks and revisions
 
 = Version 1.3 =
 
