@@ -3,9 +3,9 @@ Contributors: BraveNewCode
 Tags: environment, bravenewcode, voteearth, earthhour, earth, hour, earthhour2009, duanestorey, dalemugford
 Requires at least: 2.6
 Tested up to: 2.9.2
-Stable tag: 1.3.1
+Stable tag: 1.3.2
 
-Earth Hour is a WordPress plugin that will temporarily disable a blog during Earth Hour to show support for the initiative and the environment. Stay tuned for updated for next year's event.
+Earth Hour is a WordPress plugin that will temporarily disable a blog during Earth Hour to show support for the initiative and the environment. It also displays a thin banner on your website prior to event which shows your support, links to earthhour.org and announces how many other WordPress websites are using the plugin.
 
 == Description ==
 
@@ -14,6 +14,11 @@ During Earth Hour (which starts at 8:30pm local time on Saturday, March 27th 201
 Please visit http://www.bravenewcode.com/products/earth-hour/ for a full description & updates on the Earth Hour plugin. 
 
 == Changelog ==
+
+= Version 1.3.2 =
+
+* Added support link in admin
+* Revised out-dated text in readme
 
 = Version 1.3.1 =
 
@@ -146,11 +151,11 @@ You can now install Earth Hour directly from the WordPress admin!
 
 = Can I Help Translate Earth Hour? =
 
-* Sure! We've included the .POT file in the package.  Please translate it and email it to use at support@bravenewcode.com.  
+* Sure! We've included the .POT file in the download package.  Please translate it to the language of your choice and upload it using the POT file contact form at http://www.bravenewcode.com/contact
 
 = Why Doesn't The Banner Show Up On My Site? =
 
-* It's most likely because your theme doesn't have a wp_footer template tag.  Try adding that to your theme.
+* It's most likely because your theme doesn't have a wp_footer template tag.  Try adding that to your theme. If you still have issues with Earth Hour visit http://www.bravenewcode.com/support/ for more help.
 
 == Screenshots ==
 
