@@ -1,14 +1,12 @@
-/* @override http://www.bravenewcode.com/wordpress/wp-content/plugins/earth-hour/css/earth-hour-banner.css */
-
 body {
 	position: relative;
 }
 
 #bnc_earth_hour {
 	background: #000;
-	opacity: 0.83 !important;
-	filter:alpha(opacity=83) !important;
-	-moz-opacity:.83 !important;
+	opacity: 0.80 !important;
+	filter:alpha(opacity=80) !important;
+	-moz-opacity:.80 !important;
 	color: #c6c6c6 !important;
 	z-index: 999;
 	width: 100%;

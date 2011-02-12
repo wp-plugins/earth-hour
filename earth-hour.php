@@ -142,8 +142,8 @@ function earth_hour_footer() {
 			echo "</a><div id=\"inner\">";
 			$msg = sprintf( 
 				__ngettext( 
-					"One of %s website proudly supporting <a href=\"http://www.bravenewcode.com/products/earth-hour/\" rel=\"nofollow\">Earth Hour</a>. ", 
-					"One of %s websites proudly supporting <a href=\"http://www.bravenewcode.com/products/earth-hour/\" rel=\"nofollow\">Earth Hour</a>. ",
+					"One of %s website proudly supporting <a href=\"http://www.earthhour.org/\" rel=\"nofollow\">Earth Hour</a>. ", 
+					"One of %s websites proudly supporting <a href=\"http://www.earthhour.org/\" rel=\"nofollow\">Earth Hour</a>. ",
 					$earth_hour_settings['last_count'],
 					"earth-hour"
 				),
@@ -155,7 +155,7 @@ function earth_hour_footer() {
 			$days = sprintf( __ngettext( "%d day", "%d days", $time_until_earth_hour / (24*3600), "earth-hour" ),  $time_until_earth_hour / (24*3600) );
 			$hours = sprintf( __ngettext( "%d hour", "%d hours", ($time_until_earth_hour % (24*3600))/3600, "earth-hour" ),  ($time_until_earth_hour % (24*3600))/3600 );
 			$mins = sprintf( __ngettext( "%d minute", "%d minutes", (($time_until_earth_hour % (24*3600)) % 3600)/60, "earth-hour" ), (($time_until_earth_hour % (24*3600)) % 3600)/60 );
-			$msg2 = sprintf( __( "<a href=\"http://www.bravenewcode.com/products/earth-hour/\" rel=\"nofollow\">Earth Hour</a> begins in %1\$s, %2\$s, and %3\$s", "earth-hour" ), 
+			$msg2 = sprintf( __( "<a href=\"http://www.earthhour.org/\" rel=\"nofollow\">Earth Hour</a> begins in %1\$s, %2\$s, and %3\$s", "earth-hour" ), 
 				$days, $hours, $mins
 			);
 			echo "</div></div>";
