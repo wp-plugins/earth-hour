@@ -1,8 +1,8 @@
 === Plugin Name ===
 Contributors: BraveNewCode
 Tags: environment, bravenewcode, voteearth, earthhour, earth, hour, earthhour2009, duanestorey, dalemugford
-Requires at least: 2.6
-Tested up to: 2.9.2
+Requires at least: 2.8
+Tested up to: 3.0.5
 Stable tag: 1.3.2
 
 Earth Hour is a WordPress plugin that will temporarily disable a blog during Earth Hour to show support for the initiative and the environment. It also displays a thin banner on your website prior to event which shows your support, links to earthhour.org and announces how many other WordPress websites are using the plugin.
@@ -14,6 +14,10 @@ During Earth Hour (which starts at 8:30pm local time on Saturday, March 27th 201
 Please visit http://www.bravenewcode.com/products/earth-hour/ for a full description & updates on the Earth Hour plugin. 
 
 == Changelog ==
+
+= Version 1.4 =
+
+* Ready for 2011!
 
 = Version 1.3.2 =
 
