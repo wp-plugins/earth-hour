@@ -22,9 +22,8 @@
 				<div id="earth-hour-head-links">
 					<ul>
 						<li><?php echo sprintf(__( "%sEarthHour.org%s", "earth-hour" ), '<a href="http://www.earthhour.org" target="_blank">','</a>'); ?> | </li>
-						<li><?php echo sprintf(__( "%sBNC Earth Hour Page%s", "earth-hour" ), '<a href="http://www.bravenewcode.com/products/earth-hour/" target="_blank">','</a>'); ?> | </li>
-						<li><?php echo sprintf(__( "%sSupport Forums%s", "earth-hour" ), '<a href="http://www.bravenewcode.com/support/" target="_blank">','</a>'); ?> | </li>
-						<li><?php echo sprintf(__( "%sDonate%s", "earth-hour" ), '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=paypal%40bravenewcode%2ecom&amp;item_name=Earth%20Hour%20Beer%20Fund&amp;no_shipping=1&amp;tax=0&amp;currency_code=CAD&amp;lc=CA&amp;bn=PP%2dDonationsBF&amp;charset=UTF%2d8" target="_blank">','</a>'); ?></li>
+						<li><?php echo sprintf(__( "%sBNC Earth Hour Page%s", "earth-hour" ), '<a href="http://www.bravenewcode.com/free-stuff/" target="_blank">','</a>'); ?> | </li>
+						<li><?php echo sprintf(__( "%sSupport Forums%s", "earth-hour" ), '<a href="http://www.bravenewcode.com/support/" target="_blank">','</a>'); ?></li>
 					</ul>
 				</div>
 			<div class="bnc-clearer"></div>
@@ -103,25 +102,25 @@
 			<div class="right-content">
 				<div id="earth-hour-images">
 					<ul>
-						<li><h4>Official Earth Hour Image</h4><img src="<?php echo '' . WP_PLUGIN_URL . ''; ?>/earth-hour/images/earth-hour.gif" alt="official image" /></li>
-						<li><h4>Lightbulbs BNC Image</h4><img src="<?php echo '' . WP_PLUGIN_URL . ''; ?>/earth-hour/images/bnc-earth-hour.gif" alt="BNC image" /></li>
+						<li><h4><?php _e( "Official Earth Hour Image", "earth-hour" ); ?></h4><img src="<?php echo '' . WP_PLUGIN_URL . ''; ?>/earth-hour/images/wwf-earth-hour.gif" alt="official image" /></li>
+						<li><h4><?php _e( 'Lightbulbs BNC Image', "earth-hour" ); ?></h4><img src="<?php echo '' . WP_PLUGIN_URL . ''; ?>/earth-hour/images/bnc-earth-hour.gif" alt="BNC image" /></li>
 						<!-- <li><h4>Your Custom Image</h4><img src="" alt="custom image" /></li> -->
 					</ul>
 				</div>
 				<p><strong><?php _e( "Banner Placement", "earth-hour" ); ?></strong></p>
 				<ul>
-					<li><input class="radio" type="radio" name="banner_location" id="website-top" value="top" <?php if ( $settings['banner_location'] == 'top' ) echo 'checked="true" '; ?>/> <label for="website-top">Website Top</label></li>
-					<li><input class="radio" type="radio" name="banner_location" id="website-bottom" value="bottom" <?php if ( $settings['banner_location'] == 'bottom' ) echo 'checked="true" '; ?>/> <label for="website-bottom">Website Bottom</label></li>
+					<li><input class="radio" type="radio" name="banner_location" id="website-top" value="top" <?php if ( $settings['banner_location'] == 'top' ) echo 'checked="true" '; ?>/> <label for="website-top"><?php _e( 'Website Top', "earth-hour" ); ?></label></li>
+					<li><input class="radio" type="radio" name="banner_location" id="website-bottom" value="bottom" <?php if ( $settings['banner_location'] == 'bottom' ) echo 'checked="true" '; ?>/> <label for="website-bottom"><?php _e( 'Website Bottom', "earth-hour" ); ?></label></li>
 				</ul>
 
 				<br /><br /><br /><br />
 				
 				<p><strong><?php _e( "Earth Hour Image", "earth-hour" ); ?></strong></p>
 				<ul>
-					<li><input class="radio" type="radio" name="main_image" id="official-image" value="official" <?php if ( $settings['main_image'] == 'official' ) echo 'checked="true" '; ?>/> <label for="official-image">Official Earth Hour</label></li>
-					<li><input class="radio" type="radio" name="main_image" id="lightbulbs" value="lightbulbs" <?php if ( $settings['main_image'] == 'lightbulbs' ) echo 'checked="true" '; ?>/> <label for="lightbulbs">Lightbulbs</label></li>
+					<li><input class="radio" type="radio" name="main_image" id="official-image" value="official" <?php if ( $settings['main_image'] == 'official' ) echo 'checked="true" '; ?>/> <label for="official-image"><?php _e( 'Official Earth Hour', "earth-hour" ); ?></label></li>
+					<li><input class="radio" type="radio" name="main_image" id="lightbulbs" value="lightbulbs" <?php if ( $settings['main_image'] == 'lightbulbs' ) echo 'checked="true" '; ?>/> <label for="lightbulbs"><?php _e( 'Lightbulbs', "earth-hour" ); ?></label></li>
 					<li>
-						<input class="radio" type="radio" name="main_image" id="custom-image" value="custom" <?php if ( $settings['main_image'] == 'custom' ) echo 'checked="true" '; ?>/> <label for="custom-image">Custom Image URL:</label><br />
+						<input class="radio" type="radio" name="main_image" id="custom-image" value="custom" <?php if ( $settings['main_image'] == 'custom' ) echo 'checked="true" '; ?>/> <label for="custom-image"><?php _e( 'Custom Image URL', "earth-hour" ); ?>:</label><br />
 						<input  class="input" type="text" name="custom_image" id="custom-path" value="<?php echo $settings['custom_image']; ?>" />
 					</li>
 				</ul>

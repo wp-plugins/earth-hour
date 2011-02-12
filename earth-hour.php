@@ -4,7 +4,7 @@ Plugin Name: Earth Hour
 Plugin URI: http://www.bravenewcode.com/products/earth-hour/
 Description: Proudly show your support for Earth Hour with a banner countdown to the event and "shutting off" your site for the hour.
 Author: Dale Mugford and Duane Storey (BraveNewCode)
-Version: 1.3.2
+Version: 1.4
 Author URI: http://www.bravenewcode.com
 Text Domain: earth-hour
 */
@@ -35,7 +35,7 @@ $earth_hour_default_settings = array(
 	'banner_location' => 'top',
 	'main_image' => 'official',
 	'custom_image' => '',
-	'earth_hour_text' => '' . get_bloginfo('title') . ' is proudly participating in Earth Hour 2010.'
+	'earth_hour_text' => '' . get_bloginfo('title') . ' is proudly participating in Earth Hour 2011.'
 );
 
 function earth_hour_get_settings() {
@@ -78,7 +78,7 @@ function earth_hour_save_settings( $new_settings ) {
 }
 
 global $bnc_earth_hour_version;
-$bnc_earth_hour_version = '1.3.2';
+$bnc_earth_hour_version = '1.4';
 
 function earth_hour_version($before = '', $after = '') {
 	global $bnc_earth_hour_version;
@@ -108,17 +108,21 @@ function earth_hour_is_active() {
 }
 
 function earth_hour_head() {	
+	global $earth_hour_settings;
+	global $time_until_earth_hour;
+
 	$on_iphone = false;
 	if ( function_exists( 'bnc_is_iphone' ) ) {
 		$on_iphone = bnc_is_iphone();
 	}
 
-	if ( !$on_iphone ) {
-		echo "<link rel='stylesheet' type='text/css' media='screen' href='" . WP_PLUGIN_URL . "/earth-hour/css/earth-hour-banner.css'></link>\n";
-		echo "<link rel='stylesheet' type='text/css' media='screen' href='" . get_bloginfo("home") . "/?earth_hour_dynamic_css=1'></link>\n";
-		echo "<script type='text/javascript' src='" . WP_PLUGIN_URL . "/earth-hour/js/earth-hour.js'></script>";
+	if ( $time_until_earth_hour > 0 ) {
+		if ( !earth_hour_is_active() && !$on_iphone ) {
+			echo "<link rel='stylesheet' type='text/css' media='screen' href='" . WP_PLUGIN_URL . "/earth-hour/css/earth-hour-banner.css'></link>\n";
+			echo "<link rel='stylesheet' type='text/css' media='screen' href='" . get_bloginfo("home") . "/?earth_hour_dynamic_css=1'></link>\n";
+			echo "<script type='text/javascript' src='" . WP_PLUGIN_URL . "/earth-hour/js/earth-hour.js'></script>";
+		}
 	}
-	
 }
 
 function earth_hour_footer() {
@@ -178,10 +182,9 @@ function earth_hour_init() {
 				break;	
 		}
 		
-		// DALE CHANGE THESE
 		switch( $settings['main_image'] ) {
 			case 'official':
-				echo "#earth_hour { background-image: url(" . WP_PLUGIN_URL . "/earth-hour/images/earth-hour.gif); }\n";
+				echo "#earth_hour { background-image: url(" . WP_PLUGIN_URL . "/earth-hour/images/wwf-earth-hour.gif); }\n";
 				break;
 			case 'lightbulbs':
 				echo "#earth_hour { background-image: url(" . WP_PLUGIN_URL . "/earth-hour/images/bnc-earth-hour.gif); }\n";
@@ -190,18 +193,15 @@ function earth_hour_init() {
 				echo "#earth_hour { background-image: url(" . $settings['custom_image'] . "); }\n";
 				break;	
 		}
-		// END CHANGE
 		
 		die;
 	}
-
 	
 	$current_locale = get_locale();
 	if( !empty( $current_locale ) ) {
 		$moFile = dirname(__FILE__) . "/lang/earth-hour-" . $current_locale . ".mo";
 		if(@file_exists($moFile) && is_readable($moFile)) load_textdomain( 'earth-hour' , $moFile );
 	}
-
 
 	$now_time = time();	
 	$time_since_last_update = $now_time - $earth_hour_settings['last_count_time'];
@@ -216,7 +216,7 @@ function earth_hour_init() {
    	}
 	}
 	
-	$start_time = gmmktime( 20, 30, 0, 3, 27, 2010 );
+	$start_time = gmmktime( 20, 30, 0, 3, 26, 2011 );
 	$end_time = $start_time + 60*60;
 	
 	// adjust for local time

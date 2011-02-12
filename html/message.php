@@ -13,7 +13,7 @@
 	</head>
 	<body>
 		<div id="page">
-		<?php if ( isset( $_GET['earth_hour_preview'] )	) { ?><div class="preview">preview mode <a href="<?php bloginfo('wpurl'); ?>/wp-admin/options-general.php?page=earth-hour.php" id="admin-return">&larr; Earth Hour Admin Settings</a></div><?php } ?>
+		<?php if ( isset( $_GET['earth_hour_preview'] )	) { ?><div class="preview"><?php _e( "preview mode", "earth-hour" ); ?> <a href="<?php bloginfo('wpurl'); ?>/wp-admin/options-general.php?page=earth-hour.php" id="admin-return">&larr; <?php _e( "Earth Hour Admin Settings", "earth-hour" ); ?></a></div><?php } ?>
 			<div id="earth_hour">
 				<p class="admin-text"><?php echo $settings['earth_hour_text']; ?></p>
 				<p class="below-image"><?php echo sprintf( __ngettext( "There is currently %d other WordPress site participating in the event.",  "There are currently %d other WordPress sites participating in the event.", $count, "earth-hour"), $count); ?></p>
