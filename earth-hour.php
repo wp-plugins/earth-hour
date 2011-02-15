@@ -22,7 +22,7 @@ register_deactivation_hook( __FILE__, 'earth_hour_deactivate' );
 if ( defined('ABSPATH') ) {
 	require_once( ABSPATH . '/wp-includes/class-snoopy.php');
 } else {
-	require_once( '../../../wp-includes/class-snoopy.php');
+	require_once( dirname( __FILE__ ) . '/../../../wp-includes/class-snoopy.php');
 }
 
 global $earth_hour_settings;
@@ -93,13 +93,15 @@ function earth_hour_admin_files() {
 }
 
 function earth_hour_activate() {
-   $snoopy = new Snoopy;	
-   $snoopy->fetch('http://earthhour.bravenewclients.com/?activate=1&site=' . md5( get_bloginfo('home') ) . '&tz=' . urlencode( get_option('gmt_offset') ) ); 
+   $snoopy = new Snoopy;
+   $snoopy->read_timeout = 5;	
+   $snoopy->fetch( 'http://earthhour.bravenewclients.com/?activate=1&site=' . md5( get_bloginfo('home') ) . '&tz=' . urlencode( get_option('gmt_offset') ) ); 
 }
 
 function earth_hour_deactivate() {
    $snoopy = new Snoopy;	
-   $snoopy->fetch('http://earthhour.bravenewclients.com/?deactivate=1&site=' . md5( get_bloginfo('home') )  ); 	
+   $snoopy->read_timeout = 5;
+   $snoopy->fetch( 'http://earthhour.bravenewclients.com/?deactivate=1&site=' . md5( get_bloginfo('home') )  ); 
 }
 
 function earth_hour_is_active() {
@@ -207,13 +209,14 @@ function earth_hour_init() {
 	$time_since_last_update = $now_time - $earth_hour_settings['last_count_time'];
 	
 	if ( $time_since_last_update > (60*60) ) {
-   	$snoopy = new Snoopy;	
-   	if ( $snoopy->fetch('http://earthhour.bravenewclients.com/?count=1') ) {	
-   		$settings['last_count'] = $snoopy->results;
-   		$settings['last_count_time'] = time();
-   		
-   		earth_hour_save_settings( $settings );
-   	}
+	   	$snoopy = new Snoopy;	
+	   	$snoopy->read_timeout = 5;
+	   	if ( $snoopy->fetch( 'http://earthhour.bravenewclients.com/?count=1') ) {	
+	   		$settings['last_count'] = $snoopy->results;
+	   		$settings['last_count_time'] = time();
+	   		
+	   		earth_hour_save_settings( $settings );
+	   	}
 	}
 	
 	$start_time = gmmktime( 20, 30, 0, 3, 26, 2011 );
