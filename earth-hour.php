@@ -9,6 +9,8 @@ Author URI: http://www.bravenewcode.com
 Text Domain: earth-hour
 */
 
+define( 'EARTH_HOUR_VERSION', 1.4 );
+
 require( 'compat.php' );
 
 add_action( 'init', 'earth_hour_init' );
@@ -35,7 +37,8 @@ $earth_hour_default_settings = array(
 	'banner_location' => 'top',
 	'main_image' => 'official',
 	'custom_image' => '',
-	'earth_hour_text' => '' . get_bloginfo('title') . ' is proudly participating in Earth Hour 2011.'
+	'earth_hour_text' => '' . get_bloginfo('title') . ' is proudly participating in Earth Hour 2011.',
+	'earth_hour_version' => 0.0
 );
 
 function earth_hour_get_settings() {
@@ -78,7 +81,7 @@ function earth_hour_save_settings( $new_settings ) {
 }
 
 global $bnc_earth_hour_version;
-$bnc_earth_hour_version = '1.4';
+$bnc_earth_hour_version = EARTH_HOUR_VERSION;
 
 function earth_hour_version($before = '', $after = '') {
 	global $bnc_earth_hour_version;
@@ -168,6 +171,13 @@ function earth_hour_footer() {
 
 function earth_hour_init() {	
 	$settings = earth_hour_get_settings();	
+	
+	if ( !isset( $settings['earth_hour_version'] ) || $settings['earth_hour_version'] != EARTH_HOUR_VERSION ) {
+		$settings['earth_hour_version'] = EARTH_HOUR_VERSION;
+		
+		earth_hour_save_settings( $settings );
+		earth_hour_activate();
+	}
 	
 	// Output Dynamic CSS
 	if ( isset( $_GET['earth_hour_dynamic_css'] ) ) {
