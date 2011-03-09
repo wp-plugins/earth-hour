@@ -15,7 +15,7 @@ Please visit http://www.bravenewcode.com/free-stuff/ for a full description & up
 
 == Changelog ==
 
-= Version 1.4.1 =
+= Version 1.5 =
 
 * Added: No Banner option
 * Changed: Interval checks from 1 hour to 1 day instead to reduce server activity
