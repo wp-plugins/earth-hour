@@ -79,7 +79,7 @@
 			<div class="left-content">
 				<h4><?php _e( "Banner Placement", "earth-hour" ); ?></h4>
 				<p><?php _e( "Before Earth Hour begins, your site shows a banner in a fixed position showing your support for the event.", "earth-hour" ); ?></p>
-				<p><?php _e( "Choose whether the banner is shown at the top or bottom of your website.", "earth-hour" ); ?></p>
+				<p><?php _e( "Choose whether the banner is shown at the top, bottom or not at all on your website.", "earth-hour" ); ?></p>
 
 				<br /><br />
 
@@ -111,6 +111,7 @@
 				<ul>
 					<li><input class="radio" type="radio" name="banner_location" id="website-top" value="top" <?php if ( $settings['banner_location'] == 'top' ) echo 'checked="true" '; ?>/> <label for="website-top"><?php _e( 'Website Top', "earth-hour" ); ?></label></li>
 					<li><input class="radio" type="radio" name="banner_location" id="website-bottom" value="bottom" <?php if ( $settings['banner_location'] == 'bottom' ) echo 'checked="true" '; ?>/> <label for="website-bottom"><?php _e( 'Website Bottom', "earth-hour" ); ?></label></li>
+					<li><input class="radio" type="radio" name="banner_location" id="website-off" value="off" <?php if ( $settings['banner_location'] == 'off' ) echo 'checked="true" '; ?>/> <label for="website-bottom"><?php _e( 'No Banner', "earth-hour" ); ?></label></li>
 				</ul>
 
 				<br /><br /><br /><br />

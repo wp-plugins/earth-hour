@@ -1,15 +1,15 @@
 <?php
 /*
 Plugin Name: Earth Hour
-Plugin URI: http://www.bravenewcode.com/products/earth-hour/
+Plugin URI: http://www.bravenewcode.com/free-stuff/
 Description: Proudly show your support for Earth Hour with a banner countdown to the event and "shutting off" your site for the hour.
 Author: Dale Mugford and Duane Storey (BraveNewCode)
-Version: 1.4
+Version: 1.4.1
 Author URI: http://www.bravenewcode.com
 Text Domain: earth-hour
 */
 
-define( 'EARTH_HOUR_VERSION', 1.4 );
+define( 'EARTH_HOUR_VERSION', 1.4.1 );
 
 require( 'compat.php' );
 
@@ -190,6 +190,9 @@ function earth_hour_init() {
 			case 'bottom':
 				echo "body{margin-bottom: 20px} \n #bnc_earth_hour { position: fixed; bottom: 0px; right: 0px; border-top: 1px solid #57565f; }\n";
 				break;
+			case 'off':
+				echo "#bnc_earth_hour { display:none }\n";
+				break;
 			default:
 				break;	
 		}
@@ -217,8 +220,8 @@ function earth_hour_init() {
 
 	$now_time = time();	
 	$time_since_last_update = $now_time - $earth_hour_settings['last_count_time'];
-	
-	if ( $time_since_last_update > (60*60) ) {
+	// check the site count everyday
+	if ( $time_since_last_update > (24*60*60) ) {
 	   	$snoopy = new Snoopy;	
 	   	$snoopy->read_timeout = 5;
 	   	if ( $snoopy->fetch( 'http://earthhour.bravenewclients.com/?count=1') ) {	
@@ -290,7 +293,7 @@ function earth_hour_add_plugin_option() {
 function earth_hour_settings_link( $links, $file ) {
  	if( $file == 'earth-hour/earth-hour.php' && function_exists( "admin_url" ) ) {
 		$settings_link = '<a href="' . admin_url( 'options-general.php?page=earth-hour.php' ) . '">' . __('Settings') . '</a>';
-		array_unshift( $links, $settings_link ); // before other links
+		array_push( $links, $settings_link ); // after other links
 	}
 	return $links;
 }
