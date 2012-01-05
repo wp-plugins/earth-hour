@@ -338,11 +338,12 @@
 #earth-hour-images {
 	width: 155px;
 	position: absolute;
-	top: 27px;
-	right: 1px;
-	background-color: #fffbe0;
+	top: 30px;
+	right: 0;
+	background-color: #fffefe;
 	padding: 10px;
 	height: 100%;
+	border-left: 1px solid #f2f2f2;
 }
 
 #earth-hour-images img {
