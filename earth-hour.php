@@ -4,12 +4,12 @@ Plugin Name: Earth Hour
 Plugin URI: http://www.bravenewcode.com/free-stuff/
 Description: Proudly show your support for Earth Hour with a banner countdown to the event and "shutting off" your site for the hour.
 Author: Dale Mugford and Duane Storey (BraveNewCode)
-Version: 1.5
+Version: 1.6
 Author URI: http://www.bravenewcode.com
 Text Domain: earth-hour
 */
 
-define( 'EARTH_HOUR_VERSION', 1.5 );
+define( 'EARTH_HOUR_VERSION', 1.6 );
 
 require( 'compat.php' );
 
@@ -37,7 +37,7 @@ $earth_hour_default_settings = array(
 	'banner_location' => 'top',
 	'main_image' => 'official',
 	'custom_image' => '',
-	'earth_hour_text' => '' . get_bloginfo('title') . ' is proudly participating in Earth Hour 2011.',
+	'earth_hour_text' => '' . get_bloginfo('title') . ' is proudly participating in Earth Hour 2012.',
 	'earth_hour_version' => 0.0
 );
 
@@ -232,7 +232,7 @@ function earth_hour_init() {
 	   	}
 	}
 	
-	$start_time = gmmktime( 20, 30, 0, 3, 26, 2011 );
+	$start_time = gmmktime( 20, 30, 0, 3, 31, 2012 );
 	$end_time = $start_time + 60*60;
 	
 	// adjust for local time
