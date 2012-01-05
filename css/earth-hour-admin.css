@@ -9,7 +9,7 @@
 }
 
 #bnc-global #message p {
-	font-size: 12px;
+	font-size: 13px;
 	color: #333;
 	text-transform: capitalize;
 }
@@ -29,7 +29,7 @@
 
 #bnc-global a {
 	text-decoration: none;
-	font-size: 11px;
+	font-size: 12px;
 }
 
 #bnc-global a.orange-link {
@@ -48,7 +48,8 @@
 
 #bnc-global, #bnc-global .postbox, #bnc-global .postbox ul, #bnc-global .postbox p, #bnc-global p {
 	margin-top: 10px;
-	font-size: 11px;
+	font-size: 12px;
+	line-height: 1.4em;
 }
 
 #bnc-global .left-content {
@@ -159,7 +160,7 @@
 }
 
 #earth-hour-head-colour {
-	background-color: #b7c9d6;
+	background-color: #bfdae7;
 	padding: 10px;
 	margin: -10px -10px -20px;
 	-webkit-border-top-right-radius: 5px;
@@ -171,18 +172,17 @@
 }
 
 #earth-hour-head-title {
-	font: bold 22px Georgia, "Times New Roman", Times, serif;
 	color: #333c42;
 	text-shadow: #deeefa 0 1px 0;
 	letter-spacing: -1px;
 	margin: 0;
 	padding: 0;
 	float: left;
+	font: 24px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 #earth-hour-head-title p {
 	letter-spacing: 0;
-	font-family: "Lucida Grande", "Lucida sans Unicode", Arial, sans-serif;
 	display: inline;
 	margin-left: 10px;
 	position: relative;
@@ -196,13 +196,13 @@
 #earth-hour-head-links {
 	float: right;
 	position: relative;
-	bottom: 6px;
+	top: -2px;
 }
 
 #earth-hour-head-links a {
 	color: #333c42;
 	font-weight: bold;
-	text-shadow: #cddce8 0 1px 0;
+	text-shadow: #eef6fe 0 1px 0;
 }
 
 #earth-hour-head-links a:hover {
@@ -271,11 +271,13 @@
 #earth-hour-news-twitter li {
 	border-bottom: 1px solid #e6e6e6;
 	margin: 0;
-	padding: 3px 0;
+	padding: 6px 0 6px 10px;
 	list-style-type: circle;
 	list-style-position: inside;
 	color: #c1cfd1;
-	width: 90%;
+	width: 92%;
+	line-height: 1.3em;
+	text-indent: -10px;
 }
 
 #earth-hour-news-twitter li:last-child {
@@ -285,6 +287,10 @@
 /* @end */
 
 /* @group General Settings */
+
+#bnc-global .left-content {
+	
+}
 
 #bnc-global .right-content .radio {
 	padding: 0;

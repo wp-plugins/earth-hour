@@ -17,13 +17,13 @@
 		<div id="earth-hour-head-colour">
 			<div id="earth-hour-head-title">
 				<?php earth_hour_version(); ?>
-				<p><?php 	global $earth_hour_settings; $count = number_format( $earth_hour_settings['last_count'] ); echo sprintf( __ngettext( "There is currently %d other WordPress site supporting this cause.",  "There are currently %d other WordPress sites supporting this cause.", $count, "earth-hour"), $count); ?></p>
+				<p><?php 	global $earth_hour_settings; $count = number_format( $earth_hour_settings['last_count'] ); echo sprintf( __ngettext( "There is currently %d other WordPress site showing support",  "There are currently %d other WordPress sites showing support", $count, "earth-hour"), $count); ?></p>
 			</div>
 				<div id="earth-hour-head-links">
 					<ul>
 						<li><?php echo sprintf(__( "%sEarthHour.org%s", "earth-hour" ), '<a href="http://www.earthhour.org" target="_blank">','</a>'); ?> | </li>
 						<li><?php echo sprintf(__( "%sBNC Earth Hour Page%s", "earth-hour" ), '<a href="http://www.bravenewcode.com/free-stuff/" target="_blank">','</a>'); ?> | </li>
-						<li><?php echo sprintf(__( "%sSupport Forums%s", "earth-hour" ), '<a href="http://www.bravenewcode.com/support/" target="_blank">','</a>'); ?></li>
+						<li><?php echo sprintf(__( "%sSupport Forums%s", "earth-hour" ), '<a href="http://wordpress.org/tags/earth-hour?forum_id=10" target="_blank">','</a>'); ?></li>
 					</ul>
 				</div>
 			<div class="bnc-clearer"></div>
