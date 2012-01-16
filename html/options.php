@@ -88,12 +88,12 @@
 				<p><?php _e( "Choose between the two provided images, or link to one of your own.", "earth-hour" ); ?></p>
 				<p><?php _e( "Our images are 300px by 300px, and we suggest you keep yours at around the same size to work correctly.", "earth-hour" ); ?></p>
 				
-				<br />
+				<br /><br />
 
 				<h4><?php _e( "Earth Hour Text", "earth-hour" ); ?></h4>
 				<p><?php _e( "Along with the image your site displays a message to all your visitors. Edit that message here.", "earth-hour" ); ?></p>
 
-				<br />
+				<br /><br />
 				
 				<h4><?php _e( "Excluded Website Paths", "earth-hour" ); ?></h4>
 				<p><?php _e( "Any URLs that match any of the following paths will be excluded from the Earth Hour message (i.e. /support/).", "earth-hour" ); ?></p>
@@ -119,7 +119,7 @@
 					<li><input class="radio" type="radio" name="banner_location" id="website-off" value="off" <?php if ( $settings['banner_location'] == 'off' ) echo 'checked="true" '; ?>/> <label for="website-bottom"><?php _e( 'No Banner', "earth-hour" ); ?></label></li>
 				</ul>
 
-				<br /><br />
+				<br />	
 				
 				<p><strong><?php _e( "Earth Hour Image", "earth-hour" ); ?></strong></p>
 				<ul>
