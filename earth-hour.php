@@ -170,6 +170,30 @@ function earth_hour_footer() {
 	}
 }
 
+function bnc_earth_hour_is_valid_path() {
+	$valid_path = true;
+	
+	$settings = earth_hour_get_settings();
+	$paths = $settings[ 'earth_hour_excluded_paths' ];	
+	if ( $paths ) {
+		$proper_paths = explode( "\n", rtrim( $paths ) );
+		if ( $proper_paths && is_array( $proper_paths ) && count( $proper_paths ) ) {
+			// Make sure the path is valid
+			foreach( $proper_paths as $one_path ) {
+				if ( stripos( $_SERVER['REQUEST_URI'], trim( $one_path ) ) !== false ) {
+					$valid_path = false;
+				}
+				
+				if ( !$valid_path ) {
+					break;
+				}	
+			}
+		}
+	}
+	
+	return $valid_path;
+}
+
 function earth_hour_init() {	
 	$settings = earth_hour_get_settings();	
 	
@@ -216,7 +240,7 @@ function earth_hour_init() {
 	$current_locale = get_locale();
 	if( !empty( $current_locale ) ) {
 		$moFile = dirname(__FILE__) . "/lang/earth-hour-" . $current_locale . ".mo";
-		if(@file_exists($moFile) && is_readable($moFile)) load_textdomain( 'earth-hour' , $moFile );
+		if (@file_exists($moFile) && is_readable($moFile)) load_textdomain( 'earth-hour' , $moFile );
 	}
 
 	$now_time = time();	
@@ -244,6 +268,12 @@ function earth_hour_init() {
 	if ( isset( $_GET['earth_hour_preview'] ) ) {
 		$in_earth_hour = true;	
 	}
+	
+	// Make sure this is a valid path
+	$in_earth_hour = $in_earth_hour && bnc_earth_hour_is_valid_path();
+	
+	// Filter added in version 1.6.1 in case other people want to force Earth Hour off via a hook
+	$in_earth_hour = apply_filters( 'bnc_earth_hour_activate', $in_earth_hour );
 		
 	global $time_until_earth_hour;
 	$time_until_earth_hour = $start_time - $adjusted_time;
