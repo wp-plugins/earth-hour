@@ -94,6 +94,11 @@
 				<p><?php _e( "Along with the image your site displays a message to all your visitors. Edit that message here.", "earth-hour" ); ?></p>
 
 				<br />
+				
+				<h4><?php _e( "Excluded Website Paths", "earth-hour" ); ?></h4>
+				<p><?php _e( "Any URLs that match any of the following paths will be excluded from the Earth Hour message (i.e. /support/).", "earth-hour" ); ?></p>
+
+				<br /><br />		
 
 				<h4><?php _e( "Preview Site", "earth-hour" ); ?></h4>
 				<p><?php _e( "Clicking the Preview button will show you what your site will look like during Earth Hour.", "earth-hour" ); ?></p>
@@ -132,6 +137,11 @@
 				<ul>
 					<li><textarea class="textarea" id="earth-hour-text" name="earth_hour_text"><?php echo $settings['earth_hour_text']; ?></textarea></li>
 				</ul>
+				
+				<p><strong><?php _e( "Excluded Paths (one per line)", "earth-hour" ); ?></strong></p>
+				<ul>
+					<li><textarea class="textarea" id="earth-hour-excluded-paths" name="earth_hour_excluded_paths"><?php echo $settings['earth_hour_excluded_paths']; ?></textarea></li>
+				</ul>				
 				
 				<p><strong><?php _e( "Preview Site", "earth-hour" ); ?></strong> <small>(<?php _e( "Make sure you save before previewing", "earth-hour" ); ?>)</small></p>
 				<ul>

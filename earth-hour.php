@@ -38,7 +38,8 @@ $earth_hour_default_settings = array(
 	'main_image' => 'official',
 	'custom_image' => '',
 	'earth_hour_text' => '' . get_bloginfo('title') . ' is proudly participating in Earth Hour 2012.',
-	'earth_hour_version' => 0.0
+	'earth_hour_version' => 0.0,
+	'earth_hour_excluded_paths' => ''
 );
 
 function earth_hour_get_settings() {
