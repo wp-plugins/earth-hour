@@ -176,7 +176,7 @@ function bnc_earth_hour_is_valid_path() {
 	$settings = earth_hour_get_settings();
 	$paths = $settings[ 'earth_hour_excluded_paths' ];	
 	if ( $paths ) {
-		$proper_paths = explode( "\n", rtrim( $paths ) );
+		$proper_paths = apply_filters( 'bnc_earth_hour_excluded_paths', explode( "\n", rtrim( $paths ) ) );
 		if ( $proper_paths && is_array( $proper_paths ) && count( $proper_paths ) ) {
 			// Make sure the path is valid
 			foreach( $proper_paths as $one_path ) {
