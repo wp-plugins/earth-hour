@@ -258,7 +258,11 @@ function earth_hour_init() {
 		if ( strpos( $_SERVER["REQUEST_URI"], "/wp-admin/" ) === false && strpos( $_SERVER["REQUEST_URI"], "wp-login.php" ) === false ) {
 			global $earth_hour_minutes;
 			$earth_hour_minutes = ($end_time - $adjusted_time)/60;
-			
+
+			header( 'HTTP/1.1 503 Service Temporarily Unavailable' );
+			header( 'Status: 503 Service Temporarily Unavailable' );
+			header( 'Retry-After: 3600');	
+
 			include( 'html/message.php' );
 			die;
 		}
