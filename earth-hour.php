@@ -4,12 +4,12 @@ Plugin Name: Earth Hour
 Plugin URI: http://www.bravenewcode.com/free-stuff/
 Description: Proudly show your support for Earth Hour with a banner countdown to the event and "turning off" your site during the hour.
 Author: BraveNewCode Inc.
-Version: 1.6
+Version: 1.6.1
 Author URI: http://www.bravenewcode.com
 Text Domain: earth-hour
 */
 
-define( 'EARTH_HOUR_VERSION', 1.6 );
+define( 'EARTH_HOUR_VERSION', '1.6.1' );
 
 require( 'compat.php' );
 

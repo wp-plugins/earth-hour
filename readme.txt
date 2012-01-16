@@ -15,6 +15,10 @@ Please visit http://www.bravenewcode.com/free-stuff/ for a full description & up
 
 == Changelog ==
 
+= Version 1.6.1 =
+
+* Added: Ability to exclude certain URLs
+
 = Version 1.6 =
 
 * Updated for 2012
