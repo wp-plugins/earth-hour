@@ -154,7 +154,7 @@ function earth_hour_footer() {
 				),
 				number_format( $earth_hour_settings['last_count'] ) 
 			);
-			$msg = $msg . __( "On WordPress? Get the <a href=\"http://wordpress.org/extend/plugins/earth-hour/\" rel=\"nofollow\">plugin</a>.", "earth-hour" );	
+			$msg = $msg . '&nbsp; &nbsp;' . __( "Use WordPress? Get the <a href=\"http://wordpress.org/extend/plugins/earth-hour/\" rel=\"nofollow\">plugin</a>.", "earth-hour" );	
 			echo $msg;	
 			
 			$days = sprintf( __ngettext( "%d day", "%d days", $time_until_earth_hour / (24*3600), "earth-hour" ),  $time_until_earth_hour / (24*3600) );

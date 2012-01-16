@@ -1,65 +1,52 @@
 body {
 	position: relative;
 }
-
 #bnc_earth_hour {
-	background: #000;
+	background: #000 !important;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)" !important;
+	filter: alpha(opacity=80) !important;
 	opacity: 0.80 !important;
-	filter:alpha(opacity=80) !important;
-	-moz-opacity:.80 !important;
+	-moz-opacity: .80 !important;
 	color: #c6c6c6 !important;
-	z-index: 999;
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	font: 10px/10px Helvetica, Geneva, Arial, sans-serif;
-	height: 20px;
-	text-transform: uppercase;
+	z-index: 999 !important;
+	width: 100% !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	font: 11px/11px Helvetica, Geneva, Arial, sans-serif !important;
+	height: 26px !important;
+	text-transform: uppercase !important;
 }
-
 #bnc_earth_hour #inner {
-	text-shadow: #000000 0 -1px 1px;
-	position: relative;
-	right: 5px;
-	margin: 0;
-	padding: 0;
-	float: right;
-	top: 5px;
+	text-shadow: rgba(0,0,0,.8) 0 1px 1px !important;
+	position: relative !important;
+	right: 8px !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	float: right !important;
+	top: 8px !important;
+	font-weight: bold !important;
 }
-
-#bnc_earth_hour #inner a {
-	color: #42b01f  !important;
-	text-decoration: none;
-	font-weight: normal;
-}
-
-#bnc_earth_hour #inner a:hover {
-	color: #9fd2fb !important;
-}
-
 #bnc_earth_hour a#banner {
-	text-shadow: #000000 0 -1px 1px;
-	background: url(../images/banner-earth.png) no-repeat 3px 0;
-	color: #c6c6c6;
-	margin: 0;
-	width: auto;
-	float: left;
-	position: relative;
-	left: 2px;
-	height: 13px;
-	padding: 2px 0 0 25px;
-	text-shadow: #222 1px 1px 1px;
-	top: 3px;
+	text-shadow: rgba(0,0,0,.8) 0 1px 1px !important;
+	background: url(../images/banner-earth.png) no-repeat 3px 0 !important;
+	margin: 0 !important;
+	width: auto !important;
+	float: left !important;
+	position: relative !important;
+	left: 6px !important;
+	height: 13px !important;
+	padding: 2px 0 0 25px !important;
+	top: 6px !important;
+	font-weight: bold !important;
 }
-
 #bnc_earth_hour a#banner:hover {
-	background-position: 3px -16px;
-	color: #9fd2fb;
+	background: url(../images/banner-earth.png) no-repeat 3px -16px !important;
+}
+* html #bnc_earth_hour {
+	position: absolute !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	width: 100% !important;
 }
 
-* html #bnc_earth_hour {
-	position: absolute;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-}
+

@@ -81,19 +81,19 @@
 				<p><?php _e( "Before Earth Hour begins, your site shows a banner in a fixed position showing your support for the event.", "earth-hour" ); ?></p>
 				<p><?php _e( "Choose whether the banner is shown at the top, bottom or not at all on your website.", "earth-hour" ); ?></p>
 
-				<br /><br />
+				<br />
 
 				<h4><?php _e( "Earth Hour Image", "earth-hour" ); ?></h4>
 				<p><?php _e( "During Earth Hour all website URLs will show a page with the image you choose and the text you include in the option below.", "earth-hour" ); ?></p>
 				<p><?php _e( "Choose between the two provided images, or link to one of your own.", "earth-hour" ); ?></p>
 				<p><?php _e( "Our images are 300px by 300px, and we suggest you keep yours at around the same size to work correctly.", "earth-hour" ); ?></p>
 				
-				<br /><br />
+				<br />
 
 				<h4><?php _e( "Earth Hour Text", "earth-hour" ); ?></h4>
 				<p><?php _e( "Along with the image your site displays a message to all your visitors. Edit that message here.", "earth-hour" ); ?></p>
 
-				<br /><br />
+				<br />
 
 				<h4><?php _e( "Preview Site", "earth-hour" ); ?></h4>
 				<p><?php _e( "Clicking the Preview button will show you what your site will look like during Earth Hour.", "earth-hour" ); ?></p>
@@ -114,7 +114,7 @@
 					<li><input class="radio" type="radio" name="banner_location" id="website-off" value="off" <?php if ( $settings['banner_location'] == 'off' ) echo 'checked="true" '; ?>/> <label for="website-bottom"><?php _e( 'No Banner', "earth-hour" ); ?></label></li>
 				</ul>
 
-				<br /><br /><br /><br />
+				<br /><br />
 				
 				<p><strong><?php _e( "Earth Hour Image", "earth-hour" ); ?></strong></p>
 				<ul>

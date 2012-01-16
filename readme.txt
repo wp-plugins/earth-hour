@@ -19,6 +19,7 @@ Please visit http://www.bravenewcode.com/free-stuff/ for a full description & up
 
 * Added: Ability to exclude certain URLs
 * Added: 503 response code during Earth Hour (temporarily unavailable)
+* Changed: Updated Earth Hour banner/page designs
 
 = Version 1.6 =
 
