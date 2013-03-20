@@ -137,7 +137,7 @@ function earth_hour_footer() {
 			echo "</a><div id=\"inner\">";
 			$msg = __( 
 					"One of many WordPress websites proudly supporting <a href=\"http://www.earthhour.org/\" rel=\"nofollow\">Earth Hour</a>. ", 'earth-hour' );
-					
+
 			$msg = $msg . '&nbsp; &nbsp;' . __( "Use WordPress? Get the <a href=\"http://wordpress.org/extend/plugins/earth-hour/\" rel=\"nofollow\">plugin</a>.", "earth-hour" );	
 			echo $msg;	
 			
@@ -229,6 +229,7 @@ function earth_hour_init() {
 	$now_time = time();	
 	$time_since_last_update = $now_time - $settings['last_count_time'];
 	// check the site count everyday
+	/*
 	if ( $time_since_last_update > (24*60*60) ) {
 	   	$snoopy = new Snoopy;	
 	   	$snoopy->read_timeout = 5;
@@ -239,6 +240,7 @@ function earth_hour_init() {
 	   		earth_hour_save_settings( $settings );
 	   	}
 	}
+	*/
 	
 	$start_time = gmmktime( 20, 30, 0, 3, 23, 2013 );
 	$end_time = $start_time + 60*60;
