@@ -21,12 +21,6 @@ add_action( 'admin_init', 'earth_hour_admin_init' );
 register_activation_hook( __FILE__, 'earth_hour_activate' );
 register_deactivation_hook( __FILE__, 'earth_hour_deactivate' );
 
-if ( defined('ABSPATH') ) {
-	require_once( ABSPATH . '/wp-includes/class-snoopy.php');
-} else {
-	require_once( dirname( __FILE__ ) . '/../../../wp-includes/class-snoopy.php');
-}
-
 global $earth_hour_settings;
 $earth_hour_settings = false;
 
@@ -97,15 +91,10 @@ function earth_hour_admin_files() {
 }
 
 function earth_hour_activate() {
-   $snoopy = new Snoopy;
-   $snoopy->read_timeout = 5;	
-   $snoopy->fetch( 'http://earthhour.bravenewclients.com/?activate=1&site=' . md5( get_bloginfo('home') ) . '&tz=' . urlencode( get_option('gmt_offset') ) ); 
+
 }
 
 function earth_hour_deactivate() {
-   $snoopy = new Snoopy;	
-   $snoopy->read_timeout = 5;
-   $snoopy->fetch( 'http://earthhour.bravenewclients.com/?deactivate=1&site=' . md5( get_bloginfo('home') )  ); 
 }
 
 function earth_hour_is_active() {
@@ -125,7 +114,7 @@ function earth_hour_head() {
 	if ( $time_until_earth_hour > 0 ) {
 		if ( !earth_hour_is_active() && !$on_iphone ) {
 			echo "<link rel='stylesheet' type='text/css' media='screen' href='" . WP_PLUGIN_URL . "/earth-hour/css/earth-hour-banner.css'></link>\n";
-			echo "<link rel='stylesheet' type='text/css' media='screen' href='" . get_bloginfo("home") . "/?earth_hour_dynamic_css=1'></link>\n";
+			echo "<link rel='stylesheet' type='text/css' media='screen' href='" . home_url() . "/?earth_hour_dynamic_css=1'></link>\n";
 			echo "<script type='text/javascript' src='" . WP_PLUGIN_URL . "/earth-hour/js/earth-hour.js'></script>";
 		}
 	}
@@ -146,21 +135,15 @@ function earth_hour_footer() {
 			echo "<a id=\"banner\" href=\"http://www.earthhour.org\" rel=\"nofollow\">";
 			echo __( "Visit the Earth Hour Website", "earth-hour" );
 			echo "</a><div id=\"inner\">";
-			$msg = sprintf( 
-				__ngettext( 
-					"One of %s website proudly supporting <a href=\"http://www.earthhour.org/\" rel=\"nofollow\">Earth Hour</a>. ", 
-					"One of %s websites proudly supporting <a href=\"http://www.earthhour.org/\" rel=\"nofollow\">Earth Hour</a>. ",
-					$earth_hour_settings['last_count'],
-					"earth-hour"
-				),
-				number_format( $earth_hour_settings['last_count'] ) 
-			);
+			$msg = __( 
+					"One of many WordPress websites proudly supporting <a href=\"http://www.earthhour.org/\" rel=\"nofollow\">Earth Hour</a>. ", 'earth-hour' );
+					
 			$msg = $msg . '&nbsp; &nbsp;' . __( "Use WordPress? Get the <a href=\"http://wordpress.org/extend/plugins/earth-hour/\" rel=\"nofollow\">plugin</a>.", "earth-hour" );	
 			echo $msg;	
 			
-			$days = sprintf( __ngettext( "%d day", "%d days", $time_until_earth_hour / (24*3600), "earth-hour" ),  $time_until_earth_hour / (24*3600) );
-			$hours = sprintf( __ngettext( "%d hour", "%d hours", ($time_until_earth_hour % (24*3600))/3600, "earth-hour" ),  ($time_until_earth_hour % (24*3600))/3600 );
-			$mins = sprintf( __ngettext( "%d minute", "%d minutes", (($time_until_earth_hour % (24*3600)) % 3600)/60, "earth-hour" ), (($time_until_earth_hour % (24*3600)) % 3600)/60 );
+			$days = sprintf( _n( "%d day", "%d days", $time_until_earth_hour / (24*3600), "earth-hour" ),  $time_until_earth_hour / (24*3600) );
+			$hours = sprintf( _n( "%d hour", "%d hours", ($time_until_earth_hour % (24*3600))/3600, "earth-hour" ),  ($time_until_earth_hour % (24*3600))/3600 );
+			$mins = sprintf( _n( "%d minute", "%d minutes", (($time_until_earth_hour % (24*3600)) % 3600)/60, "earth-hour" ), (($time_until_earth_hour % (24*3600)) % 3600)/60 );
 			$msg2 = sprintf( __( "<a href=\"http://www.earthhour.org/\" rel=\"nofollow\">Earth Hour</a> begins in %1\$s, %2\$s, and %3\$s", "earth-hour" ), 
 				$days, $hours, $mins
 			);
@@ -244,7 +227,7 @@ function earth_hour_init() {
 	}
 
 	$now_time = time();	
-	$time_since_last_update = $now_time - $earth_hour_settings['last_count_time'];
+	$time_since_last_update = $now_time - $settings['last_count_time'];
 	// check the site count everyday
 	if ( $time_since_last_update > (24*60*60) ) {
 	   	$snoopy = new Snoopy;	
