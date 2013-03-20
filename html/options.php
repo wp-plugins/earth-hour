@@ -17,7 +17,7 @@
 		<div id="earth-hour-head-colour">
 			<div id="earth-hour-head-title">
 				<?php earth_hour_version(); ?>
-				<p><?php 	global $earth_hour_settings; $count = number_format( $earth_hour_settings['last_count'] ); echo sprintf( __ngettext( "There is currently %d other WordPress site showing support",  "There are currently %d other WordPress sites showing support", $count, "earth-hour"), $count); ?></p>
+				<p><!-- <?php 	global $earth_hour_settings; $count = number_format( $earth_hour_settings['last_count'] ); echo sprintf( __ngettext( "There is currently %d other WordPress site showing support",  "There are currently %d other WordPress sites showing support", $count, "earth-hour"), $count); ?>--></p>
 			</div>
 				<div id="earth-hour-head-links">
 					<ul>
@@ -47,6 +47,7 @@
 				</div>
 			</div>
 
+			<!--
 			<div id="earth-hour-twitter-wrap">			
 			<h3><span class="rss-head">&nbsp;</span><?php _e( "EarthHour.org Official Twitter Feed", "earth-hour" ); ?></h3>
 				<div id="earth-hour-twitter-content">
@@ -61,6 +62,7 @@
 					<?php } ?>
 				</div>
 			</div>
+		-->
 			
 		</div><!-- earth-hour-news-twitter -->
 	
