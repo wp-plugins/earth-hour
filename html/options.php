@@ -12,63 +12,21 @@
 		echo('</strong></p></div>');
 		} 
 ?>
-<div class="metabox-holder" id="earth-hour-head">
-	<div class="postbox">
-		<div id="earth-hour-head-colour">
-			<div id="earth-hour-head-title">
-				<?php earth_hour_version(); ?>
-				<p><!-- <?php 	global $earth_hour_settings; $count = number_format( $earth_hour_settings['last_count'] ); echo sprintf( __ngettext( "There is currently %d other WordPress site showing support",  "There are currently %d other WordPress sites showing support", $count, "earth-hour"), $count); ?>--></p>
+<div id="earth-hour-head">
+	<div id="earth-hour-head-colour">
+		<div id="earth-hour-head-title">
+			<?php earth_hour_version(); ?>
+			<p><!-- <?php 	global $earth_hour_settings; $count = number_format( $earth_hour_settings['last_count'] ); echo sprintf( __ngettext( "There is currently %d other WordPress site showing support",  "There are currently %d other WordPress sites showing support", $count, "earth-hour"), $count); ?>--></p>
+		</div>
+			<div id="earth-hour-head-links">
+				<ul>
+					<li><?php echo sprintf(__( "%sEarthHour.org%s", "earth-hour" ), '<a href="http://www.earthhour.org" target="_blank">','</a>'); ?> | </li>
+					<li><?php echo sprintf(__( "%sBNC Earth Hour Page%s", "earth-hour" ), '<a href="http://www.bravenewcode.com/free-stuff/" target="_blank">','</a>'); ?> | </li>
+					<li><?php echo sprintf(__( "%sSupport Forums%s", "earth-hour" ), '<a href="http://wordpress.org/tags/earth-hour?forum_id=10" target="_blank">','</a>'); ?></li>
+				</ul>
 			</div>
-				<div id="earth-hour-head-links">
-					<ul>
-						<li><?php echo sprintf(__( "%sEarthHour.org%s", "earth-hour" ), '<a href="http://www.earthhour.org" target="_blank">','</a>'); ?> | </li>
-						<li><?php echo sprintf(__( "%sBNC Earth Hour Page%s", "earth-hour" ), '<a href="http://www.bravenewcode.com/free-stuff/" target="_blank">','</a>'); ?> | </li>
-						<li><?php echo sprintf(__( "%sSupport Forums%s", "earth-hour" ), '<a href="http://wordpress.org/tags/earth-hour?forum_id=10" target="_blank">','</a>'); ?></li>
-					</ul>
-				</div>
-			<div class="bnc-clearer"></div>
-		</div>	
-	
-		<div id="earth-hour-news-twitter">
-
-			<div id="earth-hour-news-wrap">
-			<h3><span class="rss-head">&nbsp;</span><?php _e( "BraveNewCode Environmental Entries", "earth-hour" ); ?></h3>
-				<div id="earth-hour-blog-content">
-					<?php require_once (ABSPATH . WPINC . '/rss.php');
-					$rss = @fetch_rss('http://www.bravenewcode.com/tag/environment/rss/');
-					//$rss = @fetch_rss('http://earthhourblog.posterous.com/rss.xml');						
-					if ( isset($rss->items) && 0 != count($rss->items) ) { ?>
-					<ul>
-						<?php $rss->items = array_slice($rss->items, 0, 5); foreach ($rss->items as $item ) { ?>
-						<li><a target="_blank" class="orange-link" href='<?php echo wp_filter_kses($item['link']); ?>'><?php echo wp_specialchars($item['title']); ?></a></li>
-						<?php } ?>
-					</ul>
-					<?php } ?>
-				</div>
-			</div>
-
-			<!--
-			<div id="earth-hour-twitter-wrap">			
-			<h3><span class="rss-head">&nbsp;</span><?php _e( "EarthHour.org Official Twitter Feed", "earth-hour" ); ?></h3>
-				<div id="earth-hour-twitter-content">
-					<?php require_once (ABSPATH . WPINC . '/rss.php');
-					$rss = @fetch_rss('http://twitter.com/statuses/user_timeline/12626962.rss');						
-					if ( isset($rss->items) && 0 != count($rss->items) ) { ?>
-					<ul>
-						<?php $rss->items = array_slice($rss->items, 0, 3); foreach ($rss->items as $item ) { ?>
-						<li><a target="_blank" class="orange-link" href='<?php echo wp_filter_kses($item['link']); ?>'><?php echo wp_specialchars($item['title']); ?></a></li>
-						<?php } ?>
-					</ul>
-					<?php } ?>
-				</div>
-			</div>
-		-->
-			
-		</div><!-- earth-hour-news-twitter -->
-	
+	</div>	
 	<div class="bnc-clearer"></div>
-	</div><!-- postbox -->
-
 </div><!-- earth-hour-head -->
 
 <form method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
@@ -100,7 +58,7 @@
 				<h4><?php _e( "Excluded Website Paths", "earth-hour" ); ?></h4>
 				<p><?php _e( "Any URLs that match any of the following paths will be excluded from the Earth Hour message (e.g. /store/).", "earth-hour" ); ?></p>
 
-				<br /><br /><br /><br />	
+				<br /><br /><br /><br /><br />
 
 				<h4><?php _e( "Preview Site", "earth-hour" ); ?></h4>
 				<p><?php _e( "Clicking the Preview button will show you what your site will look like during Earth Hour.", "earth-hour" ); ?></p>
@@ -121,7 +79,7 @@
 					<li><input class="radio" type="radio" name="banner_location" id="website-off" value="off" <?php if ( $settings['banner_location'] == 'off' ) echo 'checked="true" '; ?>/> <label for="website-bottom"><?php _e( 'No Banner', "earth-hour" ); ?></label></li>
 				</ul>
 
-				<br /><br /><br />
+				<br /><br />
 				
 				<p><strong><?php _e( "Earth Hour Image", "earth-hour" ); ?></strong></p>
 				<ul>
@@ -133,25 +91,25 @@
 					</li>
 				</ul>
 
-				<br /><br /><br />
+				<br /><br />
 				
 				<p><strong><?php _e( "Earth Hour Text", "earth-hour" ); ?></strong></p>
 				<ul>
 					<li><textarea class="textarea" id="earth-hour-text" name="earth_hour_text"><?php echo $settings['earth_hour_text']; ?></textarea></li>
 				</ul>
 				
-				<br /><br /><br />
+				<br /><br />
 				
 				<p><strong><?php _e( "Excluded Paths (one per line)", "earth-hour" ); ?></strong></p>
 				<ul>
 					<li><textarea class="textarea" id="earth-hour-excluded-paths" name="earth_hour_excluded_paths"><?php echo $settings['earth_hour_excluded_paths']; ?></textarea></li>
 				</ul>
 				
-				<br /><br /><br />				
+				<br /><br />				
 				
 				<p><strong><?php _e( "Preview Site", "earth-hour" ); ?></strong> <small>(<?php _e( "Make sure you save before previewing", "earth-hour" ); ?>)</small></p>
 				<ul>
-					<li><input class="button" type="submit" name="preview" value="<?php _e('Preview Website During Earth Hour', 'earth-hour' ); ?>" /></li>
+					<li><input class="button-secondary" type="submit" name="preview" value="<?php _e('Preview Website During Earth Hour', 'earth-hour' ); ?>" /></li>
 				</ul>						
 
 			</div>
@@ -164,10 +122,10 @@
 	</form>
 	
 	<form method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
-		<input type="submit" onclick="return confirm('<?php _e('Restore default Earth Hour settings?', 'earth-hour' ); ?>');" name="reset" value="<?php _e('Restore Defaults', 'earth-hour' ); ?>" id="bnc-button-reset" class="button-highlighted" />
+		<input type="submit" onclick="return confirm('<?php _e('Restore default Earth Hour settings?', 'earth-hour' ); ?>');" name="reset" value="<?php _e('Restore Defaults', 'earth-hour' ); ?>" id="bnc-button-reset" class="button" />
 	</form>
 		
-	<?php earth_hour_version('<div class="bnc-plugin-version"> This is ','</div>'); ?>
+	<?php //earth_hour_version('<div class="bnc-plugin-version"> This is ','</div>'); ?>
 
 	<div class="bnc-clearer"></div>
 

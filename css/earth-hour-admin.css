@@ -1,10 +1,6 @@
-/* @group Global Styles */
+/* @override http://www.bravenewcode.com/wordpress/wp-content/plugins/earth-hour/css/earth-hour-admin.css */
 
-#bnc-global {
-	color: #444;
-	margin-bottom: 35px;
-	margin-top: 0;
-}
+/* @group Global Styles */
 
 #bnc-global #message p {
 	font-size: 13px;
@@ -16,7 +12,6 @@
 	padding: 10px;
 	position: relative;
 	overflow: hidden;
-	-webkit-box-shadow: #ccc 0px 1px 6px;
 	width: 98%;
 }
 
@@ -69,6 +64,7 @@
 
 #bnc-global .left-content p {
 	margin-top: 0;
+	font-size: 95%;
 }
 
 #bnc-global .left-content ul {
@@ -109,18 +105,6 @@
 	border: 1px solid #6caccd;
 }
 
-#bnc-global input {
-	border: 2px solid #a4c6d3;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	width: 177px;
-	color: #555;
-	font-size: 11px;
-	background-color: #ebf1ff;
-	margin-right: 7px;
-	margin-left: 5px;
-}
-
 /* @group Global H3 Icons */
 
 #bnc-global h3 span {
@@ -157,26 +141,13 @@
 	width: 98%;
 }
 
-#earth-hour-head-colour {
-	background-color: #bfdae7;
-	padding: 10px;
-	margin: -10px -10px -20px;
-	-webkit-border-top-right-radius: 5px;
-	-webkit-border-top-left-radius: 5px;
-	-moz-border-radius-topright: 5px;
-	-moz-border-radius-topleft: 5px;
-	border: 1px solid #e5f0f2;
-	border-bottom: 1px solid #a2bdbf;
-}
-
 #earth-hour-head-title {
-	color: #333c42;
-	text-shadow: #deeefa 0 1px 0;
 	letter-spacing: -1px;
-	margin: 0;
+	margin: 10px 0 0;
 	padding: 0;
 	float: left;
-	font: 24px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 200%;
+	color: #31435c;
 }
 
 #earth-hour-head-title p {
@@ -195,23 +166,11 @@
 	float: right;
 	position: relative;
 	top: -2px;
-}
-
-#earth-hour-head-links a {
-	color: #333c42;
-	font-weight: bold;
-	text-shadow: #eef6fe 0 1px 0;
-}
-
-#earth-hour-head-links a:hover {
-	color: #d54e21;
-	text-shadow: #cedeea 0 1px 0;
+	margin-top: 5px;
 }
 
 #earth-hour-head-links li {
 	display: inline;
-	color: #618299;
-	text-shadow: #bfdfe8 1px 1px 0;
 }
 
 #earth-hour-news-twitter {
@@ -320,13 +279,6 @@
 	overflow: auto;
 }
 
-#bnc-global .right-content .button {
-	border-width: 1px;
-	padding: 5px;
-	width: auto;
-	border-color: #ccc;
-}
-
 
 
 /* @end */
@@ -358,38 +310,9 @@
 
 /* @group Save/Restore Button Area */
 
-#bnc-global .bnc-plugin-version {
-	float: right;
-	font: 18px Georgia, "Times New Roman", Times, serif;
-	color: #70777a;
-	text-shadow: #fff -1px -1px 0;
-	letter-spacing: -1px;
-	margin-top: 2px;
-	position: relative;
-	left: 10px;
-	margin-bottom: 25px;
-	margin-right: 1%;
-}
-
-#bnc-global input#bnc-button {
-	color: #fff !important;
-}
-
 #bnc-global input#bnc-button, #bnc-global input#bnc-button-reset {
-	border: 2px solid #b2cfe4 !important;
-	float: left !important;
-	width: 12% !important;
-	padding: 4px !important;
-}
-
-#bnc-global input#bnc-button-reset:hover {
-	border-color: red !important;
-	color: red !important;
-}
-
-#bnc-global input#bnc-button:hover, #bnc-global input#bnc-button:active {
-	border: 2px solid #305769 !important;
-	color: #cdebfd !important;
+	float: left;
+	margin-right: 10px;
 }
 
 /* @end */
