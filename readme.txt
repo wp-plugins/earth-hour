@@ -15,6 +15,10 @@ Please visit http://www.bravenewcode.com/free-stuff/ for a full description & up
 
 == Changelog ==
 
+= Version 1.8 =
+
+* Updated: For 2014 Earth Hour
+
 = Version 1.7.2 =
 
 * Fixed admin css issues for WordPress 3+

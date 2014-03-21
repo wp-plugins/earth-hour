@@ -17,7 +17,7 @@
 			<div id="earth_hour">
 				<p class="admin-text"><?php echo $settings['earth_hour_text']; ?></p>
 				<!-- <p class="below-image"><?php echo sprintf( __ngettext( "There is currently %d other WordPress site participating in the event.",  "There are  %d other WordPress sites participating in the event.", $count, "earth-hour"), $count); ?></p> -->
-				<p><?php echo __( "If you'd like to join us, download the <br /><a href=\"http://www.bravenewcode.com/free-stuff/\">WordPress Earth Hour plugin</a>", "earth-hour" ) ?></p>
+				<p><?php echo __( "If you'd like to join us, download the <br /><a href=\"http://www.bravenewcode.com/\">WordPress Earth Hour plugin</a>", "earth-hour" ) ?></p>
 				<p><?php echo sprintf( __ngettext( "This website will be back online in %d minute.", "This website will be back online in %d minutes.", $earth_hour_minutes, "earth-hour" ), $earth_hour_minutes ); ?></p>
 			</div>
 		</div>
