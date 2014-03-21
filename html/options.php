@@ -5,12 +5,12 @@
 		echo('<div id="message" class="updated fade"><p><strong>');
 		echo __( "Settings saved", "earth-hour");
 		echo('</strong></p></div>');
-		} 
+		}
 	elseif (isset($_POST['reset'])) {
 		echo('<div id="message" class="updated fade"><p><strong>');
 		echo __( "Defaults restored", "earth-hour");
 		echo('</strong></p></div>');
-		} 
+		}
 ?>
 <div id="earth-hour-head">
 	<div id="earth-hour-head-colour">
@@ -21,11 +21,10 @@
 			<div id="earth-hour-head-links">
 				<ul>
 					<li><?php echo sprintf(__( "%sEarthHour.org%s", "earth-hour" ), '<a href="http://www.earthhour.org" target="_blank">','</a>'); ?> | </li>
-					<li><?php echo sprintf(__( "%sBNC Earth Hour Page%s", "earth-hour" ), '<a href="http://www.bravenewcode.com/free-stuff/" target="_blank">','</a>'); ?> | </li>
-					<li><?php echo sprintf(__( "%sSupport Forums%s", "earth-hour" ), '<a href="http://wordpress.org/tags/earth-hour?forum_id=10" target="_blank">','</a>'); ?></li>
+					<li><?php echo sprintf(__( "%sWordPress Support Forums%s", "earth-hour" ), '<a href="http://wordpress.org/tags/earth-hour?forum_id=10" target="_blank">','</a>'); ?></li>
 				</ul>
 			</div>
-	</div>	
+	</div>
 	<div class="bnc-clearer"></div>
 </div><!-- earth-hour-head -->
 
@@ -41,29 +40,29 @@
 				<p><?php _e( "Before Earth Hour begins, your site shows a banner in a fixed position showing your support for the event.", "earth-hour" ); ?></p>
 				<p><?php _e( "Choose whether the banner is shown at the top, bottom or not at all on your website.", "earth-hour" ); ?></p>
 
-				<br /><br />
+				<br />
 
 				<h4><?php _e( "Earth Hour Image", "earth-hour" ); ?></h4>
 				<p><?php _e( "During Earth Hour all website URLs will show a page with the image you choose and the text you include in the option below.", "earth-hour" ); ?></p>
 				<p><?php _e( "Choose between the two provided images, or link to one of your own.", "earth-hour" ); ?></p>
 				<p><?php _e( "Our images are 300px by 300px, and we suggest you keep yours at around the same size to work correctly.", "earth-hour" ); ?></p>
-				
-				<br /><br />
+
+				<br />
 
 				<h4><?php _e( "Earth Hour Text", "earth-hour" ); ?></h4>
 				<p><?php _e( "Along with the image your site displays a message to all your visitors. Edit that message here.", "earth-hour" ); ?></p>
 
-				<br /><br /><br /><br /><br /><br />
-				
+				<br /><br /><br />
+
 				<h4><?php _e( "Excluded Website Paths", "earth-hour" ); ?></h4>
 				<p><?php _e( "Any URLs that match any of the following paths will be excluded from the Earth Hour message (e.g. /store/).", "earth-hour" ); ?></p>
 
-				<br /><br /><br /><br /><br />
+				<br /><br /><br />
 
 				<h4><?php _e( "Preview Site", "earth-hour" ); ?></h4>
 				<p><?php _e( "Clicking the Preview button will show you what your site will look like during Earth Hour.", "earth-hour" ); ?></p>
 			</div>
-			
+
 			<div class="right-content">
 				<div id="earth-hour-images">
 					<ul>
@@ -76,11 +75,11 @@
 				<ul>
 					<li><input class="radio" type="radio" name="banner_location" id="website-top" value="top" <?php if ( $settings['banner_location'] == 'top' ) echo 'checked="true" '; ?>/> <label for="website-top"><?php _e( 'Website Top', "earth-hour" ); ?></label></li>
 					<li><input class="radio" type="radio" name="banner_location" id="website-bottom" value="bottom" <?php if ( $settings['banner_location'] == 'bottom' ) echo 'checked="true" '; ?>/> <label for="website-bottom"><?php _e( 'Website Bottom', "earth-hour" ); ?></label></li>
-					<li><input class="radio" type="radio" name="banner_location" id="website-off" value="off" <?php if ( $settings['banner_location'] == 'off' ) echo 'checked="true" '; ?>/> <label for="website-bottom"><?php _e( 'No Banner', "earth-hour" ); ?></label></li>
+					<li><input class="radio" type="radio" name="banner_location" id="website-off" value="off" <?php if ( $settings['banner_location'] == 'off' ) echo 'checked="true" '; ?>/> <label for="website-off"><?php _e( 'No Banner', "earth-hour" ); ?></label></li>
 				</ul>
 
 				<br /><br />
-				
+
 				<p><strong><?php _e( "Earth Hour Image", "earth-hour" ); ?></strong></p>
 				<ul>
 					<li><input class="radio" type="radio" name="main_image" id="official-image" value="official" <?php if ( $settings['main_image'] == 'official' ) echo 'checked="true" '; ?>/> <label for="official-image"><?php _e( 'Official Earth Hour', "earth-hour" ); ?></label></li>
@@ -92,39 +91,39 @@
 				</ul>
 
 				<br /><br />
-				
+
 				<p><strong><?php _e( "Earth Hour Text", "earth-hour" ); ?></strong></p>
 				<ul>
 					<li><textarea class="textarea" id="earth-hour-text" name="earth_hour_text"><?php echo $settings['earth_hour_text']; ?></textarea></li>
 				</ul>
-				
+
 				<br /><br />
-				
+
 				<p><strong><?php _e( "Excluded Paths (one per line)", "earth-hour" ); ?></strong></p>
 				<ul>
 					<li><textarea class="textarea" id="earth-hour-excluded-paths" name="earth_hour_excluded_paths"><?php echo $settings['earth_hour_excluded_paths']; ?></textarea></li>
 				</ul>
-				
-				<br /><br />				
-				
+
+				<br /><br />
+
 				<p><strong><?php _e( "Preview Site", "earth-hour" ); ?></strong> <small>(<?php _e( "Make sure you save before previewing", "earth-hour" ); ?>)</small></p>
 				<ul>
 					<li><input class="button-secondary" type="submit" name="preview" value="<?php _e('Preview Website During Earth Hour', 'earth-hour' ); ?>" /></li>
-				</ul>						
+				</ul>
 
 			</div>
-			
+
 	<div class="bnc-clearer"></div>
 	</div><!-- postbox -->
 </div><!-- metabox -->
 
 		<input type="submit" name="submit" value="<?php _e('Save Options', 'earth-hour' ); ?>" id="bnc-button" class="button-primary" />
 	</form>
-	
+
 	<form method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
 		<input type="submit" onclick="return confirm('<?php _e('Restore default Earth Hour settings?', 'earth-hour' ); ?>');" name="reset" value="<?php _e('Restore Defaults', 'earth-hour' ); ?>" id="bnc-button-reset" class="button" />
 	</form>
-		
+
 	<?php //earth_hour_version('<div class="bnc-plugin-version"> This is ','</div>'); ?>
 
 	<div class="bnc-clearer"></div>
