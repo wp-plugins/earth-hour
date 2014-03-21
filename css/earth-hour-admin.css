@@ -1,4 +1,4 @@
-/* @override http://www.bravenewcode.com/wordpress/wp-content/plugins/earth-hour/css/earth-hour-admin.css */
+/* @override http://wptp3.local.com/wp-content/plugins/earth-hour/css/earth-hour-admin.css */
 
 /* @group Global Styles */
 
@@ -250,11 +250,7 @@
 }
 
 #bnc-global .right-content .radio {
-	padding: 0;
-	margin: 0 5px 0 0;
-	width: auto;
-	height: auto;
-	border-style: none;
+	vertical-align: bottom;
 }
 
 #bnc-global .right-content .input {
@@ -266,17 +262,7 @@
 }
 
 #bnc-global .right-content .textarea {
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	width: 55%;
-	color: #444;
-	font-size: 11px;
-	border-width: 2px;
-	border-color: #a4c6d3;
-	background-color: #ebf1ff;
-	height: 60px;
-	margin: 0;
-	overflow: auto;
+	width: 60%;
 }
 
 
