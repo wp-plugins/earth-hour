@@ -1,0 +1,78 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	background-color: #101415;
+	position: relative;
+	z-index: 0;
+	height: 100%;
+	text-shadow: #000 1px 0 1px;
+	color: #777;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+#earth_hour {
+	width: 80%;
+	background-position: center top;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 6%;
+	text-shadow: #000000 0 -1px 0;
+	background-repeat: no-repeat;
+	font-size: 1.5em;
+	line-height: 1.7em;
+}
+
+.preview {
+	text-align: left;
+	padding: 5px 5px 5px 10px;
+	background-color: #002b48;
+	color: #51b5fb;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-shadow: #000000 0 -1px 1px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	left: 0;
+	font-size: 11px;
+	border-bottom: 1px dashed #4d6270;
+	border-top: 1px dashed #4d6270;
+	margin-top: 10px;
+}
+
+.preview span {
+	color: #eee;
+}
+
+a#admin-return {
+	text-align: right;
+	z-index: 1;
+	margin-left: 25px;
+}
+
+p.admin-text {
+	padding-top: 350px;
+	margin-bottom: 50px;
+	font-size: 20px;
+	text-transform: uppercase;
+	color: orange;
+}
+
+p {
+	font-size: 14px;
+	line-height: 1.5em;
+}
+
+p.below-image {
+	text-transform: uppercase;
+}
+
+a {
+	color: #51b5fb;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}

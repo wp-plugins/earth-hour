@@ -1,0 +1,130 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Dale Mugford and Duane Storey
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/earth-hour\n"
+"POT-Creation-Date: 2009-03-20 16:37+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Gilang Ramadhan <gielardino@gmail.com>\n"
+"Language-Team: Indonesian <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: earth-hour.php:61
+msgid "Visit the Earth Hour Website"
+msgstr "Kunjungi situs web Earth Hour"
+
+#: earth-hour.php:65
+#, php-format
+msgid ""
+"One of %s website proudly supporting <a href=\"http://www.bravenewcode.com/"
+"earth-hour/\" rel=\"nofollow\">Earth Hour</a>. "
+msgid_plural ""
+"One of %s websites proudly supporting <a href=\"http://www.bravenewcode.com/"
+"earth-hour/\" rel=\"nofollow\">Earth Hour</a>. "
+msgstr[0] "Salah satu dari %s situs web dengan bangga mendukung <a href=\"http://www.bravenewcode.com/"
+"earth-hour/\" rel=\"nofollow\">Earth Hour</a>."
+msgstr[1] "Salah satu dari %s situs web dengan bangga mendukung <a href=\"http://www.bravenewcode.com/"
+"earth-hour/\" rel=\"nofollow\">Earth Hour</a>."
+
+#: earth-hour.php:72
+msgid ""
+"On WordPress? Get the <a href=\"http://wordpress.org/extend/plugins/earth-"
+"hour/\" rel=\"nofollow\">plugin</a>."
+msgstr "Di WordPress? Dapatkan <a href=\"http://wordpress.org/extend/plugins/earth-"
+"hour/\" rel=\"nofollow\">plugin</a> ini."
+
+#: earth-hour.php:75
+#, php-format
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d hari"
+msgstr[1] "%d hari"
+
+#: earth-hour.php:76
+#, php-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d jam"
+msgstr[1] "%d jam"
+
+#: earth-hour.php:77
+#, php-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d menit"
+msgstr[1] "%d menit"
+
+#: earth-hour.php:79
+#, php-format
+msgid ""
+"<a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth "
+"Hour</a> begins in %1$s, %2$s, and %3$s"
+msgstr "<a href=\"http://www.bravenewcode.com/earth-hour/\" rel=\"nofollow\">Earth "
+"Hour</a> dimulai dalam %1$s, %2$s, dan %3$s"
+
+#: html/message.php:10
+msgid "Proudly Supporting Earth Hour"
+msgstr "Bangga mendukung Earth Hour"
+
+#: html/message.php:16
+#, php-format
+msgid "%s is currently participating in"
+msgstr "%s saat ini sedang berpartisipasi"
+
+#: html/message.php:17
+#, php-format
+msgid "There is currently %d other WordPress site supporting this cause."
+msgid_plural ""
+"There are currently %d other WordPress sites supporting this cause."
+msgstr[0] "Saat ini terdapat %d situs WordPress lain yang mendukung aksi ini."
+msgstr[1] "Saat ini terdapat %d situs WordPress lain yang mendukung aksi ini."
+
+#: html/message.php:18
+msgid ""
+"If you'd like to join us, download the <br /><a href=\"http://www."
+"bravenewcode.com/earth-hour/\">WordPress Earth Hour plugin</a>"
+msgstr "Jika Anda ingin bergabung dengan kami, download <br /><a href=\"http://www."
+"bravenewcode.com/earth-hour/\">plugin WordPress Earth Hour</a>"
+
+#: html/message.php:19
+#, php-format
+msgid "This website will be back online in %d minute."
+msgid_plural "This website will be back online in %d minutes."
+msgstr[0] "Situs ini akan segera kembali online dalam %d menit."
+msgstr[1] "Situs ini akan segera kembali online dalam %d menit."
+
+#: html/options.php:5
+#, php-format
+msgid ""
+"There are currently %d WordPress sites using this plugin and supporting "
+"Earth Hour."
+msgstr "Saat ini terdapat %d situs WordPress menggunakan plugin ini untuk mendukung "
+"Earth Hour."
+
+#. Plugin Name of an extension
+msgid "Earth Hour"
+msgstr ""
+
+#. Plugin URI of an extension
+msgid "http://www.bravenewcode.com/earth-hour/"
+msgstr ""
+
+#. Description of an extension
+msgid "Changing the world, one website at a time."
+msgstr "Mengubah dunia, satu situs sekaligus."
+
+#. Author of an extension
+msgid "Dale Mugford and Duane Storey"
+msgstr "Dale Mugford dan Duane Storey"
+
+#. Author URI of an extension
+msgid "http://www.bravenewcode.com"
+msgstr ""
